@@ -1,0 +1,5290 @@
+{
+  "GraphVersion": "1.5.0.0",
+  "UserNote": "This demo workspace shows how:\r\n\r\n1. Create dialogs intents\r\n2. Create entities\r\n3. Create fallbacks\r\n4. Add Expressions\r\n5. Add contexts\r\n6. How to work with Variables\r\n7. How to re-use and connect nodes to multiple parents.\r\n\r\nFinally it shows how you can test your bot within the workspace.",
+  "Nodes": [
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.OscovaPanelNode, Syn.Bot",
+      "OscovaBotNode": {
+        "Dialogs": [
+          {
+            "DialogName": "start_dialog",
+            "IntentAlias": null,
+            "Domain": null,
+            "Intents": [
+              {
+                "IntentName": "start_intent",
+                "MinScore": 0.0,
+                "IntentContexts": [],
+                "Prompts": [],
+                "AutoEntity": null,
+                "Fallback": null,
+                "Trait": null,
+                "Event": null,
+                "Action": null,
+                "Expressions": [
+                  {
+                    "Value": "@start",
+                    "ExpressionName": null,
+                    "Id": "be64bc5b-1115-41e3-a743-f9363de5b56e",
+                    "IsFolded": false,
+                    "DisplayName": "Expression",
+                    "Position": {
+                      "X": 3623.9846999405822,
+                      "Y": 1701.0347765581496
+                    }
+                  }
+                ],
+                "Response": {
+                  "Priority": "Normal",
+                  "Hint": "",
+                  "Type": null,
+                  "Format": null,
+                  "Text": "To further assist you, please tell me the email address associated with your account.",
+                  "ResponseMessages": [],
+                  "Children": [],
+                  "Id": "8a6c5176-8250-440d-b4d4-01f2d6cdc212",
+                  "IsFolded": false,
+                  "DisplayName": "Response",
+                  "Position": {
+                    "X": 3553.9846999405845,
+                    "Y": 1889.9236654470396
+                  }
+                },
+                "Id": "d3053edb-50a9-41f1-bc81-b89ab78ade5b",
+                "IsFolded": false,
+                "DisplayName": "Intent (start_intent)",
+                "Position": {
+                  "X": 3938.9520202020185,
+                  "Y": 1640.7207070707059
+                }
+              },
+              {
+                "IntentName": "account_fallback",
+                "MinScore": 0.0,
+                "IntentContexts": [],
+                "Prompts": [],
+                "AutoEntity": null,
+                "Fallback": {
+                  "ContextName": "con-wait-email",
+                  "Id": "1d61171d-96aa-4054-abdc-ec17b1d7eec4",
+                  "IsFolded": false,
+                  "DisplayName": "Fallback",
+                  "Position": {
+                    "X": 3597.5958607955527,
+                    "Y": 2227.5759440421944
+                  }
+                },
+                "Trait": null,
+                "Event": null,
+                "Action": null,
+                "Expressions": [],
+                "Response": {
+                  "Priority": "Normal",
+                  "Hint": "Account Email Address",
+                  "Type": null,
+                  "Format": null,
+                  "Text": "I can't recognize your command. Please type in again.",
+                  "ResponseMessages": [],
+                  "Children": [],
+                  "Id": "8d36d063-8323-47e3-994c-eb0ef85d83c2",
+                  "IsFolded": false,
+                  "DisplayName": "Response",
+                  "Position": {
+                    "X": 3550.9291941288852,
+                    "Y": 2386.4648329310835
+                  }
+                },
+                "Id": "8890f6cb-5694-4542-83d5-47e188340385",
+                "IsFolded": false,
+                "DisplayName": "Intent (account_fallback)",
+                "Position": {
+                  "X": 3936.4847496844409,
+                  "Y": 2292.0203884866387
+                }
+              },
+              {
+                "IntentName": "greet_intent",
+                "MinScore": 0.0,
+                "IntentContexts": [],
+                "Prompts": [],
+                "AutoEntity": null,
+                "Fallback": null,
+                "Trait": null,
+                "Event": null,
+                "Action": null,
+                "Expressions": [
+                  {
+                    "Value": "Hi",
+                    "ExpressionName": null,
+                    "Id": "5c8df68b-0b76-4696-b252-d5701f67b3c0",
+                    "IsFolded": false,
+                    "DisplayName": "Expression",
+                    "Position": {
+                      "X": 3875.0824649633892,
+                      "Y": 1351.6748557062292
+                    }
+                  },
+                  {
+                    "Value": "Hello",
+                    "ExpressionName": null,
+                    "Id": "b87edfb9-c30b-4e94-8fe0-aacad0679d48",
+                    "IsFolded": false,
+                    "DisplayName": "Expression",
+                    "Position": {
+                      "X": 3691.5530531986833,
+                      "Y": 1352.8513262944646
+                    }
+                  },
+                  {
+                    "Value": "Hey",
+                    "ExpressionName": null,
+                    "Id": "5aa852d9-bbff-4a32-be90-235fe6e514b6",
+                    "IsFolded": false,
+                    "DisplayName": "Expression",
+                    "Position": {
+                      "X": 3524.494229669272,
+                      "Y": 1357.5572086474056
+                    }
+                  }
+                ],
+                "Response": {
+                  "Priority": "Normal",
+                  "Hint": null,
+                  "Type": null,
+                  "Format": null,
+                  "Text": "This is Sally. How can I help you?",
+                  "ResponseMessages": [],
+                  "Children": [],
+                  "Id": "044e56ab-93be-416e-bb77-e4312ae4d961",
+                  "IsFolded": false,
+                  "DisplayName": "Response",
+                  "Position": {
+                    "X": 3299.78834731633,
+                    "Y": 1438.7336792356414
+                  }
+                },
+                "Id": "cc4c446a-1eaf-415d-a410-a3306a448b3f",
+                "IsFolded": false,
+                "DisplayName": "Intent (greet_intent)",
+                "Position": {
+                  "X": 4085.6707002575067,
+                  "Y": 1311.6748557062292
+                }
+              }
+            ],
+            "Events": [],
+            "Actions": [],
+            "Id": "6f542b44-e93a-4a99-a6f3-58434073d7d2",
+            "IsFolded": false,
+            "DisplayName": "Dialog (start_dialog)",
+            "Position": {
+              "X": 4454.7597125097118,
+              "Y": 1841.7890831390823
+            }
+          },
+          {
+            "DialogName": "account_dialog",
+            "IntentAlias": null,
+            "Domain": null,
+            "Intents": [
+              {
+                "IntentName": "account_intent",
+                "MinScore": 0.0,
+                "IntentContexts": [
+                  {
+                    "ContextName": "con-wait-email",
+                    "Id": "1c9c3207-c2f8-4b02-aded-dd797e803625",
+                    "IsFolded": false,
+                    "DisplayName": "Context",
+                    "Position": {
+                      "X": 3606.9223912482348,
+                      "Y": 2707.34655345402
+                    }
+                  }
+                ],
+                "Prompts": [],
+                "AutoEntity": null,
+                "Fallback": null,
+                "Trait": null,
+                "Event": null,
+                "Action": null,
+                "Expressions": [
+                  {
+                    "Value": "@account-email",
+                    "ExpressionName": null,
+                    "Id": "ff48d893-845f-420a-a849-51b1b51cb990",
+                    "IsFolded": false,
+                    "DisplayName": "Expression",
+                    "Position": {
+                      "X": 3606.2118068960826,
+                      "Y": 2866.9515519687684
+                    }
+                  }
+                ],
+                "Response": {
+                  "Priority": "Normal",
+                  "Hint": "",
+                  "Type": null,
+                  "Format": null,
+                  "Text": " Thank you! A few more questions before I can help you. Please provide me with your username or enter “I don’t know it”?",
+                  "ResponseMessages": [],
+                  "Children": [],
+                  "Id": "5ba15bbc-f9f0-4c62-8813-0e6d7618d8f4",
+                  "IsFolded": false,
+                  "DisplayName": "Response",
+                  "Position": {
+                    "X": 3778.572918007193,
+                    "Y": 3054.0348853021014
+                  }
+                },
+                "Id": "b5cd9384-2fcf-41f1-a514-26be6bf8d977",
+                "IsFolded": false,
+                "DisplayName": "Intent (account_intent)",
+                "Position": {
+                  "X": 4028.5729180071958,
+                  "Y": 2748.7015519687684
+                }
+              }
+            ],
+            "Events": [],
+            "Actions": [],
+            "Id": "1ec8fd73-0a98-4a67-869b-089b1baaf601",
+            "IsFolded": false,
+            "DisplayName": "Dialog (account_dialog)",
+            "Position": {
+              "X": 4285.5925825531749,
+              "Y": 2681.2445119327795
+            }
+          },
+          {
+            "DialogName": "verify_dialog",
+            "IntentAlias": null,
+            "Domain": null,
+            "Intents": [
+              {
+                "IntentName": "verify_intent",
+                "MinScore": 0.0,
+                "IntentContexts": [
+                  {
+                    "ContextName": "con-wait-username",
+                    "Id": "3f0029e4-18a2-4f30-9532-df376dbe2fc5",
+                    "IsFolded": false,
+                    "DisplayName": "Context",
+                    "Position": {
+                      "X": 2587.2295481436277,
+                      "Y": 3291.9047828063658
+                    }
+                  }
+                ],
+                "Prompts": [],
+                "AutoEntity": null,
+                "Fallback": null,
+                "Trait": null,
+                "Event": null,
+                "Action": null,
+                "Expressions": [
+                  {
+                    "Value": "@account-username",
+                    "ExpressionName": null,
+                    "Id": "1630e6bb-e6ae-48cb-b782-77b7de16c816",
+                    "IsFolded": false,
+                    "DisplayName": "Expression",
+                    "Position": {
+                      "X": 2587.7720442612012,
+                      "Y": 3436.9415511561047
+                    }
+                  }
+                ],
+                "Response": {
+                  "Priority": "Normal",
+                  "Hint": "",
+                  "Type": null,
+                  "Format": null,
+                  "Text": "OK, please tell me your company’s DUNS number.",
+                  "ResponseMessages": [],
+                  "Children": [],
+                  "Id": "06d5d8a3-b9af-486e-9f85-27c8d4803280",
+                  "IsFolded": false,
+                  "DisplayName": "Response",
+                  "Position": {
+                    "X": 2383.2829794044887,
+                    "Y": 3682.734537581443
+                  }
+                },
+                "Id": "5a9c7fed-a479-4531-be73-7b73a48a9720",
+                "IsFolded": false,
+                "DisplayName": "Intent (verify_intent)",
+                "Position": {
+                  "X": 3001.8254630646215,
+                  "Y": 3380.7420790595725
+                }
+              },
+              {
+                "IntentName": "more_top_yes",
+                "MinScore": 0.0,
+                "IntentContexts": [
+                  {
+                    "ContextName": "con-more-top",
+                    "Id": "d472728c-6c84-4185-a62c-16362547ef66",
+                    "IsFolded": false,
+                    "DisplayName": "Context",
+                    "Position": {
+                      "X": 3127.0678560345659,
+                      "Y": 4152.9756648826651
+                    }
+                  }
+                ],
+                "Prompts": [],
+                "AutoEntity": null,
+                "Fallback": null,
+                "Trait": null,
+                "Event": null,
+                "Action": null,
+                "Expressions": [
+                  {
+                    "Value": "I don't know",
+                    "ExpressionName": null,
+                    "Id": "64c1053c-1dff-444f-994b-db52aa40c68c",
+                    "IsFolded": false,
+                    "DisplayName": "Expression",
+                    "Position": {
+                      "X": 3133.879170383907,
+                      "Y": 4279.4121464587161
+                    }
+                  }
+                ],
+                "Response": {
+                  "Priority": "Normal",
+                  "Hint": "",
+                  "Type": null,
+                  "Format": null,
+                  "Text": "I can't assist you with out knowing your company DUN.",
+                  "ResponseMessages": [],
+                  "Children": [],
+                  "Id": "cabb8a0a-4a95-48ec-8f72-ad3a8e57bdbd",
+                  "IsFolded": false,
+                  "DisplayName": "Response",
+                  "Position": {
+                    "X": 3114.2212582925617,
+                    "Y": 4445.0599252365273
+                  }
+                },
+                "Id": "2b52a8f7-16cf-4092-a632-eb9d9e1d7c17",
+                "IsFolded": false,
+                "DisplayName": "Intent (more_top_yes)",
+                "Position": {
+                  "X": 3421.5632413681888,
+                  "Y": 4241.1130781230213
+                }
+              },
+              {
+                "IntentName": "plus_toppings",
+                "MinScore": 0.0,
+                "IntentContexts": [
+                  {
+                    "ContextName": "con-plus-top",
+                    "Id": "bfee983d-7238-41ba-a086-7e2942d2f3bc",
+                    "IsFolded": false,
+                    "DisplayName": "Context",
+                    "Position": {
+                      "X": 3009.3575917900048,
+                      "Y": 4997.1844574929837
+                    }
+                  }
+                ],
+                "Prompts": [],
+                "AutoEntity": null,
+                "Fallback": null,
+                "Trait": null,
+                "Event": null,
+                "Action": null,
+                "Expressions": [
+                  {
+                    "Value": "@pizza-top",
+                    "ExpressionName": null,
+                    "Id": "c6fd1fcc-d242-4a71-8edf-cdc0be7bddce",
+                    "IsFolded": false,
+                    "DisplayName": "Expression",
+                    "Position": {
+                      "X": 2902.4689667917255,
+                      "Y": 5129.3901949443843
+                    }
+                  }
+                ],
+                "Response": {
+                  "Priority": "Normal",
+                  "Hint": null,
+                  "Type": null,
+                  "Format": null,
+                  "Text": "OK, please tell me your company’s DUNS number.",
+                  "ResponseMessages": [],
+                  "Children": [],
+                  "Id": "050a09a4-623f-4e47-8e5c-768e92790be3",
+                  "IsFolded": false,
+                  "DisplayName": "Response",
+                  "Position": {
+                    "X": 2635.8870035547116,
+                    "Y": 5366.1648496498456
+                  }
+                },
+                "Id": "fc68835b-593b-49cd-b8ff-9735b937cbcf",
+                "IsFolded": false,
+                "DisplayName": "Intent (plus_toppings)",
+                "Position": {
+                  "X": 3380.9852304911742,
+                  "Y": 5101.7773482623461
+                }
+              },
+              {
+                "IntentName": "more_top_no",
+                "MinScore": 0.0,
+                "IntentContexts": [],
+                "Prompts": [],
+                "AutoEntity": null,
+                "Fallback": null,
+                "Trait": null,
+                "Event": null,
+                "Action": null,
+                "Expressions": [
+                  {
+                    "Value": "@sys.negative",
+                    "ExpressionName": null,
+                    "Id": "7999e5a3-d0e2-4b83-8a0d-99d66e6047a5",
+                    "IsFolded": false,
+                    "DisplayName": "Expression",
+                    "Position": {
+                      "X": 3275.9631462448842,
+                      "Y": 6056.3740856666645
+                    }
+                  }
+                ],
+                "Response": {
+                  "Priority": "Normal",
+                  "Hint": null,
+                  "Type": null,
+                  "Format": null,
+                  "Text": "OK, please tell me your company’s DUNS number.",
+                  "ResponseMessages": [],
+                  "Children": [],
+                  "Id": "f962d25e-ee88-482b-a766-2dfc74bc01d1",
+                  "IsFolded": false,
+                  "DisplayName": "Response",
+                  "Position": {
+                    "X": 2638.6517682018302,
+                    "Y": 5721.7722667425542
+                  }
+                },
+                "Id": "8cb1f353-c350-44df-8a09-00fc8d26b402",
+                "IsFolded": false,
+                "DisplayName": "Intent (more_top_no)",
+                "Position": {
+                  "X": 3565.1605687241267,
+                  "Y": 6073.9846083105931
+                }
+              }
+            ],
+            "Events": [],
+            "Actions": [],
+            "Id": "314f315c-5521-4166-9e8e-a3be5b512a96",
+            "IsFolded": false,
+            "DisplayName": "Dialog (verify_dialog)",
+            "Position": {
+              "X": 4288.0918029339064,
+              "Y": 3542.9961240342082
+            }
+          },
+          {
+            "DialogName": "info_dialog",
+            "IntentAlias": null,
+            "Domain": null,
+            "Intents": [
+              {
+                "IntentName": "info_intent",
+                "MinScore": 0.0,
+                "IntentContexts": [
+                  {
+                    "ContextName": "con-wait-dun",
+                    "Id": "12a1861f-1f92-433a-80b5-a38912137ecb",
+                    "IsFolded": false,
+                    "DisplayName": "Context",
+                    "Position": {
+                      "X": 2801.7825457361973,
+                      "Y": 6364.81719530814
+                    }
+                  }
+                ],
+                "Prompts": [],
+                "AutoEntity": null,
+                "Fallback": null,
+                "Trait": null,
+                "Event": null,
+                "Action": null,
+                "Expressions": [
+                  {
+                    "Value": "@account-dun",
+                    "ExpressionName": null,
+                    "Id": "461df3f4-a06e-4a65-951d-239cdc154c19",
+                    "IsFolded": false,
+                    "DisplayName": "Expression",
+                    "Position": {
+                      "X": 2791.5752464283873,
+                      "Y": 6508.4767161152986
+                    }
+                  }
+                ],
+                "Response": {
+                  "Priority": "Normal",
+                  "Hint": null,
+                  "Type": null,
+                  "Format": null,
+                  "Text": "Thank you! I found your information. You have been deactivated by the system due to extended inactivity on 09/20/2020. Do you want me to re-activate your account?",
+                  "ResponseMessages": [],
+                  "Children": [],
+                  "Id": "c5d49690-df6d-46b5-83c2-3da1a68d6825",
+                  "IsFolded": false,
+                  "DisplayName": "Response",
+                  "Position": {
+                    "X": 2796.7782243593538,
+                    "Y": 6676.838181526532
+                  }
+                },
+                "Id": "96b3179e-77bf-45ee-aa9a-ac4e0f6a5d99",
+                "IsFolded": false,
+                "DisplayName": "Intent (info_intent)",
+                "Position": {
+                  "X": 3216.343231244155,
+                  "Y": 6518.0322115620966
+                }
+              },
+              {
+                "IntentName": "end_intent",
+                "MinScore": 0.0,
+                "IntentContexts": [
+                  {
+                    "ContextName": "con-wait-confirm",
+                    "Id": "7236ea2a-3761-415f-aef3-6c01de5d5b6c",
+                    "IsFolded": false,
+                    "DisplayName": "Context",
+                    "Position": {
+                      "X": 3013.9073697698691,
+                      "Y": 7436.9756474507194
+                    }
+                  }
+                ],
+                "Prompts": [],
+                "AutoEntity": null,
+                "Fallback": null,
+                "Trait": null,
+                "Event": null,
+                "Action": null,
+                "Expressions": [
+                  {
+                    "Value": "Yes",
+                    "ExpressionName": null,
+                    "Id": "30484848-3b6c-4ff5-94d2-d9c9ec67b7d0",
+                    "IsFolded": false,
+                    "DisplayName": "Expression",
+                    "Position": {
+                      "X": 3020.7995044171516,
+                      "Y": 7596.4798221386482
+                    }
+                  }
+                ],
+                "Response": {
+                  "Priority": "Normal",
+                  "Hint": null,
+                  "Type": null,
+                  "Format": null,
+                  "Text": "Thank you! Your account has been reactivated. Your username is the same as your email address. \r\nI see that you have had your account lapse three times in the last six months! \r\nOh no! Please remember your account will be deactivated if you don’t log to your account every 30 days. \r\nMay I suggest a few tips for keeping your account active?",
+                  "ResponseMessages": [],
+                  "Children": [],
+                  "Id": "e8dd67fb-a13b-4d5e-911d-0c9c7c3945cc",
+                  "IsFolded": false,
+                  "DisplayName": "Response",
+                  "Position": {
+                    "X": 3023.1804567981044,
+                    "Y": 7777.82181348064
+                  }
+                },
+                "Id": "9646d15b-44ec-4da5-a9a7-d6627c00f004",
+                "IsFolded": false,
+                "DisplayName": "Intent (end_intent)",
+                "Position": {
+                  "X": 3289.7435668906255,
+                  "Y": 7540.2114238702516
+                }
+              },
+              {
+                "IntentName": "tip_intent",
+                "MinScore": 0.0,
+                "IntentContexts": [
+                  {
+                    "ContextName": "con-wait-tip",
+                    "Id": "3c5a0636-52a3-4f7f-b5d5-dfc0e1294627",
+                    "IsFolded": false,
+                    "DisplayName": "Context",
+                    "Position": {
+                      "X": 3041.1289457108505,
+                      "Y": 8137.4699426492134
+                    }
+                  }
+                ],
+                "Prompts": [],
+                "AutoEntity": null,
+                "Fallback": null,
+                "Trait": null,
+                "Event": null,
+                "Action": null,
+                "Expressions": [
+                  {
+                    "Value": "Yes",
+                    "ExpressionName": null,
+                    "Id": "0e0b5a46-fa5d-485e-bd70-bdc91a825d07",
+                    "IsFolded": false,
+                    "DisplayName": "Expression",
+                    "Position": {
+                      "X": 3080.1289457108505,
+                      "Y": 8251.4699426492134
+                    }
+                  }
+                ],
+                "Response": {
+                  "Priority": "Normal",
+                  "Hint": null,
+                  "Type": null,
+                  "Format": null,
+                  "Text": "Tip 1:  monitor your email for system reminders, the system will remind you 15, 7, and 1 day before the account expires.\n\nTip 2:  Set up a calendar reminder to log into the system on a certain day each month.\n\nIf you have a moment, would you like to hear a password joke?",
+                  "ResponseMessages": [],
+                  "Children": [],
+                  "Id": "a015d192-10ca-47d8-8110-1f25547e190f",
+                  "IsFolded": false,
+                  "DisplayName": "Response",
+                  "Position": {
+                    "X": 2890.1289457108505,
+                    "Y": 8344.4699426492134
+                  }
+                },
+                "Id": "0b76bb60-1a41-4152-8fe0-13e9cd5a56c5",
+                "IsFolded": false,
+                "DisplayName": "Intent (tip_intent)",
+                "Position": {
+                  "X": 3301.5103589155915,
+                  "Y": 8132.0885294444652
+                }
+              }
+            ],
+            "Events": [],
+            "Actions": [],
+            "Id": "6930b6be-bd03-49f2-83c7-814d985b6f47",
+            "IsFolded": false,
+            "DisplayName": "Dialog (info_dialog)",
+            "Position": {
+              "X": 3972.4557240145409,
+              "Y": 6895.57242573389
+            }
+          },
+          {
+            "DialogName": "joke_dialog",
+            "IntentAlias": null,
+            "Domain": null,
+            "Intents": [
+              {
+                "IntentName": "joke_intent",
+                "MinScore": 0.0,
+                "IntentContexts": [
+                  {
+                    "ContextName": "con-wait-joke",
+                    "Id": "ddd98197-a3a1-45cf-a12c-7a2aaa1d1189",
+                    "IsFolded": false,
+                    "DisplayName": "Context",
+                    "Position": {
+                      "X": 5302.477444496908,
+                      "Y": 3929.9772042489112
+                    }
+                  }
+                ],
+                "Prompts": [],
+                "AutoEntity": null,
+                "Fallback": null,
+                "Trait": null,
+                "Event": null,
+                "Action": null,
+                "Expressions": [
+                  {
+                    "Value": "sure",
+                    "ExpressionName": null,
+                    "Id": "58e0208e-650f-4540-beea-d2ba96a48ef3",
+                    "IsFolded": false,
+                    "DisplayName": "Expression",
+                    "Position": {
+                      "X": 5214.477444496908,
+                      "Y": 4054.9772042489112
+                    }
+                  }
+                ],
+                "Response": {
+                  "Priority": "Normal",
+                  "Hint": null,
+                  "Type": null,
+                  "Format": null,
+                  "Text": "What is Forrest Gump’s password?\n\n1Forrest1\n\nHope that puts a smile on your face! Have a good day!",
+                  "ResponseMessages": [],
+                  "Children": [],
+                  "Id": "2e1fd77a-a376-4123-875d-ddad47dc40b3",
+                  "IsFolded": false,
+                  "DisplayName": "Response",
+                  "Position": {
+                    "X": 5448.477444496908,
+                    "Y": 4382.9772042489112
+                  }
+                },
+                "Id": "824dc509-9bf0-45df-8bf0-77961ebcaf51",
+                "IsFolded": false,
+                "DisplayName": "Intent (joke_intent)",
+                "Position": {
+                  "X": 5521.477444496908,
+                  "Y": 4042.9772042489112
+                }
+              }
+            ],
+            "Events": [],
+            "Actions": [],
+            "Id": "991df4bd-7815-40eb-b2fb-cd47235d614a",
+            "IsFolded": false,
+            "DisplayName": "Dialog (joke_dialog)",
+            "Position": {
+              "X": 5731.36031002157,
+              "Y": 3957.1843680606235
+            }
+          }
+        ],
+        "Entities": [
+          {
+            "$type": "Syn.Bot.Oscova.WorkspaceNodes.EntryEntityCreatorNode, Syn.Bot",
+            "EntityType": "start",
+            "Entries": [
+              {
+                "EntryValue": "reactivate",
+                "Synonyms": [],
+                "Id": "26739fac-9d49-4c20-a7da-0a0546d86e81",
+                "IsFolded": false,
+                "DisplayName": "Entry",
+                "Position": {
+                  "X": 3862.7563025210056,
+                  "Y": 7363.971195144728
+                }
+              },
+              {
+                "EntryValue": "reactivate my account",
+                "Synonyms": [],
+                "Id": "ee7b06a2-9062-427b-9312-421a299ab209",
+                "IsFolded": false,
+                "DisplayName": "Entry",
+                "Position": {
+                  "X": 3744.5425975256749,
+                  "Y": 7554.2737852538994
+                }
+              }
+            ],
+            "Id": "1f91b1e5-72db-4152-83a5-8085b9ede402",
+            "IsFolded": false,
+            "DisplayName": "Entry Recognizer",
+            "Position": {
+              "X": 4123.4668534080265,
+              "Y": 7480.0141456582678
+            }
+          },
+          {
+            "$type": "Syn.Bot.Oscova.WorkspaceNodes.EntryEntityCreatorNode, Syn.Bot",
+            "EntityType": "account-email",
+            "Entries": [
+              {
+                "EntryValue": "gmail",
+                "Synonyms": [],
+                "Id": "e8cb9d2e-238e-451f-9365-1ff61658592e",
+                "IsFolded": false,
+                "DisplayName": "Entry",
+                "Position": {
+                  "X": 3807.153217697336,
+                  "Y": 7803.1443504208182
+                }
+              },
+              {
+                "EntryValue": "octoconsulting",
+                "Synonyms": [
+                  "normal"
+                ],
+                "Id": "2331f5f7-5c7b-4d4d-95e0-a6203c79a69d",
+                "IsFolded": false,
+                "DisplayName": "Entry",
+                "Position": {
+                  "X": 3595.4851929116644,
+                  "Y": 7805.4994136582409
+                }
+              },
+              {
+                "EntryValue": "gov",
+                "Synonyms": [
+                  "big"
+                ],
+                "Id": "538ee802-0c8b-460b-9ec4-7d16d286919b",
+                "IsFolded": false,
+                "DisplayName": "Entry",
+                "Position": {
+                  "X": 3820.3317254640792,
+                  "Y": 8009.1702395643606
+                }
+              },
+              {
+                "EntryValue": "com",
+                "Synonyms": [],
+                "Id": "b54d73d4-d9a8-44bb-8e3d-fe464df1924f",
+                "IsFolded": false,
+                "DisplayName": "Entry",
+                "Position": {
+                  "X": 3598.8038415832552,
+                  "Y": 8029.3630075806614
+                }
+              }
+            ],
+            "Id": "7fdbced3-50d1-4045-91c1-53f866e96555",
+            "IsFolded": false,
+            "DisplayName": "Entry Recognizer",
+            "Position": {
+              "X": 4131.8325742884563,
+              "Y": 7776.228002063297
+            }
+          },
+          {
+            "$type": "Syn.Bot.Oscova.WorkspaceNodes.EntryEntityCreatorNode, Syn.Bot",
+            "EntityType": "account-username",
+            "Entries": [
+              {
+                "EntryValue": "I don't know it",
+                "Synonyms": [],
+                "Id": "12a1990e-9c65-4e3c-a26c-112e5dc0e6f7",
+                "IsFolded": false,
+                "DisplayName": "Entry",
+                "Position": {
+                  "X": 3534.992389189757,
+                  "Y": 8550.4669608169625
+                }
+              },
+              {
+                "EntryValue": "I don't know",
+                "Synonyms": [],
+                "Id": "54e65406-6076-4ec9-8471-701e27f869a9",
+                "IsFolded": false,
+                "DisplayName": "Entry",
+                "Position": {
+                  "X": 3545.111436808807,
+                  "Y": 8765.9193417693477
+                }
+              },
+              {
+                "EntryValue": "beats me",
+                "Synonyms": [],
+                "Id": "f7a6eca1-a3a5-4ddf-8fb6-defe0aee46ef",
+                "IsFolded": false,
+                "DisplayName": "Entry",
+                "Position": {
+                  "X": 3326.3859466127278,
+                  "Y": 8766.38993000464
+                }
+              },
+              {
+                "EntryValue": "078318820",
+                "Synonyms": [],
+                "Id": "35372d08-a9c0-4251-bbcf-cc5e3c6789f4",
+                "IsFolded": false,
+                "DisplayName": "Entry",
+                "Position": {
+                  "X": 3320.0884776666562,
+                  "Y": 8548.9328694838387
+                }
+              }
+            ],
+            "Id": "9f09ed1d-dafd-4bc1-9cc8-df125c1409ac",
+            "IsFolded": false,
+            "DisplayName": "Entry Recognizer",
+            "Position": {
+              "X": 4052.5597662571336,
+              "Y": 8179.73935508936
+            }
+          },
+          {
+            "$type": "Syn.Bot.Oscova.WorkspaceNodes.EntryEntityCreatorNode, Syn.Bot",
+            "EntityType": "account-dun",
+            "Entries": [
+              {
+                "EntryValue": "078318820",
+                "Synonyms": [],
+                "Id": "03157635-0ecd-440b-a88a-ac0b78fad9cc",
+                "IsFolded": false,
+                "DisplayName": "Entry",
+                "Position": {
+                  "X": 3593.6737168414256,
+                  "Y": 9065.88496286996
+                }
+              },
+              {
+                "EntryValue": "123456789",
+                "Synonyms": [],
+                "Id": "d6b5ffe2-9b87-44a4-a82c-efbd6c22246d",
+                "IsFolded": false,
+                "DisplayName": "Entry",
+                "Position": {
+                  "X": 3417.4237168414256,
+                  "Y": 9072.218296203293
+                }
+              },
+              {
+                "EntryValue": "987654321",
+                "Synonyms": [],
+                "Id": "73bb9f52-b815-4856-884e-61e0268abe0c",
+                "IsFolded": false,
+                "DisplayName": "Entry",
+                "Position": {
+                  "X": 3229.7570501747578,
+                  "Y": 9077.7182962032912
+                }
+              }
+            ],
+            "Id": "c356d8e6-c751-427d-a00f-5f0c8ec02e1c",
+            "IsFolded": false,
+            "DisplayName": "Entry Recognizer",
+            "Position": {
+              "X": 4053.4742218919318,
+              "Y": 8407.4177911527913
+            }
+          }
+        ],
+        "Traits": [],
+        "Scripts": [],
+        "Filters": [],
+        "BotSettings": null,
+        "UserSettings": {
+          "Variables": [
+            {
+              "VariableName": "top2",
+              "VariableValue": "Not Specified",
+              "ValueCollection": [],
+              "Id": "e814bb63-9812-4346-b31a-1678e218bcfd",
+              "IsFolded": false,
+              "DisplayName": "Settings Variable",
+              "Position": {
+                "X": 4555.4839942118178,
+                "Y": 3936.023139861989
+              }
+            }
+          ],
+          "Id": "5ca0852b-2653-4963-a45c-51a89e116736",
+          "IsFolded": false,
+          "DisplayName": "User Settings",
+          "Position": {
+            "X": 4776.9720894499133,
+            "Y": 3852.4026916827174
+          }
+        },
+        "SimlNodes": [],
+        "Id": "d9ca4c49-97cd-4b12-b0d0-a4db6b995233",
+        "IsFolded": false,
+        "DisplayName": "Oscova Bot",
+        "Position": {
+          "X": 5264.1666666666661,
+          "Y": 3404.9277777777779
+        }
+      },
+      "Id": "7dd437a3-c8a5-4d46-b6f5-6272149b6ec1",
+      "IsFolded": false,
+      "DisplayName": "Oscova Test Panel",
+      "Position": {
+        "X": 5602.4444444444453,
+        "Y": 2939.7126262626266
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.OscovaBotNode, Syn.Bot",
+      "Dialogs": [
+        {
+          "DialogName": "start_dialog",
+          "IntentAlias": null,
+          "Domain": null,
+          "Intents": [
+            {
+              "IntentName": "start_intent",
+              "MinScore": 0.0,
+              "IntentContexts": [],
+              "Prompts": [],
+              "AutoEntity": null,
+              "Fallback": null,
+              "Trait": null,
+              "Event": null,
+              "Action": null,
+              "Expressions": [
+                {
+                  "Value": "@start",
+                  "ExpressionName": null,
+                  "Id": "be64bc5b-1115-41e3-a743-f9363de5b56e",
+                  "IsFolded": false,
+                  "DisplayName": "Expression",
+                  "Position": {
+                    "X": 3623.9846999405822,
+                    "Y": 1701.0347765581496
+                  }
+                }
+              ],
+              "Response": {
+                "Priority": "Normal",
+                "Hint": "",
+                "Type": null,
+                "Format": null,
+                "Text": "To further assist you, please tell me the email address associated with your account.",
+                "ResponseMessages": [],
+                "Children": [],
+                "Id": "8a6c5176-8250-440d-b4d4-01f2d6cdc212",
+                "IsFolded": false,
+                "DisplayName": "Response",
+                "Position": {
+                  "X": 3553.9846999405845,
+                  "Y": 1889.9236654470396
+                }
+              },
+              "Id": "d3053edb-50a9-41f1-bc81-b89ab78ade5b",
+              "IsFolded": false,
+              "DisplayName": "Intent (start_intent)",
+              "Position": {
+                "X": 3938.9520202020185,
+                "Y": 1640.7207070707059
+              }
+            },
+            {
+              "IntentName": "account_fallback",
+              "MinScore": 0.0,
+              "IntentContexts": [],
+              "Prompts": [],
+              "AutoEntity": null,
+              "Fallback": {
+                "ContextName": "con-wait-email",
+                "Id": "1d61171d-96aa-4054-abdc-ec17b1d7eec4",
+                "IsFolded": false,
+                "DisplayName": "Fallback",
+                "Position": {
+                  "X": 3597.5958607955527,
+                  "Y": 2227.5759440421944
+                }
+              },
+              "Trait": null,
+              "Event": null,
+              "Action": null,
+              "Expressions": [],
+              "Response": {
+                "Priority": "Normal",
+                "Hint": "Account Email Address",
+                "Type": null,
+                "Format": null,
+                "Text": "I can't recognize your command. Please type in again.",
+                "ResponseMessages": [],
+                "Children": [],
+                "Id": "8d36d063-8323-47e3-994c-eb0ef85d83c2",
+                "IsFolded": false,
+                "DisplayName": "Response",
+                "Position": {
+                  "X": 3550.9291941288852,
+                  "Y": 2386.4648329310835
+                }
+              },
+              "Id": "8890f6cb-5694-4542-83d5-47e188340385",
+              "IsFolded": false,
+              "DisplayName": "Intent (account_fallback)",
+              "Position": {
+                "X": 3936.4847496844409,
+                "Y": 2292.0203884866387
+              }
+            },
+            {
+              "IntentName": "greet_intent",
+              "MinScore": 0.0,
+              "IntentContexts": [],
+              "Prompts": [],
+              "AutoEntity": null,
+              "Fallback": null,
+              "Trait": null,
+              "Event": null,
+              "Action": null,
+              "Expressions": [
+                {
+                  "Value": "Hi",
+                  "ExpressionName": null,
+                  "Id": "5c8df68b-0b76-4696-b252-d5701f67b3c0",
+                  "IsFolded": false,
+                  "DisplayName": "Expression",
+                  "Position": {
+                    "X": 3875.0824649633892,
+                    "Y": 1351.6748557062292
+                  }
+                },
+                {
+                  "Value": "Hello",
+                  "ExpressionName": null,
+                  "Id": "b87edfb9-c30b-4e94-8fe0-aacad0679d48",
+                  "IsFolded": false,
+                  "DisplayName": "Expression",
+                  "Position": {
+                    "X": 3691.5530531986833,
+                    "Y": 1352.8513262944646
+                  }
+                },
+                {
+                  "Value": "Hey",
+                  "ExpressionName": null,
+                  "Id": "5aa852d9-bbff-4a32-be90-235fe6e514b6",
+                  "IsFolded": false,
+                  "DisplayName": "Expression",
+                  "Position": {
+                    "X": 3524.494229669272,
+                    "Y": 1357.5572086474056
+                  }
+                }
+              ],
+              "Response": {
+                "Priority": "Normal",
+                "Hint": null,
+                "Type": null,
+                "Format": null,
+                "Text": "This is Sally. How can I help you?",
+                "ResponseMessages": [],
+                "Children": [],
+                "Id": "044e56ab-93be-416e-bb77-e4312ae4d961",
+                "IsFolded": false,
+                "DisplayName": "Response",
+                "Position": {
+                  "X": 3299.78834731633,
+                  "Y": 1438.7336792356414
+                }
+              },
+              "Id": "cc4c446a-1eaf-415d-a410-a3306a448b3f",
+              "IsFolded": false,
+              "DisplayName": "Intent (greet_intent)",
+              "Position": {
+                "X": 4085.6707002575067,
+                "Y": 1311.6748557062292
+              }
+            }
+          ],
+          "Events": [],
+          "Actions": [],
+          "Id": "6f542b44-e93a-4a99-a6f3-58434073d7d2",
+          "IsFolded": false,
+          "DisplayName": "Dialog (start_dialog)",
+          "Position": {
+            "X": 4454.7597125097118,
+            "Y": 1841.7890831390823
+          }
+        },
+        {
+          "DialogName": "account_dialog",
+          "IntentAlias": null,
+          "Domain": null,
+          "Intents": [
+            {
+              "IntentName": "account_intent",
+              "MinScore": 0.0,
+              "IntentContexts": [
+                {
+                  "ContextName": "con-wait-email",
+                  "Id": "1c9c3207-c2f8-4b02-aded-dd797e803625",
+                  "IsFolded": false,
+                  "DisplayName": "Context",
+                  "Position": {
+                    "X": 3606.9223912482348,
+                    "Y": 2707.34655345402
+                  }
+                }
+              ],
+              "Prompts": [],
+              "AutoEntity": null,
+              "Fallback": null,
+              "Trait": null,
+              "Event": null,
+              "Action": null,
+              "Expressions": [
+                {
+                  "Value": "@account-email",
+                  "ExpressionName": null,
+                  "Id": "ff48d893-845f-420a-a849-51b1b51cb990",
+                  "IsFolded": false,
+                  "DisplayName": "Expression",
+                  "Position": {
+                    "X": 3606.2118068960826,
+                    "Y": 2866.9515519687684
+                  }
+                }
+              ],
+              "Response": {
+                "Priority": "Normal",
+                "Hint": "",
+                "Type": null,
+                "Format": null,
+                "Text": " Thank you! A few more questions before I can help you. Please provide me with your username or enter “I don’t know it”?",
+                "ResponseMessages": [],
+                "Children": [],
+                "Id": "5ba15bbc-f9f0-4c62-8813-0e6d7618d8f4",
+                "IsFolded": false,
+                "DisplayName": "Response",
+                "Position": {
+                  "X": 3778.572918007193,
+                  "Y": 3054.0348853021014
+                }
+              },
+              "Id": "b5cd9384-2fcf-41f1-a514-26be6bf8d977",
+              "IsFolded": false,
+              "DisplayName": "Intent (account_intent)",
+              "Position": {
+                "X": 4028.5729180071958,
+                "Y": 2748.7015519687684
+              }
+            }
+          ],
+          "Events": [],
+          "Actions": [],
+          "Id": "1ec8fd73-0a98-4a67-869b-089b1baaf601",
+          "IsFolded": false,
+          "DisplayName": "Dialog (account_dialog)",
+          "Position": {
+            "X": 4285.5925825531749,
+            "Y": 2681.2445119327795
+          }
+        },
+        {
+          "DialogName": "verify_dialog",
+          "IntentAlias": null,
+          "Domain": null,
+          "Intents": [
+            {
+              "IntentName": "verify_intent",
+              "MinScore": 0.0,
+              "IntentContexts": [
+                {
+                  "ContextName": "con-wait-username",
+                  "Id": "3f0029e4-18a2-4f30-9532-df376dbe2fc5",
+                  "IsFolded": false,
+                  "DisplayName": "Context",
+                  "Position": {
+                    "X": 2587.2295481436277,
+                    "Y": 3291.9047828063658
+                  }
+                }
+              ],
+              "Prompts": [],
+              "AutoEntity": null,
+              "Fallback": null,
+              "Trait": null,
+              "Event": null,
+              "Action": null,
+              "Expressions": [
+                {
+                  "Value": "@account-username",
+                  "ExpressionName": null,
+                  "Id": "1630e6bb-e6ae-48cb-b782-77b7de16c816",
+                  "IsFolded": false,
+                  "DisplayName": "Expression",
+                  "Position": {
+                    "X": 2587.7720442612012,
+                    "Y": 3436.9415511561047
+                  }
+                }
+              ],
+              "Response": {
+                "Priority": "Normal",
+                "Hint": "",
+                "Type": null,
+                "Format": null,
+                "Text": "OK, please tell me your company’s DUNS number.",
+                "ResponseMessages": [],
+                "Children": [],
+                "Id": "06d5d8a3-b9af-486e-9f85-27c8d4803280",
+                "IsFolded": false,
+                "DisplayName": "Response",
+                "Position": {
+                  "X": 2383.2829794044887,
+                  "Y": 3682.734537581443
+                }
+              },
+              "Id": "5a9c7fed-a479-4531-be73-7b73a48a9720",
+              "IsFolded": false,
+              "DisplayName": "Intent (verify_intent)",
+              "Position": {
+                "X": 3001.8254630646215,
+                "Y": 3380.7420790595725
+              }
+            },
+            {
+              "IntentName": "more_top_yes",
+              "MinScore": 0.0,
+              "IntentContexts": [
+                {
+                  "ContextName": "con-more-top",
+                  "Id": "d472728c-6c84-4185-a62c-16362547ef66",
+                  "IsFolded": false,
+                  "DisplayName": "Context",
+                  "Position": {
+                    "X": 3127.0678560345659,
+                    "Y": 4152.9756648826651
+                  }
+                }
+              ],
+              "Prompts": [],
+              "AutoEntity": null,
+              "Fallback": null,
+              "Trait": null,
+              "Event": null,
+              "Action": null,
+              "Expressions": [
+                {
+                  "Value": "I don't know",
+                  "ExpressionName": null,
+                  "Id": "64c1053c-1dff-444f-994b-db52aa40c68c",
+                  "IsFolded": false,
+                  "DisplayName": "Expression",
+                  "Position": {
+                    "X": 3133.879170383907,
+                    "Y": 4279.4121464587161
+                  }
+                }
+              ],
+              "Response": {
+                "Priority": "Normal",
+                "Hint": "",
+                "Type": null,
+                "Format": null,
+                "Text": "I can't assist you with out knowing your company DUN.",
+                "ResponseMessages": [],
+                "Children": [],
+                "Id": "cabb8a0a-4a95-48ec-8f72-ad3a8e57bdbd",
+                "IsFolded": false,
+                "DisplayName": "Response",
+                "Position": {
+                  "X": 3114.2212582925617,
+                  "Y": 4445.0599252365273
+                }
+              },
+              "Id": "2b52a8f7-16cf-4092-a632-eb9d9e1d7c17",
+              "IsFolded": false,
+              "DisplayName": "Intent (more_top_yes)",
+              "Position": {
+                "X": 3421.5632413681888,
+                "Y": 4241.1130781230213
+              }
+            },
+            {
+              "IntentName": "plus_toppings",
+              "MinScore": 0.0,
+              "IntentContexts": [
+                {
+                  "ContextName": "con-plus-top",
+                  "Id": "bfee983d-7238-41ba-a086-7e2942d2f3bc",
+                  "IsFolded": false,
+                  "DisplayName": "Context",
+                  "Position": {
+                    "X": 3009.3575917900048,
+                    "Y": 4997.1844574929837
+                  }
+                }
+              ],
+              "Prompts": [],
+              "AutoEntity": null,
+              "Fallback": null,
+              "Trait": null,
+              "Event": null,
+              "Action": null,
+              "Expressions": [
+                {
+                  "Value": "@pizza-top",
+                  "ExpressionName": null,
+                  "Id": "c6fd1fcc-d242-4a71-8edf-cdc0be7bddce",
+                  "IsFolded": false,
+                  "DisplayName": "Expression",
+                  "Position": {
+                    "X": 2902.4689667917255,
+                    "Y": 5129.3901949443843
+                  }
+                }
+              ],
+              "Response": {
+                "Priority": "Normal",
+                "Hint": null,
+                "Type": null,
+                "Format": null,
+                "Text": "OK, please tell me your company’s DUNS number.",
+                "ResponseMessages": [],
+                "Children": [],
+                "Id": "050a09a4-623f-4e47-8e5c-768e92790be3",
+                "IsFolded": false,
+                "DisplayName": "Response",
+                "Position": {
+                  "X": 2635.8870035547116,
+                  "Y": 5366.1648496498456
+                }
+              },
+              "Id": "fc68835b-593b-49cd-b8ff-9735b937cbcf",
+              "IsFolded": false,
+              "DisplayName": "Intent (plus_toppings)",
+              "Position": {
+                "X": 3380.9852304911742,
+                "Y": 5101.7773482623461
+              }
+            },
+            {
+              "IntentName": "more_top_no",
+              "MinScore": 0.0,
+              "IntentContexts": [],
+              "Prompts": [],
+              "AutoEntity": null,
+              "Fallback": null,
+              "Trait": null,
+              "Event": null,
+              "Action": null,
+              "Expressions": [
+                {
+                  "Value": "@sys.negative",
+                  "ExpressionName": null,
+                  "Id": "7999e5a3-d0e2-4b83-8a0d-99d66e6047a5",
+                  "IsFolded": false,
+                  "DisplayName": "Expression",
+                  "Position": {
+                    "X": 3275.9631462448842,
+                    "Y": 6056.3740856666645
+                  }
+                }
+              ],
+              "Response": {
+                "Priority": "Normal",
+                "Hint": null,
+                "Type": null,
+                "Format": null,
+                "Text": "OK, please tell me your company’s DUNS number.",
+                "ResponseMessages": [],
+                "Children": [],
+                "Id": "f962d25e-ee88-482b-a766-2dfc74bc01d1",
+                "IsFolded": false,
+                "DisplayName": "Response",
+                "Position": {
+                  "X": 2638.6517682018302,
+                  "Y": 5721.7722667425542
+                }
+              },
+              "Id": "8cb1f353-c350-44df-8a09-00fc8d26b402",
+              "IsFolded": false,
+              "DisplayName": "Intent (more_top_no)",
+              "Position": {
+                "X": 3565.1605687241267,
+                "Y": 6073.9846083105931
+              }
+            }
+          ],
+          "Events": [],
+          "Actions": [],
+          "Id": "314f315c-5521-4166-9e8e-a3be5b512a96",
+          "IsFolded": false,
+          "DisplayName": "Dialog (verify_dialog)",
+          "Position": {
+            "X": 4288.0918029339064,
+            "Y": 3542.9961240342082
+          }
+        },
+        {
+          "DialogName": "info_dialog",
+          "IntentAlias": null,
+          "Domain": null,
+          "Intents": [
+            {
+              "IntentName": "info_intent",
+              "MinScore": 0.0,
+              "IntentContexts": [
+                {
+                  "ContextName": "con-wait-dun",
+                  "Id": "12a1861f-1f92-433a-80b5-a38912137ecb",
+                  "IsFolded": false,
+                  "DisplayName": "Context",
+                  "Position": {
+                    "X": 2801.7825457361973,
+                    "Y": 6364.81719530814
+                  }
+                }
+              ],
+              "Prompts": [],
+              "AutoEntity": null,
+              "Fallback": null,
+              "Trait": null,
+              "Event": null,
+              "Action": null,
+              "Expressions": [
+                {
+                  "Value": "@account-dun",
+                  "ExpressionName": null,
+                  "Id": "461df3f4-a06e-4a65-951d-239cdc154c19",
+                  "IsFolded": false,
+                  "DisplayName": "Expression",
+                  "Position": {
+                    "X": 2791.5752464283873,
+                    "Y": 6508.4767161152986
+                  }
+                }
+              ],
+              "Response": {
+                "Priority": "Normal",
+                "Hint": null,
+                "Type": null,
+                "Format": null,
+                "Text": "Thank you! I found your information. You have been deactivated by the system due to extended inactivity on 09/20/2020. Do you want me to re-activate your account?",
+                "ResponseMessages": [],
+                "Children": [],
+                "Id": "c5d49690-df6d-46b5-83c2-3da1a68d6825",
+                "IsFolded": false,
+                "DisplayName": "Response",
+                "Position": {
+                  "X": 2796.7782243593538,
+                  "Y": 6676.838181526532
+                }
+              },
+              "Id": "96b3179e-77bf-45ee-aa9a-ac4e0f6a5d99",
+              "IsFolded": false,
+              "DisplayName": "Intent (info_intent)",
+              "Position": {
+                "X": 3216.343231244155,
+                "Y": 6518.0322115620966
+              }
+            },
+            {
+              "IntentName": "end_intent",
+              "MinScore": 0.0,
+              "IntentContexts": [
+                {
+                  "ContextName": "con-wait-confirm",
+                  "Id": "7236ea2a-3761-415f-aef3-6c01de5d5b6c",
+                  "IsFolded": false,
+                  "DisplayName": "Context",
+                  "Position": {
+                    "X": 3013.9073697698691,
+                    "Y": 7436.9756474507194
+                  }
+                }
+              ],
+              "Prompts": [],
+              "AutoEntity": null,
+              "Fallback": null,
+              "Trait": null,
+              "Event": null,
+              "Action": null,
+              "Expressions": [
+                {
+                  "Value": "Yes",
+                  "ExpressionName": null,
+                  "Id": "30484848-3b6c-4ff5-94d2-d9c9ec67b7d0",
+                  "IsFolded": false,
+                  "DisplayName": "Expression",
+                  "Position": {
+                    "X": 3020.7995044171516,
+                    "Y": 7596.4798221386482
+                  }
+                }
+              ],
+              "Response": {
+                "Priority": "Normal",
+                "Hint": null,
+                "Type": null,
+                "Format": null,
+                "Text": "Thank you! Your account has been reactivated. Your username is the same as your email address. \r\nI see that you have had your account lapse three times in the last six months! \r\nOh no! Please remember your account will be deactivated if you don’t log to your account every 30 days. \r\nMay I suggest a few tips for keeping your account active?",
+                "ResponseMessages": [],
+                "Children": [],
+                "Id": "e8dd67fb-a13b-4d5e-911d-0c9c7c3945cc",
+                "IsFolded": false,
+                "DisplayName": "Response",
+                "Position": {
+                  "X": 3023.1804567981044,
+                  "Y": 7777.82181348064
+                }
+              },
+              "Id": "9646d15b-44ec-4da5-a9a7-d6627c00f004",
+              "IsFolded": false,
+              "DisplayName": "Intent (end_intent)",
+              "Position": {
+                "X": 3289.7435668906255,
+                "Y": 7540.2114238702516
+              }
+            },
+            {
+              "IntentName": "tip_intent",
+              "MinScore": 0.0,
+              "IntentContexts": [
+                {
+                  "ContextName": "con-wait-tip",
+                  "Id": "3c5a0636-52a3-4f7f-b5d5-dfc0e1294627",
+                  "IsFolded": false,
+                  "DisplayName": "Context",
+                  "Position": {
+                    "X": 3041.1289457108505,
+                    "Y": 8137.4699426492134
+                  }
+                }
+              ],
+              "Prompts": [],
+              "AutoEntity": null,
+              "Fallback": null,
+              "Trait": null,
+              "Event": null,
+              "Action": null,
+              "Expressions": [
+                {
+                  "Value": "Yes",
+                  "ExpressionName": null,
+                  "Id": "0e0b5a46-fa5d-485e-bd70-bdc91a825d07",
+                  "IsFolded": false,
+                  "DisplayName": "Expression",
+                  "Position": {
+                    "X": 3080.1289457108505,
+                    "Y": 8251.4699426492134
+                  }
+                }
+              ],
+              "Response": {
+                "Priority": "Normal",
+                "Hint": null,
+                "Type": null,
+                "Format": null,
+                "Text": "Tip 1:  monitor your email for system reminders, the system will remind you 15, 7, and 1 day before the account expires.\n\nTip 2:  Set up a calendar reminder to log into the system on a certain day each month.\n\nIf you have a moment, would you like to hear a password joke?",
+                "ResponseMessages": [],
+                "Children": [],
+                "Id": "a015d192-10ca-47d8-8110-1f25547e190f",
+                "IsFolded": false,
+                "DisplayName": "Response",
+                "Position": {
+                  "X": 2890.1289457108505,
+                  "Y": 8344.4699426492134
+                }
+              },
+              "Id": "0b76bb60-1a41-4152-8fe0-13e9cd5a56c5",
+              "IsFolded": false,
+              "DisplayName": "Intent (tip_intent)",
+              "Position": {
+                "X": 3301.5103589155915,
+                "Y": 8132.0885294444652
+              }
+            }
+          ],
+          "Events": [],
+          "Actions": [],
+          "Id": "6930b6be-bd03-49f2-83c7-814d985b6f47",
+          "IsFolded": false,
+          "DisplayName": "Dialog (info_dialog)",
+          "Position": {
+            "X": 3972.4557240145409,
+            "Y": 6895.57242573389
+          }
+        },
+        {
+          "DialogName": "joke_dialog",
+          "IntentAlias": null,
+          "Domain": null,
+          "Intents": [
+            {
+              "IntentName": "joke_intent",
+              "MinScore": 0.0,
+              "IntentContexts": [
+                {
+                  "ContextName": "con-wait-joke",
+                  "Id": "ddd98197-a3a1-45cf-a12c-7a2aaa1d1189",
+                  "IsFolded": false,
+                  "DisplayName": "Context",
+                  "Position": {
+                    "X": 5302.477444496908,
+                    "Y": 3929.9772042489112
+                  }
+                }
+              ],
+              "Prompts": [],
+              "AutoEntity": null,
+              "Fallback": null,
+              "Trait": null,
+              "Event": null,
+              "Action": null,
+              "Expressions": [
+                {
+                  "Value": "sure",
+                  "ExpressionName": null,
+                  "Id": "58e0208e-650f-4540-beea-d2ba96a48ef3",
+                  "IsFolded": false,
+                  "DisplayName": "Expression",
+                  "Position": {
+                    "X": 5214.477444496908,
+                    "Y": 4054.9772042489112
+                  }
+                }
+              ],
+              "Response": {
+                "Priority": "Normal",
+                "Hint": null,
+                "Type": null,
+                "Format": null,
+                "Text": "What is Forrest Gump’s password?\n\n1Forrest1\n\nHope that puts a smile on your face! Have a good day!",
+                "ResponseMessages": [],
+                "Children": [],
+                "Id": "2e1fd77a-a376-4123-875d-ddad47dc40b3",
+                "IsFolded": false,
+                "DisplayName": "Response",
+                "Position": {
+                  "X": 5448.477444496908,
+                  "Y": 4382.9772042489112
+                }
+              },
+              "Id": "824dc509-9bf0-45df-8bf0-77961ebcaf51",
+              "IsFolded": false,
+              "DisplayName": "Intent (joke_intent)",
+              "Position": {
+                "X": 5521.477444496908,
+                "Y": 4042.9772042489112
+              }
+            }
+          ],
+          "Events": [],
+          "Actions": [],
+          "Id": "991df4bd-7815-40eb-b2fb-cd47235d614a",
+          "IsFolded": false,
+          "DisplayName": "Dialog (joke_dialog)",
+          "Position": {
+            "X": 5731.36031002157,
+            "Y": 3957.1843680606235
+          }
+        }
+      ],
+      "Entities": [
+        {
+          "$type": "Syn.Bot.Oscova.WorkspaceNodes.EntryEntityCreatorNode, Syn.Bot",
+          "EntityType": "start",
+          "Entries": [
+            {
+              "EntryValue": "reactivate",
+              "Synonyms": [],
+              "Id": "26739fac-9d49-4c20-a7da-0a0546d86e81",
+              "IsFolded": false,
+              "DisplayName": "Entry",
+              "Position": {
+                "X": 3862.7563025210056,
+                "Y": 7363.971195144728
+              }
+            },
+            {
+              "EntryValue": "reactivate my account",
+              "Synonyms": [],
+              "Id": "ee7b06a2-9062-427b-9312-421a299ab209",
+              "IsFolded": false,
+              "DisplayName": "Entry",
+              "Position": {
+                "X": 3744.5425975256749,
+                "Y": 7554.2737852538994
+              }
+            }
+          ],
+          "Id": "1f91b1e5-72db-4152-83a5-8085b9ede402",
+          "IsFolded": false,
+          "DisplayName": "Entry Recognizer",
+          "Position": {
+            "X": 4123.4668534080265,
+            "Y": 7480.0141456582678
+          }
+        },
+        {
+          "$type": "Syn.Bot.Oscova.WorkspaceNodes.EntryEntityCreatorNode, Syn.Bot",
+          "EntityType": "account-email",
+          "Entries": [
+            {
+              "EntryValue": "gmail",
+              "Synonyms": [],
+              "Id": "e8cb9d2e-238e-451f-9365-1ff61658592e",
+              "IsFolded": false,
+              "DisplayName": "Entry",
+              "Position": {
+                "X": 3807.153217697336,
+                "Y": 7803.1443504208182
+              }
+            },
+            {
+              "EntryValue": "octoconsulting",
+              "Synonyms": [
+                "normal"
+              ],
+              "Id": "2331f5f7-5c7b-4d4d-95e0-a6203c79a69d",
+              "IsFolded": false,
+              "DisplayName": "Entry",
+              "Position": {
+                "X": 3595.4851929116644,
+                "Y": 7805.4994136582409
+              }
+            },
+            {
+              "EntryValue": "gov",
+              "Synonyms": [
+                "big"
+              ],
+              "Id": "538ee802-0c8b-460b-9ec4-7d16d286919b",
+              "IsFolded": false,
+              "DisplayName": "Entry",
+              "Position": {
+                "X": 3820.3317254640792,
+                "Y": 8009.1702395643606
+              }
+            },
+            {
+              "EntryValue": "com",
+              "Synonyms": [],
+              "Id": "b54d73d4-d9a8-44bb-8e3d-fe464df1924f",
+              "IsFolded": false,
+              "DisplayName": "Entry",
+              "Position": {
+                "X": 3598.8038415832552,
+                "Y": 8029.3630075806614
+              }
+            }
+          ],
+          "Id": "7fdbced3-50d1-4045-91c1-53f866e96555",
+          "IsFolded": false,
+          "DisplayName": "Entry Recognizer",
+          "Position": {
+            "X": 4131.8325742884563,
+            "Y": 7776.228002063297
+          }
+        },
+        {
+          "$type": "Syn.Bot.Oscova.WorkspaceNodes.EntryEntityCreatorNode, Syn.Bot",
+          "EntityType": "account-username",
+          "Entries": [
+            {
+              "EntryValue": "I don't know it",
+              "Synonyms": [],
+              "Id": "12a1990e-9c65-4e3c-a26c-112e5dc0e6f7",
+              "IsFolded": false,
+              "DisplayName": "Entry",
+              "Position": {
+                "X": 3534.992389189757,
+                "Y": 8550.4669608169625
+              }
+            },
+            {
+              "EntryValue": "I don't know",
+              "Synonyms": [],
+              "Id": "54e65406-6076-4ec9-8471-701e27f869a9",
+              "IsFolded": false,
+              "DisplayName": "Entry",
+              "Position": {
+                "X": 3545.111436808807,
+                "Y": 8765.9193417693477
+              }
+            },
+            {
+              "EntryValue": "beats me",
+              "Synonyms": [],
+              "Id": "f7a6eca1-a3a5-4ddf-8fb6-defe0aee46ef",
+              "IsFolded": false,
+              "DisplayName": "Entry",
+              "Position": {
+                "X": 3326.3859466127278,
+                "Y": 8766.38993000464
+              }
+            },
+            {
+              "EntryValue": "078318820",
+              "Synonyms": [],
+              "Id": "35372d08-a9c0-4251-bbcf-cc5e3c6789f4",
+              "IsFolded": false,
+              "DisplayName": "Entry",
+              "Position": {
+                "X": 3320.0884776666562,
+                "Y": 8548.9328694838387
+              }
+            }
+          ],
+          "Id": "9f09ed1d-dafd-4bc1-9cc8-df125c1409ac",
+          "IsFolded": false,
+          "DisplayName": "Entry Recognizer",
+          "Position": {
+            "X": 4052.5597662571336,
+            "Y": 8179.73935508936
+          }
+        },
+        {
+          "$type": "Syn.Bot.Oscova.WorkspaceNodes.EntryEntityCreatorNode, Syn.Bot",
+          "EntityType": "account-dun",
+          "Entries": [
+            {
+              "EntryValue": "078318820",
+              "Synonyms": [],
+              "Id": "03157635-0ecd-440b-a88a-ac0b78fad9cc",
+              "IsFolded": false,
+              "DisplayName": "Entry",
+              "Position": {
+                "X": 3593.6737168414256,
+                "Y": 9065.88496286996
+              }
+            },
+            {
+              "EntryValue": "123456789",
+              "Synonyms": [],
+              "Id": "d6b5ffe2-9b87-44a4-a82c-efbd6c22246d",
+              "IsFolded": false,
+              "DisplayName": "Entry",
+              "Position": {
+                "X": 3417.4237168414256,
+                "Y": 9072.218296203293
+              }
+            },
+            {
+              "EntryValue": "987654321",
+              "Synonyms": [],
+              "Id": "73bb9f52-b815-4856-884e-61e0268abe0c",
+              "IsFolded": false,
+              "DisplayName": "Entry",
+              "Position": {
+                "X": 3229.7570501747578,
+                "Y": 9077.7182962032912
+              }
+            }
+          ],
+          "Id": "c356d8e6-c751-427d-a00f-5f0c8ec02e1c",
+          "IsFolded": false,
+          "DisplayName": "Entry Recognizer",
+          "Position": {
+            "X": 4053.4742218919318,
+            "Y": 8407.4177911527913
+          }
+        }
+      ],
+      "Traits": [],
+      "Scripts": [],
+      "Filters": [],
+      "BotSettings": null,
+      "UserSettings": {
+        "Variables": [
+          {
+            "VariableName": "top2",
+            "VariableValue": "Not Specified",
+            "ValueCollection": [],
+            "Id": "e814bb63-9812-4346-b31a-1678e218bcfd",
+            "IsFolded": false,
+            "DisplayName": "Settings Variable",
+            "Position": {
+              "X": 4555.4839942118178,
+              "Y": 3936.023139861989
+            }
+          }
+        ],
+        "Id": "5ca0852b-2653-4963-a45c-51a89e116736",
+        "IsFolded": false,
+        "DisplayName": "User Settings",
+        "Position": {
+          "X": 4776.9720894499133,
+          "Y": 3852.4026916827174
+        }
+      },
+      "SimlNodes": [],
+      "Id": "d9ca4c49-97cd-4b12-b0d0-a4db6b995233",
+      "IsFolded": false,
+      "DisplayName": "Oscova Bot",
+      "Position": {
+        "X": 5264.1666666666661,
+        "Y": 3404.9277777777779
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.IntentNode, Syn.Bot",
+      "IntentName": "start_intent",
+      "MinScore": 0.0,
+      "IntentContexts": [],
+      "Prompts": [],
+      "AutoEntity": null,
+      "Fallback": null,
+      "Trait": null,
+      "Event": null,
+      "Action": null,
+      "Expressions": [
+        {
+          "Value": "@start",
+          "ExpressionName": null,
+          "Id": "be64bc5b-1115-41e3-a743-f9363de5b56e",
+          "IsFolded": false,
+          "DisplayName": "Expression",
+          "Position": {
+            "X": 3623.9846999405822,
+            "Y": 1701.0347765581496
+          }
+        }
+      ],
+      "Response": {
+        "Priority": "Normal",
+        "Hint": "",
+        "Type": null,
+        "Format": null,
+        "Text": "To further assist you, please tell me the email address associated with your account.",
+        "ResponseMessages": [],
+        "Children": [],
+        "Id": "8a6c5176-8250-440d-b4d4-01f2d6cdc212",
+        "IsFolded": false,
+        "DisplayName": "Response",
+        "Position": {
+          "X": 3553.9846999405845,
+          "Y": 1889.9236654470396
+        }
+      },
+      "Id": "d3053edb-50a9-41f1-bc81-b89ab78ade5b",
+      "IsFolded": false,
+      "DisplayName": "Intent (start_intent)",
+      "Position": {
+        "X": 3938.9520202020185,
+        "Y": 1640.7207070707059
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.DialogNode, Syn.Bot",
+      "DialogName": "start_dialog",
+      "IntentAlias": null,
+      "Domain": null,
+      "Intents": [
+        {
+          "IntentName": "start_intent",
+          "MinScore": 0.0,
+          "IntentContexts": [],
+          "Prompts": [],
+          "AutoEntity": null,
+          "Fallback": null,
+          "Trait": null,
+          "Event": null,
+          "Action": null,
+          "Expressions": [
+            {
+              "Value": "@start",
+              "ExpressionName": null,
+              "Id": "be64bc5b-1115-41e3-a743-f9363de5b56e",
+              "IsFolded": false,
+              "DisplayName": "Expression",
+              "Position": {
+                "X": 3623.9846999405822,
+                "Y": 1701.0347765581496
+              }
+            }
+          ],
+          "Response": {
+            "Priority": "Normal",
+            "Hint": "",
+            "Type": null,
+            "Format": null,
+            "Text": "To further assist you, please tell me the email address associated with your account.",
+            "ResponseMessages": [],
+            "Children": [],
+            "Id": "8a6c5176-8250-440d-b4d4-01f2d6cdc212",
+            "IsFolded": false,
+            "DisplayName": "Response",
+            "Position": {
+              "X": 3553.9846999405845,
+              "Y": 1889.9236654470396
+            }
+          },
+          "Id": "d3053edb-50a9-41f1-bc81-b89ab78ade5b",
+          "IsFolded": false,
+          "DisplayName": "Intent (start_intent)",
+          "Position": {
+            "X": 3938.9520202020185,
+            "Y": 1640.7207070707059
+          }
+        },
+        {
+          "IntentName": "account_fallback",
+          "MinScore": 0.0,
+          "IntentContexts": [],
+          "Prompts": [],
+          "AutoEntity": null,
+          "Fallback": {
+            "ContextName": "con-wait-email",
+            "Id": "1d61171d-96aa-4054-abdc-ec17b1d7eec4",
+            "IsFolded": false,
+            "DisplayName": "Fallback",
+            "Position": {
+              "X": 3597.5958607955527,
+              "Y": 2227.5759440421944
+            }
+          },
+          "Trait": null,
+          "Event": null,
+          "Action": null,
+          "Expressions": [],
+          "Response": {
+            "Priority": "Normal",
+            "Hint": "Account Email Address",
+            "Type": null,
+            "Format": null,
+            "Text": "I can't recognize your command. Please type in again.",
+            "ResponseMessages": [],
+            "Children": [],
+            "Id": "8d36d063-8323-47e3-994c-eb0ef85d83c2",
+            "IsFolded": false,
+            "DisplayName": "Response",
+            "Position": {
+              "X": 3550.9291941288852,
+              "Y": 2386.4648329310835
+            }
+          },
+          "Id": "8890f6cb-5694-4542-83d5-47e188340385",
+          "IsFolded": false,
+          "DisplayName": "Intent (account_fallback)",
+          "Position": {
+            "X": 3936.4847496844409,
+            "Y": 2292.0203884866387
+          }
+        },
+        {
+          "IntentName": "greet_intent",
+          "MinScore": 0.0,
+          "IntentContexts": [],
+          "Prompts": [],
+          "AutoEntity": null,
+          "Fallback": null,
+          "Trait": null,
+          "Event": null,
+          "Action": null,
+          "Expressions": [
+            {
+              "Value": "Hi",
+              "ExpressionName": null,
+              "Id": "5c8df68b-0b76-4696-b252-d5701f67b3c0",
+              "IsFolded": false,
+              "DisplayName": "Expression",
+              "Position": {
+                "X": 3875.0824649633892,
+                "Y": 1351.6748557062292
+              }
+            },
+            {
+              "Value": "Hello",
+              "ExpressionName": null,
+              "Id": "b87edfb9-c30b-4e94-8fe0-aacad0679d48",
+              "IsFolded": false,
+              "DisplayName": "Expression",
+              "Position": {
+                "X": 3691.5530531986833,
+                "Y": 1352.8513262944646
+              }
+            },
+            {
+              "Value": "Hey",
+              "ExpressionName": null,
+              "Id": "5aa852d9-bbff-4a32-be90-235fe6e514b6",
+              "IsFolded": false,
+              "DisplayName": "Expression",
+              "Position": {
+                "X": 3524.494229669272,
+                "Y": 1357.5572086474056
+              }
+            }
+          ],
+          "Response": {
+            "Priority": "Normal",
+            "Hint": null,
+            "Type": null,
+            "Format": null,
+            "Text": "This is Sally. How can I help you?",
+            "ResponseMessages": [],
+            "Children": [],
+            "Id": "044e56ab-93be-416e-bb77-e4312ae4d961",
+            "IsFolded": false,
+            "DisplayName": "Response",
+            "Position": {
+              "X": 3299.78834731633,
+              "Y": 1438.7336792356414
+            }
+          },
+          "Id": "cc4c446a-1eaf-415d-a410-a3306a448b3f",
+          "IsFolded": false,
+          "DisplayName": "Intent (greet_intent)",
+          "Position": {
+            "X": 4085.6707002575067,
+            "Y": 1311.6748557062292
+          }
+        }
+      ],
+      "Events": [],
+      "Actions": [],
+      "Id": "6f542b44-e93a-4a99-a6f3-58434073d7d2",
+      "IsFolded": false,
+      "DisplayName": "Dialog (start_dialog)",
+      "Position": {
+        "X": 4454.7597125097118,
+        "Y": 1841.7890831390823
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.ExpressionNode, Syn.Bot",
+      "Value": "@start",
+      "ExpressionName": null,
+      "Id": "be64bc5b-1115-41e3-a743-f9363de5b56e",
+      "IsFolded": false,
+      "DisplayName": "Expression",
+      "Position": {
+        "X": 3623.9846999405822,
+        "Y": 1701.0347765581496
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.ResponseNode, Syn.Bot",
+      "Priority": "Normal",
+      "Hint": "",
+      "Type": null,
+      "Format": null,
+      "Text": "To further assist you, please tell me the email address associated with your account.",
+      "ResponseMessages": [],
+      "Children": [],
+      "Id": "8a6c5176-8250-440d-b4d4-01f2d6cdc212",
+      "IsFolded": false,
+      "DisplayName": "Response",
+      "Position": {
+        "X": 3553.9846999405845,
+        "Y": 1889.9236654470396
+      }
+    },
+    {
+      "$type": "Syn.Workspace.Nodes.InputOutput.InputTextNode, Syn.Workspace",
+      "OutputValue": "To further assist you, please tell me the email address associated with your account.",
+      "Id": "a0e087dc-4f66-4b55-bb6c-c4fd679a9cad",
+      "IsFolded": false,
+      "DisplayName": "Input Text",
+      "Position": {
+        "X": 2929.8821358380196,
+        "Y": 1915.9749474983214
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.EntryEntityCreatorNode, Syn.Bot",
+      "EntityType": "start",
+      "Entries": [
+        {
+          "EntryValue": "reactivate",
+          "Synonyms": [],
+          "Id": "26739fac-9d49-4c20-a7da-0a0546d86e81",
+          "IsFolded": false,
+          "DisplayName": "Entry",
+          "Position": {
+            "X": 3862.7563025210056,
+            "Y": 7363.971195144728
+          }
+        },
+        {
+          "EntryValue": "reactivate my account",
+          "Synonyms": [],
+          "Id": "ee7b06a2-9062-427b-9312-421a299ab209",
+          "IsFolded": false,
+          "DisplayName": "Entry",
+          "Position": {
+            "X": 3744.5425975256749,
+            "Y": 7554.2737852538994
+          }
+        }
+      ],
+      "Id": "1f91b1e5-72db-4152-83a5-8085b9ede402",
+      "IsFolded": false,
+      "DisplayName": "Entry Recognizer",
+      "Position": {
+        "X": 4123.4668534080265,
+        "Y": 7480.0141456582678
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.EntryNode, Syn.Bot",
+      "EntryValue": "reactivate",
+      "Synonyms": [],
+      "Id": "26739fac-9d49-4c20-a7da-0a0546d86e81",
+      "IsFolded": false,
+      "DisplayName": "Entry",
+      "Position": {
+        "X": 3862.7563025210056,
+        "Y": 7363.971195144728
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.EntryEntityCreatorNode, Syn.Bot",
+      "EntityType": "account-email",
+      "Entries": [
+        {
+          "EntryValue": "gmail",
+          "Synonyms": [],
+          "Id": "e8cb9d2e-238e-451f-9365-1ff61658592e",
+          "IsFolded": false,
+          "DisplayName": "Entry",
+          "Position": {
+            "X": 3807.153217697336,
+            "Y": 7803.1443504208182
+          }
+        },
+        {
+          "EntryValue": "octoconsulting",
+          "Synonyms": [
+            "normal"
+          ],
+          "Id": "2331f5f7-5c7b-4d4d-95e0-a6203c79a69d",
+          "IsFolded": false,
+          "DisplayName": "Entry",
+          "Position": {
+            "X": 3595.4851929116644,
+            "Y": 7805.4994136582409
+          }
+        },
+        {
+          "EntryValue": "gov",
+          "Synonyms": [
+            "big"
+          ],
+          "Id": "538ee802-0c8b-460b-9ec4-7d16d286919b",
+          "IsFolded": false,
+          "DisplayName": "Entry",
+          "Position": {
+            "X": 3820.3317254640792,
+            "Y": 8009.1702395643606
+          }
+        },
+        {
+          "EntryValue": "com",
+          "Synonyms": [],
+          "Id": "b54d73d4-d9a8-44bb-8e3d-fe464df1924f",
+          "IsFolded": false,
+          "DisplayName": "Entry",
+          "Position": {
+            "X": 3598.8038415832552,
+            "Y": 8029.3630075806614
+          }
+        }
+      ],
+      "Id": "7fdbced3-50d1-4045-91c1-53f866e96555",
+      "IsFolded": false,
+      "DisplayName": "Entry Recognizer",
+      "Position": {
+        "X": 4131.8325742884563,
+        "Y": 7776.228002063297
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.EntryNode, Syn.Bot",
+      "EntryValue": "gmail",
+      "Synonyms": [],
+      "Id": "e8cb9d2e-238e-451f-9365-1ff61658592e",
+      "IsFolded": false,
+      "DisplayName": "Entry",
+      "Position": {
+        "X": 3807.153217697336,
+        "Y": 7803.1443504208182
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.EntryNode, Syn.Bot",
+      "EntryValue": "octoconsulting",
+      "Synonyms": [
+        "normal"
+      ],
+      "Id": "2331f5f7-5c7b-4d4d-95e0-a6203c79a69d",
+      "IsFolded": false,
+      "DisplayName": "Entry",
+      "Position": {
+        "X": 3595.4851929116644,
+        "Y": 7805.4994136582409
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.EntryNode, Syn.Bot",
+      "EntryValue": "gov",
+      "Synonyms": [
+        "big"
+      ],
+      "Id": "538ee802-0c8b-460b-9ec4-7d16d286919b",
+      "IsFolded": false,
+      "DisplayName": "Entry",
+      "Position": {
+        "X": 3820.3317254640792,
+        "Y": 8009.1702395643606
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.EntryNode, Syn.Bot",
+      "EntryValue": "com",
+      "Synonyms": [],
+      "Id": "b54d73d4-d9a8-44bb-8e3d-fe464df1924f",
+      "IsFolded": false,
+      "DisplayName": "Entry",
+      "Position": {
+        "X": 3598.8038415832552,
+        "Y": 8029.3630075806614
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.ContextAddNode, Syn.Bot",
+      "ContextName": "con-wait-email",
+      "Lifespan": 2,
+      "Id": "91acbf6f-9a72-4113-9f0e-8cdeab017227",
+      "IsFolded": false,
+      "DisplayName": "Context Add",
+      "Position": {
+        "X": 3920.1499385099123,
+        "Y": 2036.4078736828274
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.DialogNode, Syn.Bot",
+      "DialogName": "account_dialog",
+      "IntentAlias": null,
+      "Domain": null,
+      "Intents": [
+        {
+          "IntentName": "account_intent",
+          "MinScore": 0.0,
+          "IntentContexts": [
+            {
+              "ContextName": "con-wait-email",
+              "Id": "1c9c3207-c2f8-4b02-aded-dd797e803625",
+              "IsFolded": false,
+              "DisplayName": "Context",
+              "Position": {
+                "X": 3606.9223912482348,
+                "Y": 2707.34655345402
+              }
+            }
+          ],
+          "Prompts": [],
+          "AutoEntity": null,
+          "Fallback": null,
+          "Trait": null,
+          "Event": null,
+          "Action": null,
+          "Expressions": [
+            {
+              "Value": "@account-email",
+              "ExpressionName": null,
+              "Id": "ff48d893-845f-420a-a849-51b1b51cb990",
+              "IsFolded": false,
+              "DisplayName": "Expression",
+              "Position": {
+                "X": 3606.2118068960826,
+                "Y": 2866.9515519687684
+              }
+            }
+          ],
+          "Response": {
+            "Priority": "Normal",
+            "Hint": "",
+            "Type": null,
+            "Format": null,
+            "Text": " Thank you! A few more questions before I can help you. Please provide me with your username or enter “I don’t know it”?",
+            "ResponseMessages": [],
+            "Children": [],
+            "Id": "5ba15bbc-f9f0-4c62-8813-0e6d7618d8f4",
+            "IsFolded": false,
+            "DisplayName": "Response",
+            "Position": {
+              "X": 3778.572918007193,
+              "Y": 3054.0348853021014
+            }
+          },
+          "Id": "b5cd9384-2fcf-41f1-a514-26be6bf8d977",
+          "IsFolded": false,
+          "DisplayName": "Intent (account_intent)",
+          "Position": {
+            "X": 4028.5729180071958,
+            "Y": 2748.7015519687684
+          }
+        }
+      ],
+      "Events": [],
+      "Actions": [],
+      "Id": "1ec8fd73-0a98-4a67-869b-089b1baaf601",
+      "IsFolded": false,
+      "DisplayName": "Dialog (account_dialog)",
+      "Position": {
+        "X": 4285.5925825531749,
+        "Y": 2681.2445119327795
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.IntentNode, Syn.Bot",
+      "IntentName": "account_intent",
+      "MinScore": 0.0,
+      "IntentContexts": [
+        {
+          "ContextName": "con-wait-email",
+          "Id": "1c9c3207-c2f8-4b02-aded-dd797e803625",
+          "IsFolded": false,
+          "DisplayName": "Context",
+          "Position": {
+            "X": 3606.9223912482348,
+            "Y": 2707.34655345402
+          }
+        }
+      ],
+      "Prompts": [],
+      "AutoEntity": null,
+      "Fallback": null,
+      "Trait": null,
+      "Event": null,
+      "Action": null,
+      "Expressions": [
+        {
+          "Value": "@account-email",
+          "ExpressionName": null,
+          "Id": "ff48d893-845f-420a-a849-51b1b51cb990",
+          "IsFolded": false,
+          "DisplayName": "Expression",
+          "Position": {
+            "X": 3606.2118068960826,
+            "Y": 2866.9515519687684
+          }
+        }
+      ],
+      "Response": {
+        "Priority": "Normal",
+        "Hint": "",
+        "Type": null,
+        "Format": null,
+        "Text": " Thank you! A few more questions before I can help you. Please provide me with your username or enter “I don’t know it”?",
+        "ResponseMessages": [],
+        "Children": [],
+        "Id": "5ba15bbc-f9f0-4c62-8813-0e6d7618d8f4",
+        "IsFolded": false,
+        "DisplayName": "Response",
+        "Position": {
+          "X": 3778.572918007193,
+          "Y": 3054.0348853021014
+        }
+      },
+      "Id": "b5cd9384-2fcf-41f1-a514-26be6bf8d977",
+      "IsFolded": false,
+      "DisplayName": "Intent (account_intent)",
+      "Position": {
+        "X": 4028.5729180071958,
+        "Y": 2748.7015519687684
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.ExpressionNode, Syn.Bot",
+      "Value": "@account-email",
+      "ExpressionName": null,
+      "Id": "ff48d893-845f-420a-a849-51b1b51cb990",
+      "IsFolded": false,
+      "DisplayName": "Expression",
+      "Position": {
+        "X": 3606.2118068960826,
+        "Y": 2866.9515519687684
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.ResponseNode, Syn.Bot",
+      "Priority": "Normal",
+      "Hint": "",
+      "Type": null,
+      "Format": null,
+      "Text": " Thank you! A few more questions before I can help you. Please provide me with your username or enter “I don’t know it”?",
+      "ResponseMessages": [],
+      "Children": [],
+      "Id": "5ba15bbc-f9f0-4c62-8813-0e6d7618d8f4",
+      "IsFolded": false,
+      "DisplayName": "Response",
+      "Position": {
+        "X": 3778.572918007193,
+        "Y": 3054.0348853021014
+      }
+    },
+    {
+      "$type": "Syn.Workspace.Nodes.InputOutput.InputTextNode, Syn.Workspace",
+      "OutputValue": " Thank you! A few more questions before I can help you. Please provide me with your username or enter “I don’t know it”?",
+      "Id": "10d64e07-8345-42d3-8ce5-8f00eefb75d6",
+      "IsFolded": false,
+      "DisplayName": "Input Text",
+      "Position": {
+        "X": 2825.8614334133563,
+        "Y": 3125.0881065906165
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.EntryEntityCreatorNode, Syn.Bot",
+      "EntityType": "account-username",
+      "Entries": [
+        {
+          "EntryValue": "I don't know it",
+          "Synonyms": [],
+          "Id": "12a1990e-9c65-4e3c-a26c-112e5dc0e6f7",
+          "IsFolded": false,
+          "DisplayName": "Entry",
+          "Position": {
+            "X": 3534.992389189757,
+            "Y": 8550.4669608169625
+          }
+        },
+        {
+          "EntryValue": "I don't know",
+          "Synonyms": [],
+          "Id": "54e65406-6076-4ec9-8471-701e27f869a9",
+          "IsFolded": false,
+          "DisplayName": "Entry",
+          "Position": {
+            "X": 3545.111436808807,
+            "Y": 8765.9193417693477
+          }
+        },
+        {
+          "EntryValue": "beats me",
+          "Synonyms": [],
+          "Id": "f7a6eca1-a3a5-4ddf-8fb6-defe0aee46ef",
+          "IsFolded": false,
+          "DisplayName": "Entry",
+          "Position": {
+            "X": 3326.3859466127278,
+            "Y": 8766.38993000464
+          }
+        },
+        {
+          "EntryValue": "078318820",
+          "Synonyms": [],
+          "Id": "35372d08-a9c0-4251-bbcf-cc5e3c6789f4",
+          "IsFolded": false,
+          "DisplayName": "Entry",
+          "Position": {
+            "X": 3320.0884776666562,
+            "Y": 8548.9328694838387
+          }
+        }
+      ],
+      "Id": "9f09ed1d-dafd-4bc1-9cc8-df125c1409ac",
+      "IsFolded": false,
+      "DisplayName": "Entry Recognizer",
+      "Position": {
+        "X": 4052.5597662571336,
+        "Y": 8179.73935508936
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.EntryNode, Syn.Bot",
+      "EntryValue": "I don't know it",
+      "Synonyms": [],
+      "Id": "12a1990e-9c65-4e3c-a26c-112e5dc0e6f7",
+      "IsFolded": false,
+      "DisplayName": "Entry",
+      "Position": {
+        "X": 3534.992389189757,
+        "Y": 8550.4669608169625
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.EntryNode, Syn.Bot",
+      "EntryValue": "I don't know",
+      "Synonyms": [],
+      "Id": "54e65406-6076-4ec9-8471-701e27f869a9",
+      "IsFolded": false,
+      "DisplayName": "Entry",
+      "Position": {
+        "X": 3545.111436808807,
+        "Y": 8765.9193417693477
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.EntryNode, Syn.Bot",
+      "EntryValue": "beats me",
+      "Synonyms": [],
+      "Id": "f7a6eca1-a3a5-4ddf-8fb6-defe0aee46ef",
+      "IsFolded": false,
+      "DisplayName": "Entry",
+      "Position": {
+        "X": 3326.3859466127278,
+        "Y": 8766.38993000464
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.EntityGetNode, Syn.Bot",
+      "EntityName": "account-email",
+      "EntityGetType": "Reference",
+      "EntityPropertyName": null,
+      "Id": "e2978536-456e-4378-b0e7-ac7ef8a3b13d",
+      "IsFolded": false,
+      "DisplayName": "Entity Get",
+      "Position": {
+        "X": 4186.5604843512028,
+        "Y": 3053.5767428141817
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.VariableSetNode, Syn.Bot",
+      "VariableName": "email",
+      "VariableOrigin": "User",
+      "VariableValue": "Small",
+      "Id": "3da39046-f345-44ce-81a1-1fc54e1a3be2",
+      "IsFolded": false,
+      "DisplayName": "Variable Set",
+      "Position": {
+        "X": 4478.063752325058,
+        "Y": 3122.9885075200632
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.DialogNode, Syn.Bot",
+      "DialogName": "verify_dialog",
+      "IntentAlias": null,
+      "Domain": null,
+      "Intents": [
+        {
+          "IntentName": "verify_intent",
+          "MinScore": 0.0,
+          "IntentContexts": [
+            {
+              "ContextName": "con-wait-username",
+              "Id": "3f0029e4-18a2-4f30-9532-df376dbe2fc5",
+              "IsFolded": false,
+              "DisplayName": "Context",
+              "Position": {
+                "X": 2587.2295481436277,
+                "Y": 3291.9047828063658
+              }
+            }
+          ],
+          "Prompts": [],
+          "AutoEntity": null,
+          "Fallback": null,
+          "Trait": null,
+          "Event": null,
+          "Action": null,
+          "Expressions": [
+            {
+              "Value": "@account-username",
+              "ExpressionName": null,
+              "Id": "1630e6bb-e6ae-48cb-b782-77b7de16c816",
+              "IsFolded": false,
+              "DisplayName": "Expression",
+              "Position": {
+                "X": 2587.7720442612012,
+                "Y": 3436.9415511561047
+              }
+            }
+          ],
+          "Response": {
+            "Priority": "Normal",
+            "Hint": "",
+            "Type": null,
+            "Format": null,
+            "Text": "OK, please tell me your company’s DUNS number.",
+            "ResponseMessages": [],
+            "Children": [],
+            "Id": "06d5d8a3-b9af-486e-9f85-27c8d4803280",
+            "IsFolded": false,
+            "DisplayName": "Response",
+            "Position": {
+              "X": 2383.2829794044887,
+              "Y": 3682.734537581443
+            }
+          },
+          "Id": "5a9c7fed-a479-4531-be73-7b73a48a9720",
+          "IsFolded": false,
+          "DisplayName": "Intent (verify_intent)",
+          "Position": {
+            "X": 3001.8254630646215,
+            "Y": 3380.7420790595725
+          }
+        },
+        {
+          "IntentName": "more_top_yes",
+          "MinScore": 0.0,
+          "IntentContexts": [
+            {
+              "ContextName": "con-more-top",
+              "Id": "d472728c-6c84-4185-a62c-16362547ef66",
+              "IsFolded": false,
+              "DisplayName": "Context",
+              "Position": {
+                "X": 3127.0678560345659,
+                "Y": 4152.9756648826651
+              }
+            }
+          ],
+          "Prompts": [],
+          "AutoEntity": null,
+          "Fallback": null,
+          "Trait": null,
+          "Event": null,
+          "Action": null,
+          "Expressions": [
+            {
+              "Value": "I don't know",
+              "ExpressionName": null,
+              "Id": "64c1053c-1dff-444f-994b-db52aa40c68c",
+              "IsFolded": false,
+              "DisplayName": "Expression",
+              "Position": {
+                "X": 3133.879170383907,
+                "Y": 4279.4121464587161
+              }
+            }
+          ],
+          "Response": {
+            "Priority": "Normal",
+            "Hint": "",
+            "Type": null,
+            "Format": null,
+            "Text": "I can't assist you with out knowing your company DUN.",
+            "ResponseMessages": [],
+            "Children": [],
+            "Id": "cabb8a0a-4a95-48ec-8f72-ad3a8e57bdbd",
+            "IsFolded": false,
+            "DisplayName": "Response",
+            "Position": {
+              "X": 3114.2212582925617,
+              "Y": 4445.0599252365273
+            }
+          },
+          "Id": "2b52a8f7-16cf-4092-a632-eb9d9e1d7c17",
+          "IsFolded": false,
+          "DisplayName": "Intent (more_top_yes)",
+          "Position": {
+            "X": 3421.5632413681888,
+            "Y": 4241.1130781230213
+          }
+        },
+        {
+          "IntentName": "plus_toppings",
+          "MinScore": 0.0,
+          "IntentContexts": [
+            {
+              "ContextName": "con-plus-top",
+              "Id": "bfee983d-7238-41ba-a086-7e2942d2f3bc",
+              "IsFolded": false,
+              "DisplayName": "Context",
+              "Position": {
+                "X": 3009.3575917900048,
+                "Y": 4997.1844574929837
+              }
+            }
+          ],
+          "Prompts": [],
+          "AutoEntity": null,
+          "Fallback": null,
+          "Trait": null,
+          "Event": null,
+          "Action": null,
+          "Expressions": [
+            {
+              "Value": "@pizza-top",
+              "ExpressionName": null,
+              "Id": "c6fd1fcc-d242-4a71-8edf-cdc0be7bddce",
+              "IsFolded": false,
+              "DisplayName": "Expression",
+              "Position": {
+                "X": 2902.4689667917255,
+                "Y": 5129.3901949443843
+              }
+            }
+          ],
+          "Response": {
+            "Priority": "Normal",
+            "Hint": null,
+            "Type": null,
+            "Format": null,
+            "Text": "OK, please tell me your company’s DUNS number.",
+            "ResponseMessages": [],
+            "Children": [],
+            "Id": "050a09a4-623f-4e47-8e5c-768e92790be3",
+            "IsFolded": false,
+            "DisplayName": "Response",
+            "Position": {
+              "X": 2635.8870035547116,
+              "Y": 5366.1648496498456
+            }
+          },
+          "Id": "fc68835b-593b-49cd-b8ff-9735b937cbcf",
+          "IsFolded": false,
+          "DisplayName": "Intent (plus_toppings)",
+          "Position": {
+            "X": 3380.9852304911742,
+            "Y": 5101.7773482623461
+          }
+        },
+        {
+          "IntentName": "more_top_no",
+          "MinScore": 0.0,
+          "IntentContexts": [],
+          "Prompts": [],
+          "AutoEntity": null,
+          "Fallback": null,
+          "Trait": null,
+          "Event": null,
+          "Action": null,
+          "Expressions": [
+            {
+              "Value": "@sys.negative",
+              "ExpressionName": null,
+              "Id": "7999e5a3-d0e2-4b83-8a0d-99d66e6047a5",
+              "IsFolded": false,
+              "DisplayName": "Expression",
+              "Position": {
+                "X": 3275.9631462448842,
+                "Y": 6056.3740856666645
+              }
+            }
+          ],
+          "Response": {
+            "Priority": "Normal",
+            "Hint": null,
+            "Type": null,
+            "Format": null,
+            "Text": "OK, please tell me your company’s DUNS number.",
+            "ResponseMessages": [],
+            "Children": [],
+            "Id": "f962d25e-ee88-482b-a766-2dfc74bc01d1",
+            "IsFolded": false,
+            "DisplayName": "Response",
+            "Position": {
+              "X": 2638.6517682018302,
+              "Y": 5721.7722667425542
+            }
+          },
+          "Id": "8cb1f353-c350-44df-8a09-00fc8d26b402",
+          "IsFolded": false,
+          "DisplayName": "Intent (more_top_no)",
+          "Position": {
+            "X": 3565.1605687241267,
+            "Y": 6073.9846083105931
+          }
+        }
+      ],
+      "Events": [],
+      "Actions": [],
+      "Id": "314f315c-5521-4166-9e8e-a3be5b512a96",
+      "IsFolded": false,
+      "DisplayName": "Dialog (verify_dialog)",
+      "Position": {
+        "X": 4288.0918029339064,
+        "Y": 3542.9961240342082
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.IntentNode, Syn.Bot",
+      "IntentName": "verify_intent",
+      "MinScore": 0.0,
+      "IntentContexts": [
+        {
+          "ContextName": "con-wait-username",
+          "Id": "3f0029e4-18a2-4f30-9532-df376dbe2fc5",
+          "IsFolded": false,
+          "DisplayName": "Context",
+          "Position": {
+            "X": 2587.2295481436277,
+            "Y": 3291.9047828063658
+          }
+        }
+      ],
+      "Prompts": [],
+      "AutoEntity": null,
+      "Fallback": null,
+      "Trait": null,
+      "Event": null,
+      "Action": null,
+      "Expressions": [
+        {
+          "Value": "@account-username",
+          "ExpressionName": null,
+          "Id": "1630e6bb-e6ae-48cb-b782-77b7de16c816",
+          "IsFolded": false,
+          "DisplayName": "Expression",
+          "Position": {
+            "X": 2587.7720442612012,
+            "Y": 3436.9415511561047
+          }
+        }
+      ],
+      "Response": {
+        "Priority": "Normal",
+        "Hint": "",
+        "Type": null,
+        "Format": null,
+        "Text": "OK, please tell me your company’s DUNS number.",
+        "ResponseMessages": [],
+        "Children": [],
+        "Id": "06d5d8a3-b9af-486e-9f85-27c8d4803280",
+        "IsFolded": false,
+        "DisplayName": "Response",
+        "Position": {
+          "X": 2383.2829794044887,
+          "Y": 3682.734537581443
+        }
+      },
+      "Id": "5a9c7fed-a479-4531-be73-7b73a48a9720",
+      "IsFolded": false,
+      "DisplayName": "Intent (verify_intent)",
+      "Position": {
+        "X": 3001.8254630646215,
+        "Y": 3380.7420790595725
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.ExpressionNode, Syn.Bot",
+      "Value": "@account-username",
+      "ExpressionName": null,
+      "Id": "1630e6bb-e6ae-48cb-b782-77b7de16c816",
+      "IsFolded": false,
+      "DisplayName": "Expression",
+      "Position": {
+        "X": 2587.7720442612012,
+        "Y": 3436.9415511561047
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.ResponseNode, Syn.Bot",
+      "Priority": "Normal",
+      "Hint": "",
+      "Type": null,
+      "Format": null,
+      "Text": "OK, please tell me your company’s DUNS number.",
+      "ResponseMessages": [],
+      "Children": [],
+      "Id": "06d5d8a3-b9af-486e-9f85-27c8d4803280",
+      "IsFolded": false,
+      "DisplayName": "Response",
+      "Position": {
+        "X": 2383.2829794044887,
+        "Y": 3682.734537581443
+      }
+    },
+    {
+      "$type": "Syn.Workspace.Nodes.InputOutput.InputTextNode, Syn.Workspace",
+      "OutputValue": "OK, please tell me your company’s DUNS number.",
+      "Id": "cf65839a-140e-449a-b15e-550d714d7dba",
+      "IsFolded": false,
+      "DisplayName": "Input Text",
+      "Position": {
+        "X": 1832.1174798713428,
+        "Y": 3792.8150697943256
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.IntentNode, Syn.Bot",
+      "IntentName": "more_top_yes",
+      "MinScore": 0.0,
+      "IntentContexts": [
+        {
+          "ContextName": "con-more-top",
+          "Id": "d472728c-6c84-4185-a62c-16362547ef66",
+          "IsFolded": false,
+          "DisplayName": "Context",
+          "Position": {
+            "X": 3127.0678560345659,
+            "Y": 4152.9756648826651
+          }
+        }
+      ],
+      "Prompts": [],
+      "AutoEntity": null,
+      "Fallback": null,
+      "Trait": null,
+      "Event": null,
+      "Action": null,
+      "Expressions": [
+        {
+          "Value": "I don't know",
+          "ExpressionName": null,
+          "Id": "64c1053c-1dff-444f-994b-db52aa40c68c",
+          "IsFolded": false,
+          "DisplayName": "Expression",
+          "Position": {
+            "X": 3133.879170383907,
+            "Y": 4279.4121464587161
+          }
+        }
+      ],
+      "Response": {
+        "Priority": "Normal",
+        "Hint": "",
+        "Type": null,
+        "Format": null,
+        "Text": "I can't assist you with out knowing your company DUN.",
+        "ResponseMessages": [],
+        "Children": [],
+        "Id": "cabb8a0a-4a95-48ec-8f72-ad3a8e57bdbd",
+        "IsFolded": false,
+        "DisplayName": "Response",
+        "Position": {
+          "X": 3114.2212582925617,
+          "Y": 4445.0599252365273
+        }
+      },
+      "Id": "2b52a8f7-16cf-4092-a632-eb9d9e1d7c17",
+      "IsFolded": false,
+      "DisplayName": "Intent (more_top_yes)",
+      "Position": {
+        "X": 3421.5632413681888,
+        "Y": 4241.1130781230213
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.ContextAddNode, Syn.Bot",
+      "ContextName": "con-wait-dun",
+      "Lifespan": 2,
+      "Id": "0f94afae-62e5-403c-8bbb-6f8db640df56",
+      "IsFolded": false,
+      "DisplayName": "Context Add",
+      "Position": {
+        "X": 2633.8684696796063,
+        "Y": 4115.5130715764208
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.ContextNode, Syn.Bot",
+      "ContextName": "con-wait-email",
+      "Id": "1c9c3207-c2f8-4b02-aded-dd797e803625",
+      "IsFolded": false,
+      "DisplayName": "Context",
+      "Position": {
+        "X": 3606.9223912482348,
+        "Y": 2707.34655345402
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.ContextNode, Syn.Bot",
+      "ContextName": "con-more-top",
+      "Id": "d472728c-6c84-4185-a62c-16362547ef66",
+      "IsFolded": false,
+      "DisplayName": "Context",
+      "Position": {
+        "X": 3127.0678560345659,
+        "Y": 4152.9756648826651
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.ContextAddNode, Syn.Bot",
+      "ContextName": "con-wait-username",
+      "Lifespan": 2,
+      "Id": "6dcd424f-7b5c-431f-8441-3970067b5e53",
+      "IsFolded": false,
+      "DisplayName": "Context Add",
+      "Position": {
+        "X": 4199.4133088273893,
+        "Y": 3281.1705170721
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.ContextNode, Syn.Bot",
+      "ContextName": "con-wait-username",
+      "Id": "3f0029e4-18a2-4f30-9532-df376dbe2fc5",
+      "IsFolded": false,
+      "DisplayName": "Context",
+      "Position": {
+        "X": 2587.2295481436277,
+        "Y": 3291.9047828063658
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.ContextRemoveNode, Syn.Bot",
+      "ContextName": "con-wait-username",
+      "Id": "9ccd00b1-d3ed-47ff-9d3b-e5782686bea9",
+      "IsFolded": false,
+      "DisplayName": "Context Remove",
+      "Position": {
+        "X": 2622.743374186864,
+        "Y": 3958.3190613382922
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.EntityGetNode, Syn.Bot",
+      "EntityName": "account-username",
+      "EntityGetType": "Reference",
+      "EntityPropertyName": null,
+      "Id": "4b8da747-f3cf-4616-88c2-5fff017838c1",
+      "IsFolded": false,
+      "DisplayName": "Entity Get",
+      "Position": {
+        "X": 2846.9081488686656,
+        "Y": 3817.9589799851778
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.VariableSetNode, Syn.Bot",
+      "VariableName": "username",
+      "VariableOrigin": "User",
+      "VariableValue": "Garlic",
+      "Id": "eb31bb63-5069-4ee3-a610-2c83a0c561f1",
+      "IsFolded": false,
+      "DisplayName": "Variable Set",
+      "Position": {
+        "X": 3101.76249060536,
+        "Y": 3849.2418931504426
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.ResponseNode, Syn.Bot",
+      "Priority": "Normal",
+      "Hint": "",
+      "Type": null,
+      "Format": null,
+      "Text": "I can't assist you with out knowing your company DUN.",
+      "ResponseMessages": [],
+      "Children": [],
+      "Id": "cabb8a0a-4a95-48ec-8f72-ad3a8e57bdbd",
+      "IsFolded": false,
+      "DisplayName": "Response",
+      "Position": {
+        "X": 3114.2212582925617,
+        "Y": 4445.0599252365273
+      }
+    },
+    {
+      "$type": "Syn.Workspace.Nodes.InputOutput.InputTextNode, Syn.Workspace",
+      "OutputValue": "I can't assist you with out knowing your company DUN.",
+      "Id": "0dc3d25e-e628-42ad-bbba-00b386216f70",
+      "IsFolded": false,
+      "DisplayName": "Input Text",
+      "Position": {
+        "X": 2700.3742684231229,
+        "Y": 4475.8043033214635
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.ExpressionNode, Syn.Bot",
+      "Value": "I don't know",
+      "ExpressionName": null,
+      "Id": "64c1053c-1dff-444f-994b-db52aa40c68c",
+      "IsFolded": false,
+      "DisplayName": "Expression",
+      "Position": {
+        "X": 3133.879170383907,
+        "Y": 4279.4121464587161
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.IntentNode, Syn.Bot",
+      "IntentName": "more_top_no",
+      "MinScore": 0.0,
+      "IntentContexts": [],
+      "Prompts": [],
+      "AutoEntity": null,
+      "Fallback": null,
+      "Trait": null,
+      "Event": null,
+      "Action": null,
+      "Expressions": [
+        {
+          "Value": "@sys.negative",
+          "ExpressionName": null,
+          "Id": "7999e5a3-d0e2-4b83-8a0d-99d66e6047a5",
+          "IsFolded": false,
+          "DisplayName": "Expression",
+          "Position": {
+            "X": 3275.9631462448842,
+            "Y": 6056.3740856666645
+          }
+        }
+      ],
+      "Response": {
+        "Priority": "Normal",
+        "Hint": null,
+        "Type": null,
+        "Format": null,
+        "Text": "OK, please tell me your company’s DUNS number.",
+        "ResponseMessages": [],
+        "Children": [],
+        "Id": "f962d25e-ee88-482b-a766-2dfc74bc01d1",
+        "IsFolded": false,
+        "DisplayName": "Response",
+        "Position": {
+          "X": 2638.6517682018302,
+          "Y": 5721.7722667425542
+        }
+      },
+      "Id": "8cb1f353-c350-44df-8a09-00fc8d26b402",
+      "IsFolded": false,
+      "DisplayName": "Intent (more_top_no)",
+      "Position": {
+        "X": 3565.1605687241267,
+        "Y": 6073.9846083105931
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.ContextRemoveNode, Syn.Bot",
+      "ContextName": "con-more-top",
+      "Id": "a80f210d-3574-4555-a26a-c138eb6858c3",
+      "IsFolded": false,
+      "DisplayName": "Context Remove",
+      "Position": {
+        "X": 3408.6601113099864,
+        "Y": 4778.36627821784
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.ContextAddNode, Syn.Bot",
+      "ContextName": "con-plus-top",
+      "Lifespan": 3,
+      "Id": "16545fe8-18e7-402d-a2ec-2ac77670158c",
+      "IsFolded": false,
+      "DisplayName": "Context Add",
+      "Position": {
+        "X": 3422.865082523198,
+        "Y": 4537.2616465727288
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.IntentNode, Syn.Bot",
+      "IntentName": "plus_toppings",
+      "MinScore": 0.0,
+      "IntentContexts": [
+        {
+          "ContextName": "con-plus-top",
+          "Id": "bfee983d-7238-41ba-a086-7e2942d2f3bc",
+          "IsFolded": false,
+          "DisplayName": "Context",
+          "Position": {
+            "X": 3009.3575917900048,
+            "Y": 4997.1844574929837
+          }
+        }
+      ],
+      "Prompts": [],
+      "AutoEntity": null,
+      "Fallback": null,
+      "Trait": null,
+      "Event": null,
+      "Action": null,
+      "Expressions": [
+        {
+          "Value": "@pizza-top",
+          "ExpressionName": null,
+          "Id": "c6fd1fcc-d242-4a71-8edf-cdc0be7bddce",
+          "IsFolded": false,
+          "DisplayName": "Expression",
+          "Position": {
+            "X": 2902.4689667917255,
+            "Y": 5129.3901949443843
+          }
+        }
+      ],
+      "Response": {
+        "Priority": "Normal",
+        "Hint": null,
+        "Type": null,
+        "Format": null,
+        "Text": "OK, please tell me your company’s DUNS number.",
+        "ResponseMessages": [],
+        "Children": [],
+        "Id": "050a09a4-623f-4e47-8e5c-768e92790be3",
+        "IsFolded": false,
+        "DisplayName": "Response",
+        "Position": {
+          "X": 2635.8870035547116,
+          "Y": 5366.1648496498456
+        }
+      },
+      "Id": "fc68835b-593b-49cd-b8ff-9735b937cbcf",
+      "IsFolded": false,
+      "DisplayName": "Intent (plus_toppings)",
+      "Position": {
+        "X": 3380.9852304911742,
+        "Y": 5101.7773482623461
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.ContextNode, Syn.Bot",
+      "ContextName": "con-plus-top",
+      "Id": "bfee983d-7238-41ba-a086-7e2942d2f3bc",
+      "IsFolded": false,
+      "DisplayName": "Context",
+      "Position": {
+        "X": 3009.3575917900048,
+        "Y": 4997.1844574929837
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.ResponseNode, Syn.Bot",
+      "Priority": "Normal",
+      "Hint": null,
+      "Type": null,
+      "Format": null,
+      "Text": "OK, please tell me your company’s DUNS number.",
+      "ResponseMessages": [],
+      "Children": [],
+      "Id": "050a09a4-623f-4e47-8e5c-768e92790be3",
+      "IsFolded": false,
+      "DisplayName": "Response",
+      "Position": {
+        "X": 2635.8870035547116,
+        "Y": 5366.1648496498456
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.EntityGetNode, Syn.Bot",
+      "EntityName": "pizza-top",
+      "EntityGetType": "Reference",
+      "EntityPropertyName": null,
+      "Id": "42ed471f-5099-467c-b5ad-6a6bdccff035",
+      "IsFolded": false,
+      "DisplayName": "Entity Get",
+      "Position": {
+        "X": 3115.5536702213776,
+        "Y": 5815.1648496498447
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.VariableSetNode, Syn.Bot",
+      "VariableName": "top2",
+      "VariableOrigin": "User",
+      "VariableValue": "Onions",
+      "Id": "b401e527-5c75-489f-ad3b-90f511c1f3ce",
+      "IsFolded": false,
+      "DisplayName": "Variable Set",
+      "Position": {
+        "X": 3356.1370035547111,
+        "Y": 5689.5815163165107
+      }
+    },
+    {
+      "$type": "Syn.Workspace.Nodes.InputOutput.InputTextNode, Syn.Workspace",
+      "OutputValue": "OK, please tell me your company’s DUNS number.",
+      "Id": "5a18b0f1-9e0d-4502-b33f-4ae19af627e6",
+      "IsFolded": false,
+      "DisplayName": "Input Text",
+      "Position": {
+        "X": 1511.9885441709584,
+        "Y": 5895.7726927871
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.EntryEntityCreatorNode, Syn.Bot",
+      "EntityType": "account-dun",
+      "Entries": [
+        {
+          "EntryValue": "078318820",
+          "Synonyms": [],
+          "Id": "03157635-0ecd-440b-a88a-ac0b78fad9cc",
+          "IsFolded": false,
+          "DisplayName": "Entry",
+          "Position": {
+            "X": 3593.6737168414256,
+            "Y": 9065.88496286996
+          }
+        },
+        {
+          "EntryValue": "123456789",
+          "Synonyms": [],
+          "Id": "d6b5ffe2-9b87-44a4-a82c-efbd6c22246d",
+          "IsFolded": false,
+          "DisplayName": "Entry",
+          "Position": {
+            "X": 3417.4237168414256,
+            "Y": 9072.218296203293
+          }
+        },
+        {
+          "EntryValue": "987654321",
+          "Synonyms": [],
+          "Id": "73bb9f52-b815-4856-884e-61e0268abe0c",
+          "IsFolded": false,
+          "DisplayName": "Entry",
+          "Position": {
+            "X": 3229.7570501747578,
+            "Y": 9077.7182962032912
+          }
+        }
+      ],
+      "Id": "c356d8e6-c751-427d-a00f-5f0c8ec02e1c",
+      "IsFolded": false,
+      "DisplayName": "Entry Recognizer",
+      "Position": {
+        "X": 4053.4742218919318,
+        "Y": 8407.4177911527913
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.EntryNode, Syn.Bot",
+      "EntryValue": "078318820",
+      "Synonyms": [],
+      "Id": "03157635-0ecd-440b-a88a-ac0b78fad9cc",
+      "IsFolded": false,
+      "DisplayName": "Entry",
+      "Position": {
+        "X": 3593.6737168414256,
+        "Y": 9065.88496286996
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.EntryNode, Syn.Bot",
+      "EntryValue": "123456789",
+      "Synonyms": [],
+      "Id": "d6b5ffe2-9b87-44a4-a82c-efbd6c22246d",
+      "IsFolded": false,
+      "DisplayName": "Entry",
+      "Position": {
+        "X": 3417.4237168414256,
+        "Y": 9072.218296203293
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.EntryNode, Syn.Bot",
+      "EntryValue": "987654321",
+      "Synonyms": [],
+      "Id": "73bb9f52-b815-4856-884e-61e0268abe0c",
+      "IsFolded": false,
+      "DisplayName": "Entry",
+      "Position": {
+        "X": 3229.7570501747578,
+        "Y": 9077.7182962032912
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.ResponseNode, Syn.Bot",
+      "Priority": "Normal",
+      "Hint": null,
+      "Type": null,
+      "Format": null,
+      "Text": "OK, please tell me your company’s DUNS number.",
+      "ResponseMessages": [],
+      "Children": [],
+      "Id": "f962d25e-ee88-482b-a766-2dfc74bc01d1",
+      "IsFolded": false,
+      "DisplayName": "Response",
+      "Position": {
+        "X": 2638.6517682018302,
+        "Y": 5721.7722667425542
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.ContextRemoveNode, Syn.Bot",
+      "ContextName": "con-plus-top",
+      "Id": "0addcfd2-8c14-4808-827a-612a37a9e6bd",
+      "IsFolded": false,
+      "DisplayName": "Context Remove",
+      "Position": {
+        "X": 3127.5272260772863,
+        "Y": 5664.1083473286326
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.ExpressionNode, Syn.Bot",
+      "Value": "@pizza-top",
+      "ExpressionName": null,
+      "Id": "c6fd1fcc-d242-4a71-8edf-cdc0be7bddce",
+      "IsFolded": false,
+      "DisplayName": "Expression",
+      "Position": {
+        "X": 2902.4689667917255,
+        "Y": 5129.3901949443843
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.ExpressionNode, Syn.Bot",
+      "Value": "@sys.negative",
+      "ExpressionName": null,
+      "Id": "7999e5a3-d0e2-4b83-8a0d-99d66e6047a5",
+      "IsFolded": false,
+      "DisplayName": "Expression",
+      "Position": {
+        "X": 3275.9631462448842,
+        "Y": 6056.3740856666645
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.ContextAddNode, Syn.Bot",
+      "ContextName": "con-wait-dun",
+      "Lifespan": 2,
+      "Id": "23acf7ce-4dc7-42d7-9b97-e51a836b28ce",
+      "IsFolded": false,
+      "DisplayName": "Context Add",
+      "Position": {
+        "X": 3130.2315744111406,
+        "Y": 5434.4386337089109
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.DialogNode, Syn.Bot",
+      "DialogName": "info_dialog",
+      "IntentAlias": null,
+      "Domain": null,
+      "Intents": [
+        {
+          "IntentName": "info_intent",
+          "MinScore": 0.0,
+          "IntentContexts": [
+            {
+              "ContextName": "con-wait-dun",
+              "Id": "12a1861f-1f92-433a-80b5-a38912137ecb",
+              "IsFolded": false,
+              "DisplayName": "Context",
+              "Position": {
+                "X": 2801.7825457361973,
+                "Y": 6364.81719530814
+              }
+            }
+          ],
+          "Prompts": [],
+          "AutoEntity": null,
+          "Fallback": null,
+          "Trait": null,
+          "Event": null,
+          "Action": null,
+          "Expressions": [
+            {
+              "Value": "@account-dun",
+              "ExpressionName": null,
+              "Id": "461df3f4-a06e-4a65-951d-239cdc154c19",
+              "IsFolded": false,
+              "DisplayName": "Expression",
+              "Position": {
+                "X": 2791.5752464283873,
+                "Y": 6508.4767161152986
+              }
+            }
+          ],
+          "Response": {
+            "Priority": "Normal",
+            "Hint": null,
+            "Type": null,
+            "Format": null,
+            "Text": "Thank you! I found your information. You have been deactivated by the system due to extended inactivity on 09/20/2020. Do you want me to re-activate your account?",
+            "ResponseMessages": [],
+            "Children": [],
+            "Id": "c5d49690-df6d-46b5-83c2-3da1a68d6825",
+            "IsFolded": false,
+            "DisplayName": "Response",
+            "Position": {
+              "X": 2796.7782243593538,
+              "Y": 6676.838181526532
+            }
+          },
+          "Id": "96b3179e-77bf-45ee-aa9a-ac4e0f6a5d99",
+          "IsFolded": false,
+          "DisplayName": "Intent (info_intent)",
+          "Position": {
+            "X": 3216.343231244155,
+            "Y": 6518.0322115620966
+          }
+        },
+        {
+          "IntentName": "end_intent",
+          "MinScore": 0.0,
+          "IntentContexts": [
+            {
+              "ContextName": "con-wait-confirm",
+              "Id": "7236ea2a-3761-415f-aef3-6c01de5d5b6c",
+              "IsFolded": false,
+              "DisplayName": "Context",
+              "Position": {
+                "X": 3013.9073697698691,
+                "Y": 7436.9756474507194
+              }
+            }
+          ],
+          "Prompts": [],
+          "AutoEntity": null,
+          "Fallback": null,
+          "Trait": null,
+          "Event": null,
+          "Action": null,
+          "Expressions": [
+            {
+              "Value": "Yes",
+              "ExpressionName": null,
+              "Id": "30484848-3b6c-4ff5-94d2-d9c9ec67b7d0",
+              "IsFolded": false,
+              "DisplayName": "Expression",
+              "Position": {
+                "X": 3020.7995044171516,
+                "Y": 7596.4798221386482
+              }
+            }
+          ],
+          "Response": {
+            "Priority": "Normal",
+            "Hint": null,
+            "Type": null,
+            "Format": null,
+            "Text": "Thank you! Your account has been reactivated. Your username is the same as your email address. \r\nI see that you have had your account lapse three times in the last six months! \r\nOh no! Please remember your account will be deactivated if you don’t log to your account every 30 days. \r\nMay I suggest a few tips for keeping your account active?",
+            "ResponseMessages": [],
+            "Children": [],
+            "Id": "e8dd67fb-a13b-4d5e-911d-0c9c7c3945cc",
+            "IsFolded": false,
+            "DisplayName": "Response",
+            "Position": {
+              "X": 3023.1804567981044,
+              "Y": 7777.82181348064
+            }
+          },
+          "Id": "9646d15b-44ec-4da5-a9a7-d6627c00f004",
+          "IsFolded": false,
+          "DisplayName": "Intent (end_intent)",
+          "Position": {
+            "X": 3289.7435668906255,
+            "Y": 7540.2114238702516
+          }
+        },
+        {
+          "IntentName": "tip_intent",
+          "MinScore": 0.0,
+          "IntentContexts": [
+            {
+              "ContextName": "con-wait-tip",
+              "Id": "3c5a0636-52a3-4f7f-b5d5-dfc0e1294627",
+              "IsFolded": false,
+              "DisplayName": "Context",
+              "Position": {
+                "X": 3041.1289457108505,
+                "Y": 8137.4699426492134
+              }
+            }
+          ],
+          "Prompts": [],
+          "AutoEntity": null,
+          "Fallback": null,
+          "Trait": null,
+          "Event": null,
+          "Action": null,
+          "Expressions": [
+            {
+              "Value": "Yes",
+              "ExpressionName": null,
+              "Id": "0e0b5a46-fa5d-485e-bd70-bdc91a825d07",
+              "IsFolded": false,
+              "DisplayName": "Expression",
+              "Position": {
+                "X": 3080.1289457108505,
+                "Y": 8251.4699426492134
+              }
+            }
+          ],
+          "Response": {
+            "Priority": "Normal",
+            "Hint": null,
+            "Type": null,
+            "Format": null,
+            "Text": "Tip 1:  monitor your email for system reminders, the system will remind you 15, 7, and 1 day before the account expires.\n\nTip 2:  Set up a calendar reminder to log into the system on a certain day each month.\n\nIf you have a moment, would you like to hear a password joke?",
+            "ResponseMessages": [],
+            "Children": [],
+            "Id": "a015d192-10ca-47d8-8110-1f25547e190f",
+            "IsFolded": false,
+            "DisplayName": "Response",
+            "Position": {
+              "X": 2890.1289457108505,
+              "Y": 8344.4699426492134
+            }
+          },
+          "Id": "0b76bb60-1a41-4152-8fe0-13e9cd5a56c5",
+          "IsFolded": false,
+          "DisplayName": "Intent (tip_intent)",
+          "Position": {
+            "X": 3301.5103589155915,
+            "Y": 8132.0885294444652
+          }
+        }
+      ],
+      "Events": [],
+      "Actions": [],
+      "Id": "6930b6be-bd03-49f2-83c7-814d985b6f47",
+      "IsFolded": false,
+      "DisplayName": "Dialog (info_dialog)",
+      "Position": {
+        "X": 3972.4557240145409,
+        "Y": 6895.57242573389
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.IntentNode, Syn.Bot",
+      "IntentName": "info_intent",
+      "MinScore": 0.0,
+      "IntentContexts": [
+        {
+          "ContextName": "con-wait-dun",
+          "Id": "12a1861f-1f92-433a-80b5-a38912137ecb",
+          "IsFolded": false,
+          "DisplayName": "Context",
+          "Position": {
+            "X": 2801.7825457361973,
+            "Y": 6364.81719530814
+          }
+        }
+      ],
+      "Prompts": [],
+      "AutoEntity": null,
+      "Fallback": null,
+      "Trait": null,
+      "Event": null,
+      "Action": null,
+      "Expressions": [
+        {
+          "Value": "@account-dun",
+          "ExpressionName": null,
+          "Id": "461df3f4-a06e-4a65-951d-239cdc154c19",
+          "IsFolded": false,
+          "DisplayName": "Expression",
+          "Position": {
+            "X": 2791.5752464283873,
+            "Y": 6508.4767161152986
+          }
+        }
+      ],
+      "Response": {
+        "Priority": "Normal",
+        "Hint": null,
+        "Type": null,
+        "Format": null,
+        "Text": "Thank you! I found your information. You have been deactivated by the system due to extended inactivity on 09/20/2020. Do you want me to re-activate your account?",
+        "ResponseMessages": [],
+        "Children": [],
+        "Id": "c5d49690-df6d-46b5-83c2-3da1a68d6825",
+        "IsFolded": false,
+        "DisplayName": "Response",
+        "Position": {
+          "X": 2796.7782243593538,
+          "Y": 6676.838181526532
+        }
+      },
+      "Id": "96b3179e-77bf-45ee-aa9a-ac4e0f6a5d99",
+      "IsFolded": false,
+      "DisplayName": "Intent (info_intent)",
+      "Position": {
+        "X": 3216.343231244155,
+        "Y": 6518.0322115620966
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.ResponseNode, Syn.Bot",
+      "Priority": "Normal",
+      "Hint": null,
+      "Type": null,
+      "Format": null,
+      "Text": "Thank you! I found your information. You have been deactivated by the system due to extended inactivity on 09/20/2020. Do you want me to re-activate your account?",
+      "ResponseMessages": [],
+      "Children": [],
+      "Id": "c5d49690-df6d-46b5-83c2-3da1a68d6825",
+      "IsFolded": false,
+      "DisplayName": "Response",
+      "Position": {
+        "X": 2796.7782243593538,
+        "Y": 6676.838181526532
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.ContextRemoveNode, Syn.Bot",
+      "ContextName": "con-wait-dun",
+      "Id": "3856c121-53f0-4168-974e-b35e879af43d",
+      "IsFolded": false,
+      "DisplayName": "Context Remove",
+      "Position": {
+        "X": 3035.2783459143639,
+        "Y": 7228.2470274756188
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.ExpressionNode, Syn.Bot",
+      "Value": "@account-dun",
+      "ExpressionName": null,
+      "Id": "461df3f4-a06e-4a65-951d-239cdc154c19",
+      "IsFolded": false,
+      "DisplayName": "Expression",
+      "Position": {
+        "X": 2791.5752464283873,
+        "Y": 6508.4767161152986
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.EntityGetNode, Syn.Bot",
+      "EntityName": "account-dun",
+      "EntityGetType": "Reference",
+      "EntityPropertyName": null,
+      "Id": "cc9b93c0-2aa6-4312-840e-812d10a95332",
+      "IsFolded": false,
+      "DisplayName": "Entity Get",
+      "Position": {
+        "X": 3051.151004004143,
+        "Y": 7007.08277672136
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.VariableSetNode, Syn.Bot",
+      "VariableName": "dun",
+      "VariableOrigin": "User",
+      "VariableValue": "Classic",
+      "Id": "532fe416-18c6-409f-9d1d-7678eff5ebed",
+      "IsFolded": false,
+      "DisplayName": "Variable Set",
+      "Position": {
+        "X": 3348.4237312768705,
+        "Y": 7095.2645949031776
+      }
+    },
+    {
+      "$type": "Syn.Workspace.Nodes.InputOutput.InputTextNode, Syn.Workspace",
+      "OutputValue": "Thank you! I found your information. You have been deactivated by the system due to extended inactivity on 09/20/2020. Do you want me to re-activate your account?",
+      "Id": "57794faf-1f92-4dac-bbbf-05c114b11c3f",
+      "IsFolded": false,
+      "DisplayName": "Input Text",
+      "Position": {
+        "X": 1760.2911532277772,
+        "Y": 6631.6019796398341
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.ContextNode, Syn.Bot",
+      "ContextName": "con-wait-dun",
+      "Id": "12a1861f-1f92-433a-80b5-a38912137ecb",
+      "IsFolded": false,
+      "DisplayName": "Context",
+      "Position": {
+        "X": 2801.7825457361973,
+        "Y": 6364.81719530814
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.ContextAddNode, Syn.Bot",
+      "ContextName": "con-wait-confirm",
+      "Lifespan": 1,
+      "Id": "563c1f5b-9ccd-4f51-9786-aa93d526d846",
+      "IsFolded": false,
+      "DisplayName": "Context Add",
+      "Position": {
+        "X": 3055.66064845563,
+        "Y": 6801.1331182053382
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.IntentNode, Syn.Bot",
+      "IntentName": "end_intent",
+      "MinScore": 0.0,
+      "IntentContexts": [
+        {
+          "ContextName": "con-wait-confirm",
+          "Id": "7236ea2a-3761-415f-aef3-6c01de5d5b6c",
+          "IsFolded": false,
+          "DisplayName": "Context",
+          "Position": {
+            "X": 3013.9073697698691,
+            "Y": 7436.9756474507194
+          }
+        }
+      ],
+      "Prompts": [],
+      "AutoEntity": null,
+      "Fallback": null,
+      "Trait": null,
+      "Event": null,
+      "Action": null,
+      "Expressions": [
+        {
+          "Value": "Yes",
+          "ExpressionName": null,
+          "Id": "30484848-3b6c-4ff5-94d2-d9c9ec67b7d0",
+          "IsFolded": false,
+          "DisplayName": "Expression",
+          "Position": {
+            "X": 3020.7995044171516,
+            "Y": 7596.4798221386482
+          }
+        }
+      ],
+      "Response": {
+        "Priority": "Normal",
+        "Hint": null,
+        "Type": null,
+        "Format": null,
+        "Text": "Thank you! Your account has been reactivated. Your username is the same as your email address. \r\nI see that you have had your account lapse three times in the last six months! \r\nOh no! Please remember your account will be deactivated if you don’t log to your account every 30 days. \r\nMay I suggest a few tips for keeping your account active?",
+        "ResponseMessages": [],
+        "Children": [],
+        "Id": "e8dd67fb-a13b-4d5e-911d-0c9c7c3945cc",
+        "IsFolded": false,
+        "DisplayName": "Response",
+        "Position": {
+          "X": 3023.1804567981044,
+          "Y": 7777.82181348064
+        }
+      },
+      "Id": "9646d15b-44ec-4da5-a9a7-d6627c00f004",
+      "IsFolded": false,
+      "DisplayName": "Intent (end_intent)",
+      "Position": {
+        "X": 3289.7435668906255,
+        "Y": 7540.2114238702516
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.ResponseNode, Syn.Bot",
+      "Priority": "Normal",
+      "Hint": null,
+      "Type": null,
+      "Format": null,
+      "Text": "Thank you! Your account has been reactivated. Your username is the same as your email address. \r\nI see that you have had your account lapse three times in the last six months! \r\nOh no! Please remember your account will be deactivated if you don’t log to your account every 30 days. \r\nMay I suggest a few tips for keeping your account active?",
+      "ResponseMessages": [],
+      "Children": [],
+      "Id": "e8dd67fb-a13b-4d5e-911d-0c9c7c3945cc",
+      "IsFolded": false,
+      "DisplayName": "Response",
+      "Position": {
+        "X": 3023.1804567981044,
+        "Y": 7777.82181348064
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.ExpressionNode, Syn.Bot",
+      "Value": "Yes",
+      "ExpressionName": null,
+      "Id": "30484848-3b6c-4ff5-94d2-d9c9ec67b7d0",
+      "IsFolded": false,
+      "DisplayName": "Expression",
+      "Position": {
+        "X": 3020.7995044171516,
+        "Y": 7596.4798221386482
+      }
+    },
+    {
+      "$type": "Syn.Workspace.Nodes.InputOutput.InputTextNode, Syn.Workspace",
+      "OutputValue": "Thank you! Your account has been reactivated. Your username is the same as your email address. \r\nI see that you have had your account lapse three times in the last six months! \r\nOh no! Please remember your account will be deactivated if you don’t log to your account every 30 days. \r\nMay I suggest a few tips for keeping your account active?",
+      "Id": "ba0fd4d8-2e4f-43a2-ae8b-191b7394cf6f",
+      "IsFolded": false,
+      "DisplayName": "Input Text",
+      "Position": {
+        "X": 2117.7661710838192,
+        "Y": 7792.832203091044
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.ContextNode, Syn.Bot",
+      "ContextName": "con-wait-confirm",
+      "Id": "7236ea2a-3761-415f-aef3-6c01de5d5b6c",
+      "IsFolded": false,
+      "DisplayName": "Context",
+      "Position": {
+        "X": 3013.9073697698691,
+        "Y": 7436.9756474507194
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.UserSettingsNode, Syn.Bot",
+      "Variables": [
+        {
+          "VariableName": "top2",
+          "VariableValue": "Not Specified",
+          "ValueCollection": [],
+          "Id": "e814bb63-9812-4346-b31a-1678e218bcfd",
+          "IsFolded": false,
+          "DisplayName": "Settings Variable",
+          "Position": {
+            "X": 4555.4839942118178,
+            "Y": 3936.023139861989
+          }
+        }
+      ],
+      "Id": "5ca0852b-2653-4963-a45c-51a89e116736",
+      "IsFolded": false,
+      "DisplayName": "User Settings",
+      "Position": {
+        "X": 4776.9720894499133,
+        "Y": 3852.4026916827174
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.SettingsVariableNode, Syn.Bot",
+      "VariableName": "top2",
+      "VariableValue": "Not Specified",
+      "ValueCollection": [],
+      "Id": "e814bb63-9812-4346-b31a-1678e218bcfd",
+      "IsFolded": false,
+      "DisplayName": "Settings Variable",
+      "Position": {
+        "X": 4555.4839942118178,
+        "Y": 3936.023139861989
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.IntentNode, Syn.Bot",
+      "IntentName": "account_fallback",
+      "MinScore": 0.0,
+      "IntentContexts": [],
+      "Prompts": [],
+      "AutoEntity": null,
+      "Fallback": {
+        "ContextName": "con-wait-email",
+        "Id": "1d61171d-96aa-4054-abdc-ec17b1d7eec4",
+        "IsFolded": false,
+        "DisplayName": "Fallback",
+        "Position": {
+          "X": 3597.5958607955527,
+          "Y": 2227.5759440421944
+        }
+      },
+      "Trait": null,
+      "Event": null,
+      "Action": null,
+      "Expressions": [],
+      "Response": {
+        "Priority": "Normal",
+        "Hint": "Account Email Address",
+        "Type": null,
+        "Format": null,
+        "Text": "I can't recognize your command. Please type in again.",
+        "ResponseMessages": [],
+        "Children": [],
+        "Id": "8d36d063-8323-47e3-994c-eb0ef85d83c2",
+        "IsFolded": false,
+        "DisplayName": "Response",
+        "Position": {
+          "X": 3550.9291941288852,
+          "Y": 2386.4648329310835
+        }
+      },
+      "Id": "8890f6cb-5694-4542-83d5-47e188340385",
+      "IsFolded": false,
+      "DisplayName": "Intent (account_fallback)",
+      "Position": {
+        "X": 3936.4847496844409,
+        "Y": 2292.0203884866387
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.FallbackNode, Syn.Bot",
+      "ContextName": "con-wait-email",
+      "Id": "1d61171d-96aa-4054-abdc-ec17b1d7eec4",
+      "IsFolded": false,
+      "DisplayName": "Fallback",
+      "Position": {
+        "X": 3597.5958607955527,
+        "Y": 2227.5759440421944
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.ResponseNode, Syn.Bot",
+      "Priority": "Normal",
+      "Hint": "Account Email Address",
+      "Type": null,
+      "Format": null,
+      "Text": "I can't recognize your command. Please type in again.",
+      "ResponseMessages": [],
+      "Children": [],
+      "Id": "8d36d063-8323-47e3-994c-eb0ef85d83c2",
+      "IsFolded": false,
+      "DisplayName": "Response",
+      "Position": {
+        "X": 3550.9291941288852,
+        "Y": 2386.4648329310835
+      }
+    },
+    {
+      "$type": "Syn.Workspace.Nodes.InputOutput.InputTextNode, Syn.Workspace",
+      "OutputValue": "I can't recognize your command. Please type in again.",
+      "Id": "b3f38a1f-7443-4f54-bc3b-114d9a6088ac",
+      "IsFolded": false,
+      "DisplayName": "Input Text",
+      "Position": {
+        "X": 3006.48474968444,
+        "Y": 2439.7981662644161
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.EntryNode, Syn.Bot",
+      "EntryValue": "reactivate my account",
+      "Synonyms": [],
+      "Id": "ee7b06a2-9062-427b-9312-421a299ab209",
+      "IsFolded": false,
+      "DisplayName": "Entry",
+      "Position": {
+        "X": 3744.5425975256749,
+        "Y": 7554.2737852538994
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.IntentNode, Syn.Bot",
+      "IntentName": "greet_intent",
+      "MinScore": 0.0,
+      "IntentContexts": [],
+      "Prompts": [],
+      "AutoEntity": null,
+      "Fallback": null,
+      "Trait": null,
+      "Event": null,
+      "Action": null,
+      "Expressions": [
+        {
+          "Value": "Hi",
+          "ExpressionName": null,
+          "Id": "5c8df68b-0b76-4696-b252-d5701f67b3c0",
+          "IsFolded": false,
+          "DisplayName": "Expression",
+          "Position": {
+            "X": 3875.0824649633892,
+            "Y": 1351.6748557062292
+          }
+        },
+        {
+          "Value": "Hello",
+          "ExpressionName": null,
+          "Id": "b87edfb9-c30b-4e94-8fe0-aacad0679d48",
+          "IsFolded": false,
+          "DisplayName": "Expression",
+          "Position": {
+            "X": 3691.5530531986833,
+            "Y": 1352.8513262944646
+          }
+        },
+        {
+          "Value": "Hey",
+          "ExpressionName": null,
+          "Id": "5aa852d9-bbff-4a32-be90-235fe6e514b6",
+          "IsFolded": false,
+          "DisplayName": "Expression",
+          "Position": {
+            "X": 3524.494229669272,
+            "Y": 1357.5572086474056
+          }
+        }
+      ],
+      "Response": {
+        "Priority": "Normal",
+        "Hint": null,
+        "Type": null,
+        "Format": null,
+        "Text": "This is Sally. How can I help you?",
+        "ResponseMessages": [],
+        "Children": [],
+        "Id": "044e56ab-93be-416e-bb77-e4312ae4d961",
+        "IsFolded": false,
+        "DisplayName": "Response",
+        "Position": {
+          "X": 3299.78834731633,
+          "Y": 1438.7336792356414
+        }
+      },
+      "Id": "cc4c446a-1eaf-415d-a410-a3306a448b3f",
+      "IsFolded": false,
+      "DisplayName": "Intent (greet_intent)",
+      "Position": {
+        "X": 4085.6707002575067,
+        "Y": 1311.6748557062292
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.ExpressionNode, Syn.Bot",
+      "Value": "Hi",
+      "ExpressionName": null,
+      "Id": "5c8df68b-0b76-4696-b252-d5701f67b3c0",
+      "IsFolded": false,
+      "DisplayName": "Expression",
+      "Position": {
+        "X": 3875.0824649633892,
+        "Y": 1351.6748557062292
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.ExpressionNode, Syn.Bot",
+      "Value": "Hello",
+      "ExpressionName": null,
+      "Id": "b87edfb9-c30b-4e94-8fe0-aacad0679d48",
+      "IsFolded": false,
+      "DisplayName": "Expression",
+      "Position": {
+        "X": 3691.5530531986833,
+        "Y": 1352.8513262944646
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.ExpressionNode, Syn.Bot",
+      "Value": "Hey",
+      "ExpressionName": null,
+      "Id": "5aa852d9-bbff-4a32-be90-235fe6e514b6",
+      "IsFolded": false,
+      "DisplayName": "Expression",
+      "Position": {
+        "X": 3524.494229669272,
+        "Y": 1357.5572086474056
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.ResponseNode, Syn.Bot",
+      "Priority": "Normal",
+      "Hint": null,
+      "Type": null,
+      "Format": null,
+      "Text": "This is Sally. How can I help you?",
+      "ResponseMessages": [],
+      "Children": [],
+      "Id": "044e56ab-93be-416e-bb77-e4312ae4d961",
+      "IsFolded": false,
+      "DisplayName": "Response",
+      "Position": {
+        "X": 3299.78834731633,
+        "Y": 1438.7336792356414
+      }
+    },
+    {
+      "$type": "Syn.Workspace.Nodes.InputOutput.InputTextNode, Syn.Workspace",
+      "OutputValue": "This is Sally. How can I help you?",
+      "Id": "701d4c1e-5699-4c99-b123-dc61f5213cd0",
+      "IsFolded": false,
+      "DisplayName": "Input Text",
+      "Position": {
+        "X": 3001.5222048158116,
+        "Y": 1443.7668822186924
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.EntryNode, Syn.Bot",
+      "EntryValue": "078318820",
+      "Synonyms": [],
+      "Id": "35372d08-a9c0-4251-bbcf-cc5e3c6789f4",
+      "IsFolded": false,
+      "DisplayName": "Entry",
+      "Position": {
+        "X": 3320.0884776666562,
+        "Y": 8548.9328694838387
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.ContextAddNode, Syn.Bot",
+      "ContextName": "con-wait-tip",
+      "Lifespan": 5,
+      "Id": "837a017e-21e6-49aa-9ce0-a67ead3013e9",
+      "IsFolded": false,
+      "DisplayName": "Context Add",
+      "Position": {
+        "X": 3237.8602746529286,
+        "Y": 7915.1228459670565
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.IntentNode, Syn.Bot",
+      "IntentName": "tip_intent",
+      "MinScore": 0.0,
+      "IntentContexts": [
+        {
+          "ContextName": "con-wait-tip",
+          "Id": "3c5a0636-52a3-4f7f-b5d5-dfc0e1294627",
+          "IsFolded": false,
+          "DisplayName": "Context",
+          "Position": {
+            "X": 3041.1289457108505,
+            "Y": 8137.4699426492134
+          }
+        }
+      ],
+      "Prompts": [],
+      "AutoEntity": null,
+      "Fallback": null,
+      "Trait": null,
+      "Event": null,
+      "Action": null,
+      "Expressions": [
+        {
+          "Value": "Yes",
+          "ExpressionName": null,
+          "Id": "0e0b5a46-fa5d-485e-bd70-bdc91a825d07",
+          "IsFolded": false,
+          "DisplayName": "Expression",
+          "Position": {
+            "X": 3080.1289457108505,
+            "Y": 8251.4699426492134
+          }
+        }
+      ],
+      "Response": {
+        "Priority": "Normal",
+        "Hint": null,
+        "Type": null,
+        "Format": null,
+        "Text": "Tip 1:  monitor your email for system reminders, the system will remind you 15, 7, and 1 day before the account expires.\n\nTip 2:  Set up a calendar reminder to log into the system on a certain day each month.\n\nIf you have a moment, would you like to hear a password joke?",
+        "ResponseMessages": [],
+        "Children": [],
+        "Id": "a015d192-10ca-47d8-8110-1f25547e190f",
+        "IsFolded": false,
+        "DisplayName": "Response",
+        "Position": {
+          "X": 2890.1289457108505,
+          "Y": 8344.4699426492134
+        }
+      },
+      "Id": "0b76bb60-1a41-4152-8fe0-13e9cd5a56c5",
+      "IsFolded": false,
+      "DisplayName": "Intent (tip_intent)",
+      "Position": {
+        "X": 3301.5103589155915,
+        "Y": 8132.0885294444652
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.ContextNode, Syn.Bot",
+      "ContextName": "con-wait-tip",
+      "Id": "3c5a0636-52a3-4f7f-b5d5-dfc0e1294627",
+      "IsFolded": false,
+      "DisplayName": "Context",
+      "Position": {
+        "X": 3041.1289457108505,
+        "Y": 8137.4699426492134
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.ResponseNode, Syn.Bot",
+      "Priority": "Normal",
+      "Hint": null,
+      "Type": null,
+      "Format": null,
+      "Text": "Tip 1:  monitor your email for system reminders, the system will remind you 15, 7, and 1 day before the account expires.\n\nTip 2:  Set up a calendar reminder to log into the system on a certain day each month.\n\nIf you have a moment, would you like to hear a password joke?",
+      "ResponseMessages": [],
+      "Children": [],
+      "Id": "a015d192-10ca-47d8-8110-1f25547e190f",
+      "IsFolded": false,
+      "DisplayName": "Response",
+      "Position": {
+        "X": 2890.1289457108505,
+        "Y": 8344.4699426492134
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.ExpressionNode, Syn.Bot",
+      "Value": "Yes",
+      "ExpressionName": null,
+      "Id": "0e0b5a46-fa5d-485e-bd70-bdc91a825d07",
+      "IsFolded": false,
+      "DisplayName": "Expression",
+      "Position": {
+        "X": 3080.1289457108505,
+        "Y": 8251.4699426492134
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.ContextAddNode, Syn.Bot",
+      "ContextName": "con-wait-joke",
+      "Lifespan": 5,
+      "Id": "5c3cf3bd-2bdb-43ad-a98b-1f6a45f935f6",
+      "IsFolded": false,
+      "DisplayName": "Context Add",
+      "Position": {
+        "X": 3073.5703784731886,
+        "Y": 8449.5870771245227
+      }
+    },
+    {
+      "$type": "Syn.Workspace.Nodes.InputOutput.InputTextNode, Syn.Workspace",
+      "OutputValue": "Tip 1:  monitor your email for system reminders, the system will remind you 15, 7, and 1 day before the account expires.\n\nTip 2:  Set up a calendar reminder to log into the system on a certain day each month.\n\nIf you have a moment, would you like to hear a password joke?",
+      "Id": "bae3f608-4890-4f5e-a678-c633607dc3b0",
+      "IsFolded": false,
+      "DisplayName": "Input Text",
+      "Position": {
+        "X": 2083.5703784731886,
+        "Y": 8201.5870771245227
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.DialogNode, Syn.Bot",
+      "DialogName": "joke_dialog",
+      "IntentAlias": null,
+      "Domain": null,
+      "Intents": [
+        {
+          "IntentName": "joke_intent",
+          "MinScore": 0.0,
+          "IntentContexts": [
+            {
+              "ContextName": "con-wait-joke",
+              "Id": "ddd98197-a3a1-45cf-a12c-7a2aaa1d1189",
+              "IsFolded": false,
+              "DisplayName": "Context",
+              "Position": {
+                "X": 5302.477444496908,
+                "Y": 3929.9772042489112
+              }
+            }
+          ],
+          "Prompts": [],
+          "AutoEntity": null,
+          "Fallback": null,
+          "Trait": null,
+          "Event": null,
+          "Action": null,
+          "Expressions": [
+            {
+              "Value": "sure",
+              "ExpressionName": null,
+              "Id": "58e0208e-650f-4540-beea-d2ba96a48ef3",
+              "IsFolded": false,
+              "DisplayName": "Expression",
+              "Position": {
+                "X": 5214.477444496908,
+                "Y": 4054.9772042489112
+              }
+            }
+          ],
+          "Response": {
+            "Priority": "Normal",
+            "Hint": null,
+            "Type": null,
+            "Format": null,
+            "Text": "What is Forrest Gump’s password?\n\n1Forrest1\n\nHope that puts a smile on your face! Have a good day!",
+            "ResponseMessages": [],
+            "Children": [],
+            "Id": "2e1fd77a-a376-4123-875d-ddad47dc40b3",
+            "IsFolded": false,
+            "DisplayName": "Response",
+            "Position": {
+              "X": 5448.477444496908,
+              "Y": 4382.9772042489112
+            }
+          },
+          "Id": "824dc509-9bf0-45df-8bf0-77961ebcaf51",
+          "IsFolded": false,
+          "DisplayName": "Intent (joke_intent)",
+          "Position": {
+            "X": 5521.477444496908,
+            "Y": 4042.9772042489112
+          }
+        }
+      ],
+      "Events": [],
+      "Actions": [],
+      "Id": "991df4bd-7815-40eb-b2fb-cd47235d614a",
+      "IsFolded": false,
+      "DisplayName": "Dialog (joke_dialog)",
+      "Position": {
+        "X": 5731.36031002157,
+        "Y": 3957.1843680606235
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.IntentNode, Syn.Bot",
+      "IntentName": "joke_intent",
+      "MinScore": 0.0,
+      "IntentContexts": [
+        {
+          "ContextName": "con-wait-joke",
+          "Id": "ddd98197-a3a1-45cf-a12c-7a2aaa1d1189",
+          "IsFolded": false,
+          "DisplayName": "Context",
+          "Position": {
+            "X": 5302.477444496908,
+            "Y": 3929.9772042489112
+          }
+        }
+      ],
+      "Prompts": [],
+      "AutoEntity": null,
+      "Fallback": null,
+      "Trait": null,
+      "Event": null,
+      "Action": null,
+      "Expressions": [
+        {
+          "Value": "sure",
+          "ExpressionName": null,
+          "Id": "58e0208e-650f-4540-beea-d2ba96a48ef3",
+          "IsFolded": false,
+          "DisplayName": "Expression",
+          "Position": {
+            "X": 5214.477444496908,
+            "Y": 4054.9772042489112
+          }
+        }
+      ],
+      "Response": {
+        "Priority": "Normal",
+        "Hint": null,
+        "Type": null,
+        "Format": null,
+        "Text": "What is Forrest Gump’s password?\n\n1Forrest1\n\nHope that puts a smile on your face! Have a good day!",
+        "ResponseMessages": [],
+        "Children": [],
+        "Id": "2e1fd77a-a376-4123-875d-ddad47dc40b3",
+        "IsFolded": false,
+        "DisplayName": "Response",
+        "Position": {
+          "X": 5448.477444496908,
+          "Y": 4382.9772042489112
+        }
+      },
+      "Id": "824dc509-9bf0-45df-8bf0-77961ebcaf51",
+      "IsFolded": false,
+      "DisplayName": "Intent (joke_intent)",
+      "Position": {
+        "X": 5521.477444496908,
+        "Y": 4042.9772042489112
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.ContextNode, Syn.Bot",
+      "ContextName": "con-wait-joke",
+      "Id": "ddd98197-a3a1-45cf-a12c-7a2aaa1d1189",
+      "IsFolded": false,
+      "DisplayName": "Context",
+      "Position": {
+        "X": 5302.477444496908,
+        "Y": 3929.9772042489112
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.ExpressionNode, Syn.Bot",
+      "Value": "sure",
+      "ExpressionName": null,
+      "Id": "58e0208e-650f-4540-beea-d2ba96a48ef3",
+      "IsFolded": false,
+      "DisplayName": "Expression",
+      "Position": {
+        "X": 5214.477444496908,
+        "Y": 4054.9772042489112
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.ResponseNode, Syn.Bot",
+      "Priority": "Normal",
+      "Hint": null,
+      "Type": null,
+      "Format": null,
+      "Text": "What is Forrest Gump’s password?\n\n1Forrest1\n\nHope that puts a smile on your face! Have a good day!",
+      "ResponseMessages": [],
+      "Children": [],
+      "Id": "2e1fd77a-a376-4123-875d-ddad47dc40b3",
+      "IsFolded": false,
+      "DisplayName": "Response",
+      "Position": {
+        "X": 5448.477444496908,
+        "Y": 4382.9772042489112
+      }
+    },
+    {
+      "$type": "Syn.Workspace.Nodes.InputOutput.InputTextNode, Syn.Workspace",
+      "OutputValue": "What is Forrest Gump’s password?\n\n1Forrest1\n\nHope that puts a smile on your face! Have a good day!",
+      "Id": "54771cce-f70c-4be6-8bad-5d8c49ef8c39",
+      "IsFolded": false,
+      "DisplayName": "Input Text",
+      "Position": {
+        "X": 5036.477444496908,
+        "Y": 4575.9772042489112
+      }
+    }
+  ],
+  "Connections": [
+    {
+      "FromNodeId": "d9ca4c49-97cd-4b12-b0d0-a4db6b995233",
+      "FromPortName": "Output",
+      "ToNodeId": "7dd437a3-c8a5-4d46-b6f5-6272149b6ec1",
+      "ToPortName": "OscovaBotNode"
+    },
+    {
+      "FromNodeId": "6f542b44-e93a-4a99-a6f3-58434073d7d2",
+      "FromPortName": "Output",
+      "ToNodeId": "d9ca4c49-97cd-4b12-b0d0-a4db6b995233",
+      "ToPortName": "Dialogs"
+    },
+    {
+      "FromNodeId": "1ec8fd73-0a98-4a67-869b-089b1baaf601",
+      "FromPortName": "Output",
+      "ToNodeId": "d9ca4c49-97cd-4b12-b0d0-a4db6b995233",
+      "ToPortName": "Dialogs"
+    },
+    {
+      "FromNodeId": "314f315c-5521-4166-9e8e-a3be5b512a96",
+      "FromPortName": "Output",
+      "ToNodeId": "d9ca4c49-97cd-4b12-b0d0-a4db6b995233",
+      "ToPortName": "Dialogs"
+    },
+    {
+      "FromNodeId": "6930b6be-bd03-49f2-83c7-814d985b6f47",
+      "FromPortName": "Output",
+      "ToNodeId": "d9ca4c49-97cd-4b12-b0d0-a4db6b995233",
+      "ToPortName": "Dialogs"
+    },
+    {
+      "FromNodeId": "991df4bd-7815-40eb-b2fb-cd47235d614a",
+      "FromPortName": "Output",
+      "ToNodeId": "d9ca4c49-97cd-4b12-b0d0-a4db6b995233",
+      "ToPortName": "Dialogs"
+    },
+    {
+      "FromNodeId": "1f91b1e5-72db-4152-83a5-8085b9ede402",
+      "FromPortName": "Output",
+      "ToNodeId": "d9ca4c49-97cd-4b12-b0d0-a4db6b995233",
+      "ToPortName": "Entities"
+    },
+    {
+      "FromNodeId": "7fdbced3-50d1-4045-91c1-53f866e96555",
+      "FromPortName": "Output",
+      "ToNodeId": "d9ca4c49-97cd-4b12-b0d0-a4db6b995233",
+      "ToPortName": "Entities"
+    },
+    {
+      "FromNodeId": "9f09ed1d-dafd-4bc1-9cc8-df125c1409ac",
+      "FromPortName": "Output",
+      "ToNodeId": "d9ca4c49-97cd-4b12-b0d0-a4db6b995233",
+      "ToPortName": "Entities"
+    },
+    {
+      "FromNodeId": "c356d8e6-c751-427d-a00f-5f0c8ec02e1c",
+      "FromPortName": "Output",
+      "ToNodeId": "d9ca4c49-97cd-4b12-b0d0-a4db6b995233",
+      "ToPortName": "Entities"
+    },
+    {
+      "FromNodeId": "5ca0852b-2653-4963-a45c-51a89e116736",
+      "FromPortName": "Output",
+      "ToNodeId": "d9ca4c49-97cd-4b12-b0d0-a4db6b995233",
+      "ToPortName": "UserSettings"
+    },
+    {
+      "FromNodeId": "be64bc5b-1115-41e3-a743-f9363de5b56e",
+      "FromPortName": "Output",
+      "ToNodeId": "d3053edb-50a9-41f1-bc81-b89ab78ade5b",
+      "ToPortName": "Expressions"
+    },
+    {
+      "FromNodeId": "8a6c5176-8250-440d-b4d4-01f2d6cdc212",
+      "FromPortName": "Output",
+      "ToNodeId": "d3053edb-50a9-41f1-bc81-b89ab78ade5b",
+      "ToPortName": "Response"
+    },
+    {
+      "FromNodeId": "d3053edb-50a9-41f1-bc81-b89ab78ade5b",
+      "FromPortName": "Output",
+      "ToNodeId": "6f542b44-e93a-4a99-a6f3-58434073d7d2",
+      "ToPortName": "Intents"
+    },
+    {
+      "FromNodeId": "8890f6cb-5694-4542-83d5-47e188340385",
+      "FromPortName": "Output",
+      "ToNodeId": "6f542b44-e93a-4a99-a6f3-58434073d7d2",
+      "ToPortName": "Intents"
+    },
+    {
+      "FromNodeId": "cc4c446a-1eaf-415d-a410-a3306a448b3f",
+      "FromPortName": "Output",
+      "ToNodeId": "6f542b44-e93a-4a99-a6f3-58434073d7d2",
+      "ToPortName": "Intents"
+    },
+    {
+      "FromNodeId": "a0e087dc-4f66-4b55-bb6c-c4fd679a9cad",
+      "FromPortName": "OutputValue",
+      "ToNodeId": "8a6c5176-8250-440d-b4d4-01f2d6cdc212",
+      "ToPortName": "Text"
+    },
+    {
+      "FromNodeId": "26739fac-9d49-4c20-a7da-0a0546d86e81",
+      "FromPortName": "Output",
+      "ToNodeId": "1f91b1e5-72db-4152-83a5-8085b9ede402",
+      "ToPortName": "Entries"
+    },
+    {
+      "FromNodeId": "ee7b06a2-9062-427b-9312-421a299ab209",
+      "FromPortName": "Output",
+      "ToNodeId": "1f91b1e5-72db-4152-83a5-8085b9ede402",
+      "ToPortName": "Entries"
+    },
+    {
+      "FromNodeId": "e8cb9d2e-238e-451f-9365-1ff61658592e",
+      "FromPortName": "Output",
+      "ToNodeId": "7fdbced3-50d1-4045-91c1-53f866e96555",
+      "ToPortName": "Entries"
+    },
+    {
+      "FromNodeId": "2331f5f7-5c7b-4d4d-95e0-a6203c79a69d",
+      "FromPortName": "Output",
+      "ToNodeId": "7fdbced3-50d1-4045-91c1-53f866e96555",
+      "ToPortName": "Entries"
+    },
+    {
+      "FromNodeId": "538ee802-0c8b-460b-9ec4-7d16d286919b",
+      "FromPortName": "Output",
+      "ToNodeId": "7fdbced3-50d1-4045-91c1-53f866e96555",
+      "ToPortName": "Entries"
+    },
+    {
+      "FromNodeId": "b54d73d4-d9a8-44bb-8e3d-fe464df1924f",
+      "FromPortName": "Output",
+      "ToNodeId": "7fdbced3-50d1-4045-91c1-53f866e96555",
+      "ToPortName": "Entries"
+    },
+    {
+      "FromNodeId": "8a6c5176-8250-440d-b4d4-01f2d6cdc212",
+      "FromPortName": "TriggerFlow",
+      "ToNodeId": "91acbf6f-9a72-4113-9f0e-8cdeab017227",
+      "ToPortName": "OnNodeTriggered"
+    },
+    {
+      "FromNodeId": "b5cd9384-2fcf-41f1-a514-26be6bf8d977",
+      "FromPortName": "Output",
+      "ToNodeId": "1ec8fd73-0a98-4a67-869b-089b1baaf601",
+      "ToPortName": "Intents"
+    },
+    {
+      "FromNodeId": "1c9c3207-c2f8-4b02-aded-dd797e803625",
+      "FromPortName": "Output",
+      "ToNodeId": "b5cd9384-2fcf-41f1-a514-26be6bf8d977",
+      "ToPortName": "IntentContexts"
+    },
+    {
+      "FromNodeId": "ff48d893-845f-420a-a849-51b1b51cb990",
+      "FromPortName": "Output",
+      "ToNodeId": "b5cd9384-2fcf-41f1-a514-26be6bf8d977",
+      "ToPortName": "Expressions"
+    },
+    {
+      "FromNodeId": "5ba15bbc-f9f0-4c62-8813-0e6d7618d8f4",
+      "FromPortName": "Output",
+      "ToNodeId": "b5cd9384-2fcf-41f1-a514-26be6bf8d977",
+      "ToPortName": "Response"
+    },
+    {
+      "FromNodeId": "10d64e07-8345-42d3-8ce5-8f00eefb75d6",
+      "FromPortName": "OutputValue",
+      "ToNodeId": "5ba15bbc-f9f0-4c62-8813-0e6d7618d8f4",
+      "ToPortName": "Text"
+    },
+    {
+      "FromNodeId": "12a1990e-9c65-4e3c-a26c-112e5dc0e6f7",
+      "FromPortName": "Output",
+      "ToNodeId": "9f09ed1d-dafd-4bc1-9cc8-df125c1409ac",
+      "ToPortName": "Entries"
+    },
+    {
+      "FromNodeId": "54e65406-6076-4ec9-8471-701e27f869a9",
+      "FromPortName": "Output",
+      "ToNodeId": "9f09ed1d-dafd-4bc1-9cc8-df125c1409ac",
+      "ToPortName": "Entries"
+    },
+    {
+      "FromNodeId": "f7a6eca1-a3a5-4ddf-8fb6-defe0aee46ef",
+      "FromPortName": "Output",
+      "ToNodeId": "9f09ed1d-dafd-4bc1-9cc8-df125c1409ac",
+      "ToPortName": "Entries"
+    },
+    {
+      "FromNodeId": "35372d08-a9c0-4251-bbcf-cc5e3c6789f4",
+      "FromPortName": "Output",
+      "ToNodeId": "9f09ed1d-dafd-4bc1-9cc8-df125c1409ac",
+      "ToPortName": "Entries"
+    },
+    {
+      "FromNodeId": "5ba15bbc-f9f0-4c62-8813-0e6d7618d8f4",
+      "FromPortName": "TriggerFlow",
+      "ToNodeId": "e2978536-456e-4378-b0e7-ac7ef8a3b13d",
+      "ToPortName": "OnNodeTriggered"
+    },
+    {
+      "FromNodeId": "e2978536-456e-4378-b0e7-ac7ef8a3b13d",
+      "FromPortName": "Output",
+      "ToNodeId": "3da39046-f345-44ce-81a1-1fc54e1a3be2",
+      "ToPortName": "VariableValue"
+    },
+    {
+      "FromNodeId": "5a9c7fed-a479-4531-be73-7b73a48a9720",
+      "FromPortName": "Output",
+      "ToNodeId": "314f315c-5521-4166-9e8e-a3be5b512a96",
+      "ToPortName": "Intents"
+    },
+    {
+      "FromNodeId": "2b52a8f7-16cf-4092-a632-eb9d9e1d7c17",
+      "FromPortName": "Output",
+      "ToNodeId": "314f315c-5521-4166-9e8e-a3be5b512a96",
+      "ToPortName": "Intents"
+    },
+    {
+      "FromNodeId": "fc68835b-593b-49cd-b8ff-9735b937cbcf",
+      "FromPortName": "Output",
+      "ToNodeId": "314f315c-5521-4166-9e8e-a3be5b512a96",
+      "ToPortName": "Intents"
+    },
+    {
+      "FromNodeId": "8cb1f353-c350-44df-8a09-00fc8d26b402",
+      "FromPortName": "Output",
+      "ToNodeId": "314f315c-5521-4166-9e8e-a3be5b512a96",
+      "ToPortName": "Intents"
+    },
+    {
+      "FromNodeId": "3f0029e4-18a2-4f30-9532-df376dbe2fc5",
+      "FromPortName": "Output",
+      "ToNodeId": "5a9c7fed-a479-4531-be73-7b73a48a9720",
+      "ToPortName": "IntentContexts"
+    },
+    {
+      "FromNodeId": "1630e6bb-e6ae-48cb-b782-77b7de16c816",
+      "FromPortName": "Output",
+      "ToNodeId": "5a9c7fed-a479-4531-be73-7b73a48a9720",
+      "ToPortName": "Expressions"
+    },
+    {
+      "FromNodeId": "06d5d8a3-b9af-486e-9f85-27c8d4803280",
+      "FromPortName": "Output",
+      "ToNodeId": "5a9c7fed-a479-4531-be73-7b73a48a9720",
+      "ToPortName": "Response"
+    },
+    {
+      "FromNodeId": "cf65839a-140e-449a-b15e-550d714d7dba",
+      "FromPortName": "OutputValue",
+      "ToNodeId": "06d5d8a3-b9af-486e-9f85-27c8d4803280",
+      "ToPortName": "Text"
+    },
+    {
+      "FromNodeId": "d472728c-6c84-4185-a62c-16362547ef66",
+      "FromPortName": "Output",
+      "ToNodeId": "2b52a8f7-16cf-4092-a632-eb9d9e1d7c17",
+      "ToPortName": "IntentContexts"
+    },
+    {
+      "FromNodeId": "64c1053c-1dff-444f-994b-db52aa40c68c",
+      "FromPortName": "Output",
+      "ToNodeId": "2b52a8f7-16cf-4092-a632-eb9d9e1d7c17",
+      "ToPortName": "Expressions"
+    },
+    {
+      "FromNodeId": "cabb8a0a-4a95-48ec-8f72-ad3a8e57bdbd",
+      "FromPortName": "Output",
+      "ToNodeId": "2b52a8f7-16cf-4092-a632-eb9d9e1d7c17",
+      "ToPortName": "Response"
+    },
+    {
+      "FromNodeId": "06d5d8a3-b9af-486e-9f85-27c8d4803280",
+      "FromPortName": "TriggerFlow",
+      "ToNodeId": "0f94afae-62e5-403c-8bbb-6f8db640df56",
+      "ToPortName": "OnNodeTriggered"
+    },
+    {
+      "FromNodeId": "5ba15bbc-f9f0-4c62-8813-0e6d7618d8f4",
+      "FromPortName": "TriggerFlow",
+      "ToNodeId": "6dcd424f-7b5c-431f-8441-3970067b5e53",
+      "ToPortName": "OnNodeTriggered"
+    },
+    {
+      "FromNodeId": "06d5d8a3-b9af-486e-9f85-27c8d4803280",
+      "FromPortName": "TriggerFlow",
+      "ToNodeId": "9ccd00b1-d3ed-47ff-9d3b-e5782686bea9",
+      "ToPortName": "OnNodeTriggered"
+    },
+    {
+      "FromNodeId": "06d5d8a3-b9af-486e-9f85-27c8d4803280",
+      "FromPortName": "TriggerFlow",
+      "ToNodeId": "4b8da747-f3cf-4616-88c2-5fff017838c1",
+      "ToPortName": "OnNodeTriggered"
+    },
+    {
+      "FromNodeId": "4b8da747-f3cf-4616-88c2-5fff017838c1",
+      "FromPortName": "Output",
+      "ToNodeId": "eb31bb63-5069-4ee3-a610-2c83a0c561f1",
+      "ToPortName": "VariableValue"
+    },
+    {
+      "FromNodeId": "0dc3d25e-e628-42ad-bbba-00b386216f70",
+      "FromPortName": "OutputValue",
+      "ToNodeId": "cabb8a0a-4a95-48ec-8f72-ad3a8e57bdbd",
+      "ToPortName": "Text"
+    },
+    {
+      "FromNodeId": "7999e5a3-d0e2-4b83-8a0d-99d66e6047a5",
+      "FromPortName": "Output",
+      "ToNodeId": "8cb1f353-c350-44df-8a09-00fc8d26b402",
+      "ToPortName": "Expressions"
+    },
+    {
+      "FromNodeId": "f962d25e-ee88-482b-a766-2dfc74bc01d1",
+      "FromPortName": "Output",
+      "ToNodeId": "8cb1f353-c350-44df-8a09-00fc8d26b402",
+      "ToPortName": "Response"
+    },
+    {
+      "FromNodeId": "cabb8a0a-4a95-48ec-8f72-ad3a8e57bdbd",
+      "FromPortName": "TriggerFlow",
+      "ToNodeId": "a80f210d-3574-4555-a26a-c138eb6858c3",
+      "ToPortName": "OnNodeTriggered"
+    },
+    {
+      "FromNodeId": "cabb8a0a-4a95-48ec-8f72-ad3a8e57bdbd",
+      "FromPortName": "TriggerFlow",
+      "ToNodeId": "16545fe8-18e7-402d-a2ec-2ac77670158c",
+      "ToPortName": "OnNodeTriggered"
+    },
+    {
+      "FromNodeId": "bfee983d-7238-41ba-a086-7e2942d2f3bc",
+      "FromPortName": "Output",
+      "ToNodeId": "fc68835b-593b-49cd-b8ff-9735b937cbcf",
+      "ToPortName": "IntentContexts"
+    },
+    {
+      "FromNodeId": "c6fd1fcc-d242-4a71-8edf-cdc0be7bddce",
+      "FromPortName": "Output",
+      "ToNodeId": "fc68835b-593b-49cd-b8ff-9735b937cbcf",
+      "ToPortName": "Expressions"
+    },
+    {
+      "FromNodeId": "050a09a4-623f-4e47-8e5c-768e92790be3",
+      "FromPortName": "Output",
+      "ToNodeId": "fc68835b-593b-49cd-b8ff-9735b937cbcf",
+      "ToPortName": "Response"
+    },
+    {
+      "FromNodeId": "5a18b0f1-9e0d-4502-b33f-4ae19af627e6",
+      "FromPortName": "OutputValue",
+      "ToNodeId": "050a09a4-623f-4e47-8e5c-768e92790be3",
+      "ToPortName": "Text"
+    },
+    {
+      "FromNodeId": "050a09a4-623f-4e47-8e5c-768e92790be3",
+      "FromPortName": "TriggerFlow",
+      "ToNodeId": "42ed471f-5099-467c-b5ad-6a6bdccff035",
+      "ToPortName": "OnNodeTriggered"
+    },
+    {
+      "FromNodeId": "42ed471f-5099-467c-b5ad-6a6bdccff035",
+      "FromPortName": "Output",
+      "ToNodeId": "b401e527-5c75-489f-ad3b-90f511c1f3ce",
+      "ToPortName": "VariableValue"
+    },
+    {
+      "FromNodeId": "03157635-0ecd-440b-a88a-ac0b78fad9cc",
+      "FromPortName": "Output",
+      "ToNodeId": "c356d8e6-c751-427d-a00f-5f0c8ec02e1c",
+      "ToPortName": "Entries"
+    },
+    {
+      "FromNodeId": "d6b5ffe2-9b87-44a4-a82c-efbd6c22246d",
+      "FromPortName": "Output",
+      "ToNodeId": "c356d8e6-c751-427d-a00f-5f0c8ec02e1c",
+      "ToPortName": "Entries"
+    },
+    {
+      "FromNodeId": "73bb9f52-b815-4856-884e-61e0268abe0c",
+      "FromPortName": "Output",
+      "ToNodeId": "c356d8e6-c751-427d-a00f-5f0c8ec02e1c",
+      "ToPortName": "Entries"
+    },
+    {
+      "FromNodeId": "5a18b0f1-9e0d-4502-b33f-4ae19af627e6",
+      "FromPortName": "OutputValue",
+      "ToNodeId": "f962d25e-ee88-482b-a766-2dfc74bc01d1",
+      "ToPortName": "Text"
+    },
+    {
+      "FromNodeId": "050a09a4-623f-4e47-8e5c-768e92790be3",
+      "FromPortName": "TriggerFlow",
+      "ToNodeId": "0addcfd2-8c14-4808-827a-612a37a9e6bd",
+      "ToPortName": "OnNodeTriggered"
+    },
+    {
+      "FromNodeId": "f962d25e-ee88-482b-a766-2dfc74bc01d1",
+      "FromPortName": "TriggerFlow",
+      "ToNodeId": "0addcfd2-8c14-4808-827a-612a37a9e6bd",
+      "ToPortName": "OnNodeTriggered"
+    },
+    {
+      "FromNodeId": "050a09a4-623f-4e47-8e5c-768e92790be3",
+      "FromPortName": "TriggerFlow",
+      "ToNodeId": "23acf7ce-4dc7-42d7-9b97-e51a836b28ce",
+      "ToPortName": "OnNodeTriggered"
+    },
+    {
+      "FromNodeId": "f962d25e-ee88-482b-a766-2dfc74bc01d1",
+      "FromPortName": "TriggerFlow",
+      "ToNodeId": "23acf7ce-4dc7-42d7-9b97-e51a836b28ce",
+      "ToPortName": "OnNodeTriggered"
+    },
+    {
+      "FromNodeId": "96b3179e-77bf-45ee-aa9a-ac4e0f6a5d99",
+      "FromPortName": "Output",
+      "ToNodeId": "6930b6be-bd03-49f2-83c7-814d985b6f47",
+      "ToPortName": "Intents"
+    },
+    {
+      "FromNodeId": "9646d15b-44ec-4da5-a9a7-d6627c00f004",
+      "FromPortName": "Output",
+      "ToNodeId": "6930b6be-bd03-49f2-83c7-814d985b6f47",
+      "ToPortName": "Intents"
+    },
+    {
+      "FromNodeId": "0b76bb60-1a41-4152-8fe0-13e9cd5a56c5",
+      "FromPortName": "Output",
+      "ToNodeId": "6930b6be-bd03-49f2-83c7-814d985b6f47",
+      "ToPortName": "Intents"
+    },
+    {
+      "FromNodeId": "12a1861f-1f92-433a-80b5-a38912137ecb",
+      "FromPortName": "Output",
+      "ToNodeId": "96b3179e-77bf-45ee-aa9a-ac4e0f6a5d99",
+      "ToPortName": "IntentContexts"
+    },
+    {
+      "FromNodeId": "461df3f4-a06e-4a65-951d-239cdc154c19",
+      "FromPortName": "Output",
+      "ToNodeId": "96b3179e-77bf-45ee-aa9a-ac4e0f6a5d99",
+      "ToPortName": "Expressions"
+    },
+    {
+      "FromNodeId": "c5d49690-df6d-46b5-83c2-3da1a68d6825",
+      "FromPortName": "Output",
+      "ToNodeId": "96b3179e-77bf-45ee-aa9a-ac4e0f6a5d99",
+      "ToPortName": "Response"
+    },
+    {
+      "FromNodeId": "57794faf-1f92-4dac-bbbf-05c114b11c3f",
+      "FromPortName": "OutputValue",
+      "ToNodeId": "c5d49690-df6d-46b5-83c2-3da1a68d6825",
+      "ToPortName": "Text"
+    },
+    {
+      "FromNodeId": "c5d49690-df6d-46b5-83c2-3da1a68d6825",
+      "FromPortName": "TriggerFlow",
+      "ToNodeId": "3856c121-53f0-4168-974e-b35e879af43d",
+      "ToPortName": "OnNodeTriggered"
+    },
+    {
+      "FromNodeId": "c5d49690-df6d-46b5-83c2-3da1a68d6825",
+      "FromPortName": "TriggerFlow",
+      "ToNodeId": "cc9b93c0-2aa6-4312-840e-812d10a95332",
+      "ToPortName": "OnNodeTriggered"
+    },
+    {
+      "FromNodeId": "cc9b93c0-2aa6-4312-840e-812d10a95332",
+      "FromPortName": "Output",
+      "ToNodeId": "532fe416-18c6-409f-9d1d-7678eff5ebed",
+      "ToPortName": "VariableValue"
+    },
+    {
+      "FromNodeId": "c5d49690-df6d-46b5-83c2-3da1a68d6825",
+      "FromPortName": "TriggerFlow",
+      "ToNodeId": "563c1f5b-9ccd-4f51-9786-aa93d526d846",
+      "ToPortName": "OnNodeTriggered"
+    },
+    {
+      "FromNodeId": "7236ea2a-3761-415f-aef3-6c01de5d5b6c",
+      "FromPortName": "Output",
+      "ToNodeId": "9646d15b-44ec-4da5-a9a7-d6627c00f004",
+      "ToPortName": "IntentContexts"
+    },
+    {
+      "FromNodeId": "30484848-3b6c-4ff5-94d2-d9c9ec67b7d0",
+      "FromPortName": "Output",
+      "ToNodeId": "9646d15b-44ec-4da5-a9a7-d6627c00f004",
+      "ToPortName": "Expressions"
+    },
+    {
+      "FromNodeId": "e8dd67fb-a13b-4d5e-911d-0c9c7c3945cc",
+      "FromPortName": "Output",
+      "ToNodeId": "9646d15b-44ec-4da5-a9a7-d6627c00f004",
+      "ToPortName": "Response"
+    },
+    {
+      "FromNodeId": "ba0fd4d8-2e4f-43a2-ae8b-191b7394cf6f",
+      "FromPortName": "OutputValue",
+      "ToNodeId": "e8dd67fb-a13b-4d5e-911d-0c9c7c3945cc",
+      "ToPortName": "Text"
+    },
+    {
+      "FromNodeId": "e814bb63-9812-4346-b31a-1678e218bcfd",
+      "FromPortName": "Output",
+      "ToNodeId": "5ca0852b-2653-4963-a45c-51a89e116736",
+      "ToPortName": "Variables"
+    },
+    {
+      "FromNodeId": "1d61171d-96aa-4054-abdc-ec17b1d7eec4",
+      "FromPortName": "Output",
+      "ToNodeId": "8890f6cb-5694-4542-83d5-47e188340385",
+      "ToPortName": "Fallback"
+    },
+    {
+      "FromNodeId": "8d36d063-8323-47e3-994c-eb0ef85d83c2",
+      "FromPortName": "Output",
+      "ToNodeId": "8890f6cb-5694-4542-83d5-47e188340385",
+      "ToPortName": "Response"
+    },
+    {
+      "FromNodeId": "b3f38a1f-7443-4f54-bc3b-114d9a6088ac",
+      "FromPortName": "OutputValue",
+      "ToNodeId": "8d36d063-8323-47e3-994c-eb0ef85d83c2",
+      "ToPortName": "Text"
+    },
+    {
+      "FromNodeId": "5c8df68b-0b76-4696-b252-d5701f67b3c0",
+      "FromPortName": "Output",
+      "ToNodeId": "cc4c446a-1eaf-415d-a410-a3306a448b3f",
+      "ToPortName": "Expressions"
+    },
+    {
+      "FromNodeId": "b87edfb9-c30b-4e94-8fe0-aacad0679d48",
+      "FromPortName": "Output",
+      "ToNodeId": "cc4c446a-1eaf-415d-a410-a3306a448b3f",
+      "ToPortName": "Expressions"
+    },
+    {
+      "FromNodeId": "5aa852d9-bbff-4a32-be90-235fe6e514b6",
+      "FromPortName": "Output",
+      "ToNodeId": "cc4c446a-1eaf-415d-a410-a3306a448b3f",
+      "ToPortName": "Expressions"
+    },
+    {
+      "FromNodeId": "044e56ab-93be-416e-bb77-e4312ae4d961",
+      "FromPortName": "Output",
+      "ToNodeId": "cc4c446a-1eaf-415d-a410-a3306a448b3f",
+      "ToPortName": "Response"
+    },
+    {
+      "FromNodeId": "701d4c1e-5699-4c99-b123-dc61f5213cd0",
+      "FromPortName": "OutputValue",
+      "ToNodeId": "044e56ab-93be-416e-bb77-e4312ae4d961",
+      "ToPortName": "Text"
+    },
+    {
+      "FromNodeId": "e8dd67fb-a13b-4d5e-911d-0c9c7c3945cc",
+      "FromPortName": "TriggerFlow",
+      "ToNodeId": "837a017e-21e6-49aa-9ce0-a67ead3013e9",
+      "ToPortName": "OnNodeTriggered"
+    },
+    {
+      "FromNodeId": "3c5a0636-52a3-4f7f-b5d5-dfc0e1294627",
+      "FromPortName": "Output",
+      "ToNodeId": "0b76bb60-1a41-4152-8fe0-13e9cd5a56c5",
+      "ToPortName": "IntentContexts"
+    },
+    {
+      "FromNodeId": "0e0b5a46-fa5d-485e-bd70-bdc91a825d07",
+      "FromPortName": "Output",
+      "ToNodeId": "0b76bb60-1a41-4152-8fe0-13e9cd5a56c5",
+      "ToPortName": "Expressions"
+    },
+    {
+      "FromNodeId": "a015d192-10ca-47d8-8110-1f25547e190f",
+      "FromPortName": "Output",
+      "ToNodeId": "0b76bb60-1a41-4152-8fe0-13e9cd5a56c5",
+      "ToPortName": "Response"
+    },
+    {
+      "FromNodeId": "bae3f608-4890-4f5e-a678-c633607dc3b0",
+      "FromPortName": "OutputValue",
+      "ToNodeId": "a015d192-10ca-47d8-8110-1f25547e190f",
+      "ToPortName": "Text"
+    },
+    {
+      "FromNodeId": "a015d192-10ca-47d8-8110-1f25547e190f",
+      "FromPortName": "TriggerFlow",
+      "ToNodeId": "5c3cf3bd-2bdb-43ad-a98b-1f6a45f935f6",
+      "ToPortName": "OnNodeTriggered"
+    },
+    {
+      "FromNodeId": "824dc509-9bf0-45df-8bf0-77961ebcaf51",
+      "FromPortName": "Output",
+      "ToNodeId": "991df4bd-7815-40eb-b2fb-cd47235d614a",
+      "ToPortName": "Intents"
+    },
+    {
+      "FromNodeId": "ddd98197-a3a1-45cf-a12c-7a2aaa1d1189",
+      "FromPortName": "Output",
+      "ToNodeId": "824dc509-9bf0-45df-8bf0-77961ebcaf51",
+      "ToPortName": "IntentContexts"
+    },
+    {
+      "FromNodeId": "58e0208e-650f-4540-beea-d2ba96a48ef3",
+      "FromPortName": "Output",
+      "ToNodeId": "824dc509-9bf0-45df-8bf0-77961ebcaf51",
+      "ToPortName": "Expressions"
+    },
+    {
+      "FromNodeId": "2e1fd77a-a376-4123-875d-ddad47dc40b3",
+      "FromPortName": "Output",
+      "ToNodeId": "824dc509-9bf0-45df-8bf0-77961ebcaf51",
+      "ToPortName": "Response"
+    },
+    {
+      "FromNodeId": "54771cce-f70c-4be6-8bad-5d8c49ef8c39",
+      "FromPortName": "OutputValue",
+      "ToNodeId": "2e1fd77a-a376-4123-875d-ddad47dc40b3",
+      "ToPortName": "Text"
+    }
+  ]
+}

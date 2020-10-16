@@ -1,0 +1,2269 @@
+{
+  "GraphVersion": "1.5.0.0",
+  "UserNote": "",
+  "Nodes": [
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.DialogNode, Syn.Bot",
+      "DialogName": "greet_dialog",
+      "IntentAlias": null,
+      "Domain": null,
+      "Intents": [
+        {
+          "IntentName": "greet_intent",
+          "MinScore": 0.0,
+          "IntentContexts": [],
+          "Prompts": [],
+          "AutoEntity": null,
+          "Fallback": null,
+          "Trait": null,
+          "Event": null,
+          "Action": null,
+          "Expressions": [
+            {
+              "Value": "hi there",
+              "ExpressionName": null,
+              "Id": "319e2cb5-24b7-4cee-8028-29a6598c6acc",
+              "IsFolded": false,
+              "DisplayName": "Expression",
+              "Position": {
+                "X": 3609.5129488868606,
+                "Y": 1601.3211361102649
+              }
+            },
+            {
+              "Value": "hello there",
+              "ExpressionName": null,
+              "Id": "764a2867-f68f-42e7-8434-30f0c13f8d30",
+              "IsFolded": false,
+              "DisplayName": "Expression",
+              "Position": {
+                "X": 3602.0926590317877,
+                "Y": 1759.7559187189609
+              }
+            },
+            {
+              "Value": "Hey can I reactivate my account",
+              "ExpressionName": null,
+              "Id": "43d8e889-c2b4-410a-8860-ebbf2d54e123",
+              "IsFolded": false,
+              "DisplayName": "Expression",
+              "Position": {
+                "X": 3543.2846880172947,
+                "Y": 1924.5928752406994
+              }
+            },
+            {
+              "Value": "I need to reactivate my account",
+              "ExpressionName": null,
+              "Id": "60522539-8638-4144-911e-c427ccd9ce99",
+              "IsFolded": false,
+              "DisplayName": "Expression",
+              "Position": {
+                "X": 3483.2566341870679,
+                "Y": 2086.6981547438054
+              }
+            }
+          ],
+          "Response": {
+            "Priority": "Normal",
+            "Hint": "",
+            "Type": null,
+            "Format": "Plain",
+            "Text": "Hi there, to further assist you, please let tell me your email.   ",
+            "ResponseMessages": [],
+            "Children": [],
+            "Id": "6865eaec-bad9-40fc-b5c9-380c7a4115dc",
+            "IsFolded": false,
+            "DisplayName": "Response",
+            "Position": {
+              "X": 3610.840449494568,
+              "Y": 2337.1223562732716
+            }
+          },
+          "Id": "c775e85b-46a3-43a0-b432-17db4097abfa",
+          "IsFolded": false,
+          "DisplayName": "Intent (greet_intent)",
+          "Position": {
+            "X": 3935.6904496469724,
+            "Y": 1933.2818283166093
+          }
+        },
+        {
+          "IntentName": "user_reactivate_intent",
+          "MinScore": 0.0,
+          "IntentContexts": [
+            {
+              "ContextName": "user-email-con",
+              "Id": "0b80c47f-ebf8-43ca-a50b-c2824418d088",
+              "IsFolded": false,
+              "DisplayName": "Context",
+              "Position": {
+                "X": 3612.8727468781635,
+                "Y": 2651.0374278456407
+              }
+            }
+          ],
+          "Prompts": [],
+          "AutoEntity": null,
+          "Fallback": null,
+          "Trait": null,
+          "Event": null,
+          "Action": null,
+          "Expressions": [
+            {
+              "Value": "$user-email",
+              "ExpressionName": "",
+              "Id": "027d3fce-5e73-4e54-8273-7e6ec54d890c",
+              "IsFolded": false,
+              "DisplayName": "Expression",
+              "Position": {
+                "X": 3626.5666085720259,
+                "Y": 2784.7672229043819
+              }
+            }
+          ],
+          "Response": {
+            "Priority": "Normal",
+            "Hint": "",
+            "Type": null,
+            "Format": "",
+            "Text": "I found account associated with this email.  Please provide me with your username.",
+            "ResponseMessages": [],
+            "Children": [],
+            "Id": "45021972-4b42-48bb-a203-eb108466c5eb",
+            "IsFolded": false,
+            "DisplayName": "Response",
+            "Position": {
+              "X": 3430.6447914120545,
+              "Y": 3100.2998170769279
+            }
+          },
+          "Id": "3ab5c676-e5e5-4ff1-80a8-b7c89d690fc0",
+          "IsFolded": false,
+          "DisplayName": "Intent (user_reactivate_intent)",
+          "Position": {
+            "X": 3911.7701370696732,
+            "Y": 2749.5651289027555
+          }
+        }
+      ],
+      "Events": [],
+      "Actions": [],
+      "Id": "dbb77ada-665d-47ef-b7cc-55865b9d9911",
+      "IsFolded": false,
+      "DisplayName": "Dialog (greet_dialog)",
+      "Position": {
+        "X": 4704.2072649572656,
+        "Y": 2334.7143812709014
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.IntentNode, Syn.Bot",
+      "IntentName": "greet_intent",
+      "MinScore": 0.0,
+      "IntentContexts": [],
+      "Prompts": [],
+      "AutoEntity": null,
+      "Fallback": null,
+      "Trait": null,
+      "Event": null,
+      "Action": null,
+      "Expressions": [
+        {
+          "Value": "hi there",
+          "ExpressionName": null,
+          "Id": "319e2cb5-24b7-4cee-8028-29a6598c6acc",
+          "IsFolded": false,
+          "DisplayName": "Expression",
+          "Position": {
+            "X": 3609.5129488868606,
+            "Y": 1601.3211361102649
+          }
+        },
+        {
+          "Value": "hello there",
+          "ExpressionName": null,
+          "Id": "764a2867-f68f-42e7-8434-30f0c13f8d30",
+          "IsFolded": false,
+          "DisplayName": "Expression",
+          "Position": {
+            "X": 3602.0926590317877,
+            "Y": 1759.7559187189609
+          }
+        },
+        {
+          "Value": "Hey can I reactivate my account",
+          "ExpressionName": null,
+          "Id": "43d8e889-c2b4-410a-8860-ebbf2d54e123",
+          "IsFolded": false,
+          "DisplayName": "Expression",
+          "Position": {
+            "X": 3543.2846880172947,
+            "Y": 1924.5928752406994
+          }
+        },
+        {
+          "Value": "I need to reactivate my account",
+          "ExpressionName": null,
+          "Id": "60522539-8638-4144-911e-c427ccd9ce99",
+          "IsFolded": false,
+          "DisplayName": "Expression",
+          "Position": {
+            "X": 3483.2566341870679,
+            "Y": 2086.6981547438054
+          }
+        }
+      ],
+      "Response": {
+        "Priority": "Normal",
+        "Hint": "",
+        "Type": null,
+        "Format": "Plain",
+        "Text": "Hi there, to further assist you, please let tell me your email.   ",
+        "ResponseMessages": [],
+        "Children": [],
+        "Id": "6865eaec-bad9-40fc-b5c9-380c7a4115dc",
+        "IsFolded": false,
+        "DisplayName": "Response",
+        "Position": {
+          "X": 3610.840449494568,
+          "Y": 2337.1223562732716
+        }
+      },
+      "Id": "c775e85b-46a3-43a0-b432-17db4097abfa",
+      "IsFolded": false,
+      "DisplayName": "Intent (greet_intent)",
+      "Position": {
+        "X": 3935.6904496469724,
+        "Y": 1933.2818283166093
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.ExpressionNode, Syn.Bot",
+      "Value": "hi there",
+      "ExpressionName": null,
+      "Id": "319e2cb5-24b7-4cee-8028-29a6598c6acc",
+      "IsFolded": false,
+      "DisplayName": "Expression",
+      "Position": {
+        "X": 3609.5129488868606,
+        "Y": 1601.3211361102649
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.ExpressionNode, Syn.Bot",
+      "Value": "hello there",
+      "ExpressionName": null,
+      "Id": "764a2867-f68f-42e7-8434-30f0c13f8d30",
+      "IsFolded": false,
+      "DisplayName": "Expression",
+      "Position": {
+        "X": 3602.0926590317877,
+        "Y": 1759.7559187189609
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.ExpressionNode, Syn.Bot",
+      "Value": "Hey can I reactivate my account",
+      "ExpressionName": null,
+      "Id": "43d8e889-c2b4-410a-8860-ebbf2d54e123",
+      "IsFolded": false,
+      "DisplayName": "Expression",
+      "Position": {
+        "X": 3543.2846880172947,
+        "Y": 1924.5928752406994
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.ExpressionNode, Syn.Bot",
+      "Value": "I need to reactivate my account",
+      "ExpressionName": null,
+      "Id": "60522539-8638-4144-911e-c427ccd9ce99",
+      "IsFolded": false,
+      "DisplayName": "Expression",
+      "Position": {
+        "X": 3483.2566341870679,
+        "Y": 2086.6981547438054
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.ResponseNode, Syn.Bot",
+      "Priority": "Normal",
+      "Hint": "",
+      "Type": null,
+      "Format": "Plain",
+      "Text": "Hi there, to further assist you, please let tell me your email.   ",
+      "ResponseMessages": [],
+      "Children": [],
+      "Id": "6865eaec-bad9-40fc-b5c9-380c7a4115dc",
+      "IsFolded": false,
+      "DisplayName": "Response",
+      "Position": {
+        "X": 3610.840449494568,
+        "Y": 2337.1223562732716
+      }
+    },
+    {
+      "$type": "Syn.Workspace.Nodes.InputOutput.InputTextNode, Syn.Workspace",
+      "OutputValue": "Hi there, to further assist you, please let tell me your email.   ",
+      "Id": "e1b022e2-7955-4680-8d23-7d4cbba6e44b",
+      "IsFolded": false,
+      "DisplayName": "Input Text",
+      "Position": {
+        "X": 2976.04512785714,
+        "Y": 2373.4966252791191
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.ContextAddNode, Syn.Bot",
+      "ContextName": "user-email-con",
+      "Lifespan": 2,
+      "Id": "b00124ec-8f05-43c0-953c-9c85b6f2d3e1",
+      "IsFolded": false,
+      "DisplayName": "Context Add",
+      "Position": {
+        "X": 3947.6504999831059,
+        "Y": 2383.8171276219341
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.IntentNode, Syn.Bot",
+      "IntentName": "user_reactivate_intent",
+      "MinScore": 0.0,
+      "IntentContexts": [
+        {
+          "ContextName": "user-email-con",
+          "Id": "0b80c47f-ebf8-43ca-a50b-c2824418d088",
+          "IsFolded": false,
+          "DisplayName": "Context",
+          "Position": {
+            "X": 3612.8727468781635,
+            "Y": 2651.0374278456407
+          }
+        }
+      ],
+      "Prompts": [],
+      "AutoEntity": null,
+      "Fallback": null,
+      "Trait": null,
+      "Event": null,
+      "Action": null,
+      "Expressions": [
+        {
+          "Value": "$user-email",
+          "ExpressionName": "",
+          "Id": "027d3fce-5e73-4e54-8273-7e6ec54d890c",
+          "IsFolded": false,
+          "DisplayName": "Expression",
+          "Position": {
+            "X": 3626.5666085720259,
+            "Y": 2784.7672229043819
+          }
+        }
+      ],
+      "Response": {
+        "Priority": "Normal",
+        "Hint": "",
+        "Type": null,
+        "Format": "",
+        "Text": "I found account associated with this email.  Please provide me with your username.",
+        "ResponseMessages": [],
+        "Children": [],
+        "Id": "45021972-4b42-48bb-a203-eb108466c5eb",
+        "IsFolded": false,
+        "DisplayName": "Response",
+        "Position": {
+          "X": 3430.6447914120545,
+          "Y": 3100.2998170769279
+        }
+      },
+      "Id": "3ab5c676-e5e5-4ff1-80a8-b7c89d690fc0",
+      "IsFolded": false,
+      "DisplayName": "Intent (user_reactivate_intent)",
+      "Position": {
+        "X": 3911.7701370696732,
+        "Y": 2749.5651289027555
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.ContextNode, Syn.Bot",
+      "ContextName": "user-email-con",
+      "Id": "0b80c47f-ebf8-43ca-a50b-c2824418d088",
+      "IsFolded": false,
+      "DisplayName": "Context",
+      "Position": {
+        "X": 3612.8727468781635,
+        "Y": 2651.0374278456407
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.ExpressionNode, Syn.Bot",
+      "Value": "$user-email",
+      "ExpressionName": "",
+      "Id": "027d3fce-5e73-4e54-8273-7e6ec54d890c",
+      "IsFolded": false,
+      "DisplayName": "Expression",
+      "Position": {
+        "X": 3626.5666085720259,
+        "Y": 2784.7672229043819
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.ResponseNode, Syn.Bot",
+      "Priority": "Normal",
+      "Hint": "",
+      "Type": null,
+      "Format": "",
+      "Text": "I found account associated with this email.  Please provide me with your username.",
+      "ResponseMessages": [],
+      "Children": [],
+      "Id": "45021972-4b42-48bb-a203-eb108466c5eb",
+      "IsFolded": false,
+      "DisplayName": "Response",
+      "Position": {
+        "X": 3430.6447914120545,
+        "Y": 3100.2998170769279
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.EntityGetNode, Syn.Bot",
+      "EntityName": "user-email",
+      "EntityGetType": "Value",
+      "EntityPropertyName": null,
+      "Id": "03826038-699a-4b37-8f6a-515b05f7750b",
+      "IsFolded": false,
+      "DisplayName": "Entity Get",
+      "Position": {
+        "X": 3737.1675906503269,
+        "Y": 3147.9844490794317
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.VariableSetNode, Syn.Bot",
+      "VariableName": "user-email-var",
+      "VariableOrigin": "User",
+      "VariableValue": "Tomorrow",
+      "Id": "7925466e-258a-42b7-a784-3cdb62418379",
+      "IsFolded": false,
+      "DisplayName": "Variable Set",
+      "Position": {
+        "X": 3959.6739845122183,
+        "Y": 3218.9818915346737
+      }
+    },
+    {
+      "$type": "Syn.Workspace.Nodes.InputOutput.InputTextNode, Syn.Workspace",
+      "OutputValue": "I found account associated with this email.  Please provide me with your username.",
+      "Id": "858617e2-111e-434f-aeee-ff14448f065b",
+      "IsFolded": false,
+      "DisplayName": "Input Text",
+      "Position": {
+        "X": 2806.8296457370207,
+        "Y": 3175.4108560123154
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.ContextAddNode, Syn.Bot",
+      "ContextName": "user-username-con",
+      "Lifespan": 2,
+      "Id": "5d07f149-ddc4-4aa6-aef5-687ad34ed865",
+      "IsFolded": false,
+      "DisplayName": "Context Add",
+      "Position": {
+        "X": 3729.7868070941813,
+        "Y": 3363.737118638579
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.OscovaBotNode, Syn.Bot",
+      "Dialogs": [
+        {
+          "DialogName": "greet_dialog",
+          "IntentAlias": null,
+          "Domain": null,
+          "Intents": [
+            {
+              "IntentName": "greet_intent",
+              "MinScore": 0.0,
+              "IntentContexts": [],
+              "Prompts": [],
+              "AutoEntity": null,
+              "Fallback": null,
+              "Trait": null,
+              "Event": null,
+              "Action": null,
+              "Expressions": [
+                {
+                  "Value": "hi there",
+                  "ExpressionName": null,
+                  "Id": "319e2cb5-24b7-4cee-8028-29a6598c6acc",
+                  "IsFolded": false,
+                  "DisplayName": "Expression",
+                  "Position": {
+                    "X": 3609.5129488868606,
+                    "Y": 1601.3211361102649
+                  }
+                },
+                {
+                  "Value": "hello there",
+                  "ExpressionName": null,
+                  "Id": "764a2867-f68f-42e7-8434-30f0c13f8d30",
+                  "IsFolded": false,
+                  "DisplayName": "Expression",
+                  "Position": {
+                    "X": 3602.0926590317877,
+                    "Y": 1759.7559187189609
+                  }
+                },
+                {
+                  "Value": "Hey can I reactivate my account",
+                  "ExpressionName": null,
+                  "Id": "43d8e889-c2b4-410a-8860-ebbf2d54e123",
+                  "IsFolded": false,
+                  "DisplayName": "Expression",
+                  "Position": {
+                    "X": 3543.2846880172947,
+                    "Y": 1924.5928752406994
+                  }
+                },
+                {
+                  "Value": "I need to reactivate my account",
+                  "ExpressionName": null,
+                  "Id": "60522539-8638-4144-911e-c427ccd9ce99",
+                  "IsFolded": false,
+                  "DisplayName": "Expression",
+                  "Position": {
+                    "X": 3483.2566341870679,
+                    "Y": 2086.6981547438054
+                  }
+                }
+              ],
+              "Response": {
+                "Priority": "Normal",
+                "Hint": "",
+                "Type": null,
+                "Format": "Plain",
+                "Text": "Hi there, to further assist you, please let tell me your email.   ",
+                "ResponseMessages": [],
+                "Children": [],
+                "Id": "6865eaec-bad9-40fc-b5c9-380c7a4115dc",
+                "IsFolded": false,
+                "DisplayName": "Response",
+                "Position": {
+                  "X": 3610.840449494568,
+                  "Y": 2337.1223562732716
+                }
+              },
+              "Id": "c775e85b-46a3-43a0-b432-17db4097abfa",
+              "IsFolded": false,
+              "DisplayName": "Intent (greet_intent)",
+              "Position": {
+                "X": 3935.6904496469724,
+                "Y": 1933.2818283166093
+              }
+            },
+            {
+              "IntentName": "user_reactivate_intent",
+              "MinScore": 0.0,
+              "IntentContexts": [
+                {
+                  "ContextName": "user-email-con",
+                  "Id": "0b80c47f-ebf8-43ca-a50b-c2824418d088",
+                  "IsFolded": false,
+                  "DisplayName": "Context",
+                  "Position": {
+                    "X": 3612.8727468781635,
+                    "Y": 2651.0374278456407
+                  }
+                }
+              ],
+              "Prompts": [],
+              "AutoEntity": null,
+              "Fallback": null,
+              "Trait": null,
+              "Event": null,
+              "Action": null,
+              "Expressions": [
+                {
+                  "Value": "$user-email",
+                  "ExpressionName": "",
+                  "Id": "027d3fce-5e73-4e54-8273-7e6ec54d890c",
+                  "IsFolded": false,
+                  "DisplayName": "Expression",
+                  "Position": {
+                    "X": 3626.5666085720259,
+                    "Y": 2784.7672229043819
+                  }
+                }
+              ],
+              "Response": {
+                "Priority": "Normal",
+                "Hint": "",
+                "Type": null,
+                "Format": "",
+                "Text": "I found account associated with this email.  Please provide me with your username.",
+                "ResponseMessages": [],
+                "Children": [],
+                "Id": "45021972-4b42-48bb-a203-eb108466c5eb",
+                "IsFolded": false,
+                "DisplayName": "Response",
+                "Position": {
+                  "X": 3430.6447914120545,
+                  "Y": 3100.2998170769279
+                }
+              },
+              "Id": "3ab5c676-e5e5-4ff1-80a8-b7c89d690fc0",
+              "IsFolded": false,
+              "DisplayName": "Intent (user_reactivate_intent)",
+              "Position": {
+                "X": 3911.7701370696732,
+                "Y": 2749.5651289027555
+              }
+            }
+          ],
+          "Events": [],
+          "Actions": [],
+          "Id": "dbb77ada-665d-47ef-b7cc-55865b9d9911",
+          "IsFolded": false,
+          "DisplayName": "Dialog (greet_dialog)",
+          "Position": {
+            "X": 4704.2072649572656,
+            "Y": 2334.7143812709014
+          }
+        },
+        {
+          "DialogName": "table_config_dialog",
+          "IntentAlias": null,
+          "Domain": null,
+          "Intents": [
+            {
+              "IntentName": "table_time_intent",
+              "MinScore": 0.0,
+              "IntentContexts": [
+                {
+                  "ContextName": "table-time-con",
+                  "Id": "e741d45d-f54a-4031-8122-0ebb984e9712",
+                  "IsFolded": false,
+                  "DisplayName": "Context",
+                  "Position": {
+                    "X": 3316.2602826310253,
+                    "Y": 4028.8757109935186
+                  }
+                }
+              ],
+              "Prompts": [],
+              "AutoEntity": null,
+              "Fallback": null,
+              "Trait": null,
+              "Event": null,
+              "Action": null,
+              "Expressions": [
+                {
+                  "Value": "@meal-type",
+                  "ExpressionName": null,
+                  "Id": "43f834d1-4089-48c5-938d-bcd2efada85f",
+                  "IsFolded": false,
+                  "DisplayName": "Expression",
+                  "Position": {
+                    "X": 3323.2602826310253,
+                    "Y": 4151.8757109935186
+                  }
+                }
+              ],
+              "Response": {
+                "Priority": "Normal",
+                "Hint": "1|2|3|4",
+                "Type": null,
+                "Format": null,
+                "Text": "Perfect!. How many people shall I book the table for?",
+                "ResponseMessages": [],
+                "Children": [],
+                "Id": "6a6b78a8-7022-4d84-aa04-dd3c371fe2dd",
+                "IsFolded": false,
+                "DisplayName": "Response",
+                "Position": {
+                  "X": 3313.81583818658,
+                  "Y": 4400.986822104629
+                }
+              },
+              "Id": "556cd632-2360-4856-8df9-dd073df8d7cf",
+              "IsFolded": false,
+              "DisplayName": "Intent (table_time_intent)",
+              "Position": {
+                "X": 3713.5102826310258,
+                "Y": 4078.8757109935186
+              }
+            },
+            {
+              "IntentName": "table_num_intent",
+              "MinScore": 0.0,
+              "IntentContexts": [
+                {
+                  "ContextName": "table-num-con",
+                  "Id": "981de5e6-6288-4960-9667-236483609cc2",
+                  "IsFolded": false,
+                  "DisplayName": "Context",
+                  "Position": {
+                    "X": 3324.718548221641,
+                    "Y": 4811.7893732686243
+                  }
+                }
+              ],
+              "Prompts": [],
+              "AutoEntity": null,
+              "Fallback": null,
+              "Trait": null,
+              "Event": null,
+              "Action": null,
+              "Expressions": [
+                {
+                  "Value": "@sys.number",
+                  "ExpressionName": null,
+                  "Id": "c786f9e2-ca93-43ea-bd7a-8584cadfe206",
+                  "IsFolded": false,
+                  "DisplayName": "Expression",
+                  "Position": {
+                    "X": 3332.9538423392883,
+                    "Y": 4954.1423144450973
+                  }
+                }
+              ],
+              "Response": {
+                "Priority": "Normal",
+                "Hint": null,
+                "Type": null,
+                "Format": null,
+                "Text": "Awesome! I'll set the table for $sys.number people then. We are all set.\r\nCould you please share your number so that I can confirm your booking.",
+                "ResponseMessages": [],
+                "Children": [],
+                "Id": "29e8406f-384e-4080-b281-106d92793cd0",
+                "IsFolded": false,
+                "DisplayName": "Response",
+                "Position": {
+                  "X": 3350.4620084231406,
+                  "Y": 5279.7559881275256
+                }
+              },
+              "Id": "d819c540-6fef-4411-8905-3f5a684c77ab",
+              "IsFolded": false,
+              "DisplayName": "Intent (table_num_intent)",
+              "Position": {
+                "X": 3720.1107050843866,
+                "Y": 4925.2207458176426
+              }
+            }
+          ],
+          "Events": [],
+          "Actions": [],
+          "Id": "5fc36730-6a60-4e3e-9408-e91da9c443c8",
+          "IsFolded": false,
+          "DisplayName": "Dialog (table_config_dialog)",
+          "Position": {
+            "X": 4318.6209297238693,
+            "Y": 4397.6775482171743
+          }
+        },
+        {
+          "DialogName": "confirm_dialog",
+          "IntentAlias": null,
+          "Domain": null,
+          "Intents": [
+            {
+              "IntentName": "confirm_intent",
+              "MinScore": 0.0,
+              "IntentContexts": [
+                {
+                  "ContextName": "table-phone-con",
+                  "Id": "8828835c-1b90-445b-9892-0110ad516f34",
+                  "IsFolded": false,
+                  "DisplayName": "Context",
+                  "Position": {
+                    "X": 3589.9852393650349,
+                    "Y": 5964.8015353585988
+                  }
+                }
+              ],
+              "Prompts": [],
+              "AutoEntity": null,
+              "Fallback": null,
+              "Trait": null,
+              "Event": null,
+              "Action": null,
+              "Expressions": [
+                {
+                  "Value": "@sys.number",
+                  "ExpressionName": null,
+                  "Id": "b1383e0f-6d4c-4506-b4aa-91c4f9622224",
+                  "IsFolded": false,
+                  "DisplayName": "Expression",
+                  "Position": {
+                    "X": 3596.2074615872557,
+                    "Y": 6108.723103986049
+                  }
+                }
+              ],
+              "Response": {
+                "Priority": "Normal",
+                "Hint": null,
+                "Type": null,
+                "Format": null,
+                "Text": "Thank you so much! You table booking for $sys.user.table-date for $sys.user.table-num is now confirmed. \r\nYou'll receive a notification on your mobile number $sys.number soon.",
+                "ResponseMessages": [],
+                "Children": [],
+                "Id": "b4684d58-74b0-4b56-b8ee-0091ff9b7da7",
+                "IsFolded": false,
+                "DisplayName": "Response",
+                "Position": {
+                  "X": 3615.0963504761453,
+                  "Y": 6389.83421509716
+                }
+              },
+              "Id": "54823e60-095c-400d-ba86-a74296e4a2ac",
+              "IsFolded": false,
+              "DisplayName": "Intent (confirm_intent)",
+              "Position": {
+                "X": 3862.4296838094788,
+                "Y": 6049.742711829188
+              }
+            }
+          ],
+          "Events": [],
+          "Actions": [],
+          "Id": "b7b3b00b-55c6-439b-888d-b6a76f8a38ce",
+          "IsFolded": false,
+          "DisplayName": "Dialog (confirm_dialog)",
+          "Position": {
+            "X": 4125.5729229233048,
+            "Y": 5966.0524054035832
+          }
+        }
+      ],
+      "Entities": [
+        {
+          "$type": "Syn.Bot.Oscova.WorkspaceNodes.EntryEntityCreatorNode, Syn.Bot",
+          "EntityType": "meal-type",
+          "Entries": [
+            {
+              "EntryValue": "Breakfast",
+              "Synonyms": [],
+              "Id": "0d2209ce-e32c-4498-b12c-e7f41057fa90",
+              "IsFolded": false,
+              "DisplayName": "Entry",
+              "Position": {
+                "X": 5095.8985444380178,
+                "Y": 5736.7149534504006
+              }
+            },
+            {
+              "EntryValue": "Lunch",
+              "Synonyms": [],
+              "Id": "79f51e8f-15ea-492a-a72f-6e7cf4b9fd3e",
+              "IsFolded": false,
+              "DisplayName": "Entry",
+              "Position": {
+                "X": 5094.2717501796433,
+                "Y": 5956.3752405317409
+              }
+            },
+            {
+              "EntryValue": "Dinner",
+              "Synonyms": [],
+              "Id": "ef2bb35a-4c6f-486e-8249-58766c0fe4d3",
+              "IsFolded": false,
+              "DisplayName": "Entry",
+              "Position": {
+                "X": 5093.2191186006958,
+                "Y": 6163.7436615843726
+              }
+            }
+          ],
+          "Id": "8b707e4a-b01b-48d0-8b32-1aa83a971956",
+          "IsFolded": false,
+          "DisplayName": "Entry Recognizer",
+          "Position": {
+            "X": 5396.0272753562213,
+            "Y": 5785.7649581412734
+          }
+        }
+      ],
+      "Traits": [],
+      "Scripts": [],
+      "Filters": [],
+      "BotSettings": null,
+      "UserSettings": null,
+      "SimlNodes": [],
+      "Id": "ad0be0b5-a02b-4b30-986b-439e60bdd7a8",
+      "IsFolded": false,
+      "DisplayName": "Oscova Bot",
+      "Position": {
+        "X": 5858.9349399918219,
+        "Y": 4010.9904480025193
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.OscovaPanelNode, Syn.Bot",
+      "OscovaBotNode": {
+        "Dialogs": [
+          {
+            "DialogName": "greet_dialog",
+            "IntentAlias": null,
+            "Domain": null,
+            "Intents": [
+              {
+                "IntentName": "greet_intent",
+                "MinScore": 0.0,
+                "IntentContexts": [],
+                "Prompts": [],
+                "AutoEntity": null,
+                "Fallback": null,
+                "Trait": null,
+                "Event": null,
+                "Action": null,
+                "Expressions": [
+                  {
+                    "Value": "hi there",
+                    "ExpressionName": null,
+                    "Id": "319e2cb5-24b7-4cee-8028-29a6598c6acc",
+                    "IsFolded": false,
+                    "DisplayName": "Expression",
+                    "Position": {
+                      "X": 3609.5129488868606,
+                      "Y": 1601.3211361102649
+                    }
+                  },
+                  {
+                    "Value": "hello there",
+                    "ExpressionName": null,
+                    "Id": "764a2867-f68f-42e7-8434-30f0c13f8d30",
+                    "IsFolded": false,
+                    "DisplayName": "Expression",
+                    "Position": {
+                      "X": 3602.0926590317877,
+                      "Y": 1759.7559187189609
+                    }
+                  },
+                  {
+                    "Value": "Hey can I reactivate my account",
+                    "ExpressionName": null,
+                    "Id": "43d8e889-c2b4-410a-8860-ebbf2d54e123",
+                    "IsFolded": false,
+                    "DisplayName": "Expression",
+                    "Position": {
+                      "X": 3543.2846880172947,
+                      "Y": 1924.5928752406994
+                    }
+                  },
+                  {
+                    "Value": "I need to reactivate my account",
+                    "ExpressionName": null,
+                    "Id": "60522539-8638-4144-911e-c427ccd9ce99",
+                    "IsFolded": false,
+                    "DisplayName": "Expression",
+                    "Position": {
+                      "X": 3483.2566341870679,
+                      "Y": 2086.6981547438054
+                    }
+                  }
+                ],
+                "Response": {
+                  "Priority": "Normal",
+                  "Hint": "",
+                  "Type": null,
+                  "Format": "Plain",
+                  "Text": "Hi there, to further assist you, please let tell me your email.   ",
+                  "ResponseMessages": [],
+                  "Children": [],
+                  "Id": "6865eaec-bad9-40fc-b5c9-380c7a4115dc",
+                  "IsFolded": false,
+                  "DisplayName": "Response",
+                  "Position": {
+                    "X": 3610.840449494568,
+                    "Y": 2337.1223562732716
+                  }
+                },
+                "Id": "c775e85b-46a3-43a0-b432-17db4097abfa",
+                "IsFolded": false,
+                "DisplayName": "Intent (greet_intent)",
+                "Position": {
+                  "X": 3935.6904496469724,
+                  "Y": 1933.2818283166093
+                }
+              },
+              {
+                "IntentName": "user_reactivate_intent",
+                "MinScore": 0.0,
+                "IntentContexts": [
+                  {
+                    "ContextName": "user-email-con",
+                    "Id": "0b80c47f-ebf8-43ca-a50b-c2824418d088",
+                    "IsFolded": false,
+                    "DisplayName": "Context",
+                    "Position": {
+                      "X": 3612.8727468781635,
+                      "Y": 2651.0374278456407
+                    }
+                  }
+                ],
+                "Prompts": [],
+                "AutoEntity": null,
+                "Fallback": null,
+                "Trait": null,
+                "Event": null,
+                "Action": null,
+                "Expressions": [
+                  {
+                    "Value": "$user-email",
+                    "ExpressionName": "",
+                    "Id": "027d3fce-5e73-4e54-8273-7e6ec54d890c",
+                    "IsFolded": false,
+                    "DisplayName": "Expression",
+                    "Position": {
+                      "X": 3626.5666085720259,
+                      "Y": 2784.7672229043819
+                    }
+                  }
+                ],
+                "Response": {
+                  "Priority": "Normal",
+                  "Hint": "",
+                  "Type": null,
+                  "Format": "",
+                  "Text": "I found account associated with this email.  Please provide me with your username.",
+                  "ResponseMessages": [],
+                  "Children": [],
+                  "Id": "45021972-4b42-48bb-a203-eb108466c5eb",
+                  "IsFolded": false,
+                  "DisplayName": "Response",
+                  "Position": {
+                    "X": 3430.6447914120545,
+                    "Y": 3100.2998170769279
+                  }
+                },
+                "Id": "3ab5c676-e5e5-4ff1-80a8-b7c89d690fc0",
+                "IsFolded": false,
+                "DisplayName": "Intent (user_reactivate_intent)",
+                "Position": {
+                  "X": 3911.7701370696732,
+                  "Y": 2749.5651289027555
+                }
+              }
+            ],
+            "Events": [],
+            "Actions": [],
+            "Id": "dbb77ada-665d-47ef-b7cc-55865b9d9911",
+            "IsFolded": false,
+            "DisplayName": "Dialog (greet_dialog)",
+            "Position": {
+              "X": 4704.2072649572656,
+              "Y": 2334.7143812709014
+            }
+          },
+          {
+            "DialogName": "table_config_dialog",
+            "IntentAlias": null,
+            "Domain": null,
+            "Intents": [
+              {
+                "IntentName": "table_time_intent",
+                "MinScore": 0.0,
+                "IntentContexts": [
+                  {
+                    "ContextName": "table-time-con",
+                    "Id": "e741d45d-f54a-4031-8122-0ebb984e9712",
+                    "IsFolded": false,
+                    "DisplayName": "Context",
+                    "Position": {
+                      "X": 3316.2602826310253,
+                      "Y": 4028.8757109935186
+                    }
+                  }
+                ],
+                "Prompts": [],
+                "AutoEntity": null,
+                "Fallback": null,
+                "Trait": null,
+                "Event": null,
+                "Action": null,
+                "Expressions": [
+                  {
+                    "Value": "@meal-type",
+                    "ExpressionName": null,
+                    "Id": "43f834d1-4089-48c5-938d-bcd2efada85f",
+                    "IsFolded": false,
+                    "DisplayName": "Expression",
+                    "Position": {
+                      "X": 3323.2602826310253,
+                      "Y": 4151.8757109935186
+                    }
+                  }
+                ],
+                "Response": {
+                  "Priority": "Normal",
+                  "Hint": "1|2|3|4",
+                  "Type": null,
+                  "Format": null,
+                  "Text": "Perfect!. How many people shall I book the table for?",
+                  "ResponseMessages": [],
+                  "Children": [],
+                  "Id": "6a6b78a8-7022-4d84-aa04-dd3c371fe2dd",
+                  "IsFolded": false,
+                  "DisplayName": "Response",
+                  "Position": {
+                    "X": 3313.81583818658,
+                    "Y": 4400.986822104629
+                  }
+                },
+                "Id": "556cd632-2360-4856-8df9-dd073df8d7cf",
+                "IsFolded": false,
+                "DisplayName": "Intent (table_time_intent)",
+                "Position": {
+                  "X": 3713.5102826310258,
+                  "Y": 4078.8757109935186
+                }
+              },
+              {
+                "IntentName": "table_num_intent",
+                "MinScore": 0.0,
+                "IntentContexts": [
+                  {
+                    "ContextName": "table-num-con",
+                    "Id": "981de5e6-6288-4960-9667-236483609cc2",
+                    "IsFolded": false,
+                    "DisplayName": "Context",
+                    "Position": {
+                      "X": 3324.718548221641,
+                      "Y": 4811.7893732686243
+                    }
+                  }
+                ],
+                "Prompts": [],
+                "AutoEntity": null,
+                "Fallback": null,
+                "Trait": null,
+                "Event": null,
+                "Action": null,
+                "Expressions": [
+                  {
+                    "Value": "@sys.number",
+                    "ExpressionName": null,
+                    "Id": "c786f9e2-ca93-43ea-bd7a-8584cadfe206",
+                    "IsFolded": false,
+                    "DisplayName": "Expression",
+                    "Position": {
+                      "X": 3332.9538423392883,
+                      "Y": 4954.1423144450973
+                    }
+                  }
+                ],
+                "Response": {
+                  "Priority": "Normal",
+                  "Hint": null,
+                  "Type": null,
+                  "Format": null,
+                  "Text": "Awesome! I'll set the table for $sys.number people then. We are all set.\r\nCould you please share your number so that I can confirm your booking.",
+                  "ResponseMessages": [],
+                  "Children": [],
+                  "Id": "29e8406f-384e-4080-b281-106d92793cd0",
+                  "IsFolded": false,
+                  "DisplayName": "Response",
+                  "Position": {
+                    "X": 3350.4620084231406,
+                    "Y": 5279.7559881275256
+                  }
+                },
+                "Id": "d819c540-6fef-4411-8905-3f5a684c77ab",
+                "IsFolded": false,
+                "DisplayName": "Intent (table_num_intent)",
+                "Position": {
+                  "X": 3720.1107050843866,
+                  "Y": 4925.2207458176426
+                }
+              }
+            ],
+            "Events": [],
+            "Actions": [],
+            "Id": "5fc36730-6a60-4e3e-9408-e91da9c443c8",
+            "IsFolded": false,
+            "DisplayName": "Dialog (table_config_dialog)",
+            "Position": {
+              "X": 4318.6209297238693,
+              "Y": 4397.6775482171743
+            }
+          },
+          {
+            "DialogName": "confirm_dialog",
+            "IntentAlias": null,
+            "Domain": null,
+            "Intents": [
+              {
+                "IntentName": "confirm_intent",
+                "MinScore": 0.0,
+                "IntentContexts": [
+                  {
+                    "ContextName": "table-phone-con",
+                    "Id": "8828835c-1b90-445b-9892-0110ad516f34",
+                    "IsFolded": false,
+                    "DisplayName": "Context",
+                    "Position": {
+                      "X": 3589.9852393650349,
+                      "Y": 5964.8015353585988
+                    }
+                  }
+                ],
+                "Prompts": [],
+                "AutoEntity": null,
+                "Fallback": null,
+                "Trait": null,
+                "Event": null,
+                "Action": null,
+                "Expressions": [
+                  {
+                    "Value": "@sys.number",
+                    "ExpressionName": null,
+                    "Id": "b1383e0f-6d4c-4506-b4aa-91c4f9622224",
+                    "IsFolded": false,
+                    "DisplayName": "Expression",
+                    "Position": {
+                      "X": 3596.2074615872557,
+                      "Y": 6108.723103986049
+                    }
+                  }
+                ],
+                "Response": {
+                  "Priority": "Normal",
+                  "Hint": null,
+                  "Type": null,
+                  "Format": null,
+                  "Text": "Thank you so much! You table booking for $sys.user.table-date for $sys.user.table-num is now confirmed. \r\nYou'll receive a notification on your mobile number $sys.number soon.",
+                  "ResponseMessages": [],
+                  "Children": [],
+                  "Id": "b4684d58-74b0-4b56-b8ee-0091ff9b7da7",
+                  "IsFolded": false,
+                  "DisplayName": "Response",
+                  "Position": {
+                    "X": 3615.0963504761453,
+                    "Y": 6389.83421509716
+                  }
+                },
+                "Id": "54823e60-095c-400d-ba86-a74296e4a2ac",
+                "IsFolded": false,
+                "DisplayName": "Intent (confirm_intent)",
+                "Position": {
+                  "X": 3862.4296838094788,
+                  "Y": 6049.742711829188
+                }
+              }
+            ],
+            "Events": [],
+            "Actions": [],
+            "Id": "b7b3b00b-55c6-439b-888d-b6a76f8a38ce",
+            "IsFolded": false,
+            "DisplayName": "Dialog (confirm_dialog)",
+            "Position": {
+              "X": 4125.5729229233048,
+              "Y": 5966.0524054035832
+            }
+          }
+        ],
+        "Entities": [
+          {
+            "$type": "Syn.Bot.Oscova.WorkspaceNodes.EntryEntityCreatorNode, Syn.Bot",
+            "EntityType": "meal-type",
+            "Entries": [
+              {
+                "EntryValue": "Breakfast",
+                "Synonyms": [],
+                "Id": "0d2209ce-e32c-4498-b12c-e7f41057fa90",
+                "IsFolded": false,
+                "DisplayName": "Entry",
+                "Position": {
+                  "X": 5095.8985444380178,
+                  "Y": 5736.7149534504006
+                }
+              },
+              {
+                "EntryValue": "Lunch",
+                "Synonyms": [],
+                "Id": "79f51e8f-15ea-492a-a72f-6e7cf4b9fd3e",
+                "IsFolded": false,
+                "DisplayName": "Entry",
+                "Position": {
+                  "X": 5094.2717501796433,
+                  "Y": 5956.3752405317409
+                }
+              },
+              {
+                "EntryValue": "Dinner",
+                "Synonyms": [],
+                "Id": "ef2bb35a-4c6f-486e-8249-58766c0fe4d3",
+                "IsFolded": false,
+                "DisplayName": "Entry",
+                "Position": {
+                  "X": 5093.2191186006958,
+                  "Y": 6163.7436615843726
+                }
+              }
+            ],
+            "Id": "8b707e4a-b01b-48d0-8b32-1aa83a971956",
+            "IsFolded": false,
+            "DisplayName": "Entry Recognizer",
+            "Position": {
+              "X": 5396.0272753562213,
+              "Y": 5785.7649581412734
+            }
+          }
+        ],
+        "Traits": [],
+        "Scripts": [],
+        "Filters": [],
+        "BotSettings": null,
+        "UserSettings": null,
+        "SimlNodes": [],
+        "Id": "ad0be0b5-a02b-4b30-986b-439e60bdd7a8",
+        "IsFolded": false,
+        "DisplayName": "Oscova Bot",
+        "Position": {
+          "X": 5858.9349399918219,
+          "Y": 4010.9904480025193
+        }
+      },
+      "Id": "81c5314f-a755-414c-8182-ab82c2f37719",
+      "IsFolded": false,
+      "DisplayName": "Oscova Test Panel",
+      "Position": {
+        "X": 6178.77883843351,
+        "Y": 3937.6942682294793
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.EntryEntityCreatorNode, Syn.Bot",
+      "EntityType": "meal-type",
+      "Entries": [
+        {
+          "EntryValue": "Breakfast",
+          "Synonyms": [],
+          "Id": "0d2209ce-e32c-4498-b12c-e7f41057fa90",
+          "IsFolded": false,
+          "DisplayName": "Entry",
+          "Position": {
+            "X": 5095.8985444380178,
+            "Y": 5736.7149534504006
+          }
+        },
+        {
+          "EntryValue": "Lunch",
+          "Synonyms": [],
+          "Id": "79f51e8f-15ea-492a-a72f-6e7cf4b9fd3e",
+          "IsFolded": false,
+          "DisplayName": "Entry",
+          "Position": {
+            "X": 5094.2717501796433,
+            "Y": 5956.3752405317409
+          }
+        },
+        {
+          "EntryValue": "Dinner",
+          "Synonyms": [],
+          "Id": "ef2bb35a-4c6f-486e-8249-58766c0fe4d3",
+          "IsFolded": false,
+          "DisplayName": "Entry",
+          "Position": {
+            "X": 5093.2191186006958,
+            "Y": 6163.7436615843726
+          }
+        }
+      ],
+      "Id": "8b707e4a-b01b-48d0-8b32-1aa83a971956",
+      "IsFolded": false,
+      "DisplayName": "Entry Recognizer",
+      "Position": {
+        "X": 5396.0272753562213,
+        "Y": 5785.7649581412734
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.EntryNode, Syn.Bot",
+      "EntryValue": "Breakfast",
+      "Synonyms": [],
+      "Id": "0d2209ce-e32c-4498-b12c-e7f41057fa90",
+      "IsFolded": false,
+      "DisplayName": "Entry",
+      "Position": {
+        "X": 5095.8985444380178,
+        "Y": 5736.7149534504006
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.EntryNode, Syn.Bot",
+      "EntryValue": "Lunch",
+      "Synonyms": [],
+      "Id": "79f51e8f-15ea-492a-a72f-6e7cf4b9fd3e",
+      "IsFolded": false,
+      "DisplayName": "Entry",
+      "Position": {
+        "X": 5094.2717501796433,
+        "Y": 5956.3752405317409
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.EntryNode, Syn.Bot",
+      "EntryValue": "Dinner",
+      "Synonyms": [],
+      "Id": "ef2bb35a-4c6f-486e-8249-58766c0fe4d3",
+      "IsFolded": false,
+      "DisplayName": "Entry",
+      "Position": {
+        "X": 5093.2191186006958,
+        "Y": 6163.7436615843726
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.DialogNode, Syn.Bot",
+      "DialogName": "table_config_dialog",
+      "IntentAlias": null,
+      "Domain": null,
+      "Intents": [
+        {
+          "IntentName": "table_time_intent",
+          "MinScore": 0.0,
+          "IntentContexts": [
+            {
+              "ContextName": "table-time-con",
+              "Id": "e741d45d-f54a-4031-8122-0ebb984e9712",
+              "IsFolded": false,
+              "DisplayName": "Context",
+              "Position": {
+                "X": 3316.2602826310253,
+                "Y": 4028.8757109935186
+              }
+            }
+          ],
+          "Prompts": [],
+          "AutoEntity": null,
+          "Fallback": null,
+          "Trait": null,
+          "Event": null,
+          "Action": null,
+          "Expressions": [
+            {
+              "Value": "@meal-type",
+              "ExpressionName": null,
+              "Id": "43f834d1-4089-48c5-938d-bcd2efada85f",
+              "IsFolded": false,
+              "DisplayName": "Expression",
+              "Position": {
+                "X": 3323.2602826310253,
+                "Y": 4151.8757109935186
+              }
+            }
+          ],
+          "Response": {
+            "Priority": "Normal",
+            "Hint": "1|2|3|4",
+            "Type": null,
+            "Format": null,
+            "Text": "Perfect!. How many people shall I book the table for?",
+            "ResponseMessages": [],
+            "Children": [],
+            "Id": "6a6b78a8-7022-4d84-aa04-dd3c371fe2dd",
+            "IsFolded": false,
+            "DisplayName": "Response",
+            "Position": {
+              "X": 3313.81583818658,
+              "Y": 4400.986822104629
+            }
+          },
+          "Id": "556cd632-2360-4856-8df9-dd073df8d7cf",
+          "IsFolded": false,
+          "DisplayName": "Intent (table_time_intent)",
+          "Position": {
+            "X": 3713.5102826310258,
+            "Y": 4078.8757109935186
+          }
+        },
+        {
+          "IntentName": "table_num_intent",
+          "MinScore": 0.0,
+          "IntentContexts": [
+            {
+              "ContextName": "table-num-con",
+              "Id": "981de5e6-6288-4960-9667-236483609cc2",
+              "IsFolded": false,
+              "DisplayName": "Context",
+              "Position": {
+                "X": 3324.718548221641,
+                "Y": 4811.7893732686243
+              }
+            }
+          ],
+          "Prompts": [],
+          "AutoEntity": null,
+          "Fallback": null,
+          "Trait": null,
+          "Event": null,
+          "Action": null,
+          "Expressions": [
+            {
+              "Value": "@sys.number",
+              "ExpressionName": null,
+              "Id": "c786f9e2-ca93-43ea-bd7a-8584cadfe206",
+              "IsFolded": false,
+              "DisplayName": "Expression",
+              "Position": {
+                "X": 3332.9538423392883,
+                "Y": 4954.1423144450973
+              }
+            }
+          ],
+          "Response": {
+            "Priority": "Normal",
+            "Hint": null,
+            "Type": null,
+            "Format": null,
+            "Text": "Awesome! I'll set the table for $sys.number people then. We are all set.\r\nCould you please share your number so that I can confirm your booking.",
+            "ResponseMessages": [],
+            "Children": [],
+            "Id": "29e8406f-384e-4080-b281-106d92793cd0",
+            "IsFolded": false,
+            "DisplayName": "Response",
+            "Position": {
+              "X": 3350.4620084231406,
+              "Y": 5279.7559881275256
+            }
+          },
+          "Id": "d819c540-6fef-4411-8905-3f5a684c77ab",
+          "IsFolded": false,
+          "DisplayName": "Intent (table_num_intent)",
+          "Position": {
+            "X": 3720.1107050843866,
+            "Y": 4925.2207458176426
+          }
+        }
+      ],
+      "Events": [],
+      "Actions": [],
+      "Id": "5fc36730-6a60-4e3e-9408-e91da9c443c8",
+      "IsFolded": false,
+      "DisplayName": "Dialog (table_config_dialog)",
+      "Position": {
+        "X": 4318.6209297238693,
+        "Y": 4397.6775482171743
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.IntentNode, Syn.Bot",
+      "IntentName": "table_time_intent",
+      "MinScore": 0.0,
+      "IntentContexts": [
+        {
+          "ContextName": "table-time-con",
+          "Id": "e741d45d-f54a-4031-8122-0ebb984e9712",
+          "IsFolded": false,
+          "DisplayName": "Context",
+          "Position": {
+            "X": 3316.2602826310253,
+            "Y": 4028.8757109935186
+          }
+        }
+      ],
+      "Prompts": [],
+      "AutoEntity": null,
+      "Fallback": null,
+      "Trait": null,
+      "Event": null,
+      "Action": null,
+      "Expressions": [
+        {
+          "Value": "@meal-type",
+          "ExpressionName": null,
+          "Id": "43f834d1-4089-48c5-938d-bcd2efada85f",
+          "IsFolded": false,
+          "DisplayName": "Expression",
+          "Position": {
+            "X": 3323.2602826310253,
+            "Y": 4151.8757109935186
+          }
+        }
+      ],
+      "Response": {
+        "Priority": "Normal",
+        "Hint": "1|2|3|4",
+        "Type": null,
+        "Format": null,
+        "Text": "Perfect!. How many people shall I book the table for?",
+        "ResponseMessages": [],
+        "Children": [],
+        "Id": "6a6b78a8-7022-4d84-aa04-dd3c371fe2dd",
+        "IsFolded": false,
+        "DisplayName": "Response",
+        "Position": {
+          "X": 3313.81583818658,
+          "Y": 4400.986822104629
+        }
+      },
+      "Id": "556cd632-2360-4856-8df9-dd073df8d7cf",
+      "IsFolded": false,
+      "DisplayName": "Intent (table_time_intent)",
+      "Position": {
+        "X": 3713.5102826310258,
+        "Y": 4078.8757109935186
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.ContextNode, Syn.Bot",
+      "ContextName": "table-time-con",
+      "Id": "e741d45d-f54a-4031-8122-0ebb984e9712",
+      "IsFolded": false,
+      "DisplayName": "Context",
+      "Position": {
+        "X": 3316.2602826310253,
+        "Y": 4028.8757109935186
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.ExpressionNode, Syn.Bot",
+      "Value": "@meal-type",
+      "ExpressionName": null,
+      "Id": "43f834d1-4089-48c5-938d-bcd2efada85f",
+      "IsFolded": false,
+      "DisplayName": "Expression",
+      "Position": {
+        "X": 3323.2602826310253,
+        "Y": 4151.8757109935186
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.ContextAddNode, Syn.Bot",
+      "ContextName": "table-num-con",
+      "Lifespan": 1,
+      "Id": "56e1d60e-2f45-490e-94bb-b5f82ccd29c7",
+      "IsFolded": false,
+      "DisplayName": "Context Add",
+      "Position": {
+        "X": 3615.81583818658,
+        "Y": 4486.986822104629
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.ResponseNode, Syn.Bot",
+      "Priority": "Normal",
+      "Hint": "1|2|3|4",
+      "Type": null,
+      "Format": null,
+      "Text": "Perfect!. How many people shall I book the table for?",
+      "ResponseMessages": [],
+      "Children": [],
+      "Id": "6a6b78a8-7022-4d84-aa04-dd3c371fe2dd",
+      "IsFolded": false,
+      "DisplayName": "Response",
+      "Position": {
+        "X": 3313.81583818658,
+        "Y": 4400.986822104629
+      }
+    },
+    {
+      "$type": "Syn.Workspace.Nodes.InputOutput.InputTextNode, Syn.Workspace",
+      "OutputValue": "Perfect!. How many people shall I book the table for?",
+      "Id": "4f4f8896-9b6b-484d-8ed6-e161ff636560",
+      "IsFolded": false,
+      "DisplayName": "Input Text",
+      "Position": {
+        "X": 2777.56583818658,
+        "Y": 4493.486822104629
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.IntentNode, Syn.Bot",
+      "IntentName": "table_num_intent",
+      "MinScore": 0.0,
+      "IntentContexts": [
+        {
+          "ContextName": "table-num-con",
+          "Id": "981de5e6-6288-4960-9667-236483609cc2",
+          "IsFolded": false,
+          "DisplayName": "Context",
+          "Position": {
+            "X": 3324.718548221641,
+            "Y": 4811.7893732686243
+          }
+        }
+      ],
+      "Prompts": [],
+      "AutoEntity": null,
+      "Fallback": null,
+      "Trait": null,
+      "Event": null,
+      "Action": null,
+      "Expressions": [
+        {
+          "Value": "@sys.number",
+          "ExpressionName": null,
+          "Id": "c786f9e2-ca93-43ea-bd7a-8584cadfe206",
+          "IsFolded": false,
+          "DisplayName": "Expression",
+          "Position": {
+            "X": 3332.9538423392883,
+            "Y": 4954.1423144450973
+          }
+        }
+      ],
+      "Response": {
+        "Priority": "Normal",
+        "Hint": null,
+        "Type": null,
+        "Format": null,
+        "Text": "Awesome! I'll set the table for $sys.number people then. We are all set.\r\nCould you please share your number so that I can confirm your booking.",
+        "ResponseMessages": [],
+        "Children": [],
+        "Id": "29e8406f-384e-4080-b281-106d92793cd0",
+        "IsFolded": false,
+        "DisplayName": "Response",
+        "Position": {
+          "X": 3350.4620084231406,
+          "Y": 5279.7559881275256
+        }
+      },
+      "Id": "d819c540-6fef-4411-8905-3f5a684c77ab",
+      "IsFolded": false,
+      "DisplayName": "Intent (table_num_intent)",
+      "Position": {
+        "X": 3720.1107050843866,
+        "Y": 4925.2207458176426
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.ContextNode, Syn.Bot",
+      "ContextName": "table-num-con",
+      "Id": "981de5e6-6288-4960-9667-236483609cc2",
+      "IsFolded": false,
+      "DisplayName": "Context",
+      "Position": {
+        "X": 3324.718548221641,
+        "Y": 4811.7893732686243
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.ExpressionNode, Syn.Bot",
+      "Value": "@sys.number",
+      "ExpressionName": null,
+      "Id": "c786f9e2-ca93-43ea-bd7a-8584cadfe206",
+      "IsFolded": false,
+      "DisplayName": "Expression",
+      "Position": {
+        "X": 3332.9538423392883,
+        "Y": 4954.1423144450973
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.ResponseNode, Syn.Bot",
+      "Priority": "Normal",
+      "Hint": null,
+      "Type": null,
+      "Format": null,
+      "Text": "Awesome! I'll set the table for $sys.number people then. We are all set.\r\nCould you please share your number so that I can confirm your booking.",
+      "ResponseMessages": [],
+      "Children": [],
+      "Id": "29e8406f-384e-4080-b281-106d92793cd0",
+      "IsFolded": false,
+      "DisplayName": "Response",
+      "Position": {
+        "X": 3350.4620084231406,
+        "Y": 5279.7559881275256
+      }
+    },
+    {
+      "$type": "Syn.Workspace.Nodes.InputOutput.InputTextNode, Syn.Workspace",
+      "OutputValue": "Awesome! I'll set the table for $sys.number people then. We are all set.\r\nCould you please share your number so that I can confirm your booking.",
+      "Id": "571e976c-0640-4e8f-9c71-0c1e173e8a5e",
+      "IsFolded": false,
+      "DisplayName": "Input Text",
+      "Position": {
+        "X": 2727.3277918074318,
+        "Y": 5333.962921701871
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.EntityGetNode, Syn.Bot",
+      "EntityName": "sys.number",
+      "EntityGetType": "Reference",
+      "EntityPropertyName": null,
+      "Id": "0320308c-3239-497a-a345-5cfe14e43127",
+      "IsFolded": false,
+      "DisplayName": "Entity Get",
+      "Position": {
+        "X": 3648.3804233863771,
+        "Y": 5324.4892374913434
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.VariableSetNode, Syn.Bot",
+      "VariableName": "table-num",
+      "VariableOrigin": "User",
+      "VariableValue": "2",
+      "Id": "348eed6b-d4ff-46a3-a536-b1068c9898bd",
+      "IsFolded": false,
+      "DisplayName": "Variable Set",
+      "Position": {
+        "X": 3923.1172654916418,
+        "Y": 5351.8576585439732
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.ContextAddNode, Syn.Bot",
+      "ContextName": "table-phone-con",
+      "Lifespan": 2,
+      "Id": "de85d2df-1d62-4881-8f9b-caad457e1fb1",
+      "IsFolded": false,
+      "DisplayName": "Context Add",
+      "Position": {
+        "X": 3659.9593707547988,
+        "Y": 5531.857658543975
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.DialogNode, Syn.Bot",
+      "DialogName": "confirm_dialog",
+      "IntentAlias": null,
+      "Domain": null,
+      "Intents": [
+        {
+          "IntentName": "confirm_intent",
+          "MinScore": 0.0,
+          "IntentContexts": [
+            {
+              "ContextName": "table-phone-con",
+              "Id": "8828835c-1b90-445b-9892-0110ad516f34",
+              "IsFolded": false,
+              "DisplayName": "Context",
+              "Position": {
+                "X": 3589.9852393650349,
+                "Y": 5964.8015353585988
+              }
+            }
+          ],
+          "Prompts": [],
+          "AutoEntity": null,
+          "Fallback": null,
+          "Trait": null,
+          "Event": null,
+          "Action": null,
+          "Expressions": [
+            {
+              "Value": "@sys.number",
+              "ExpressionName": null,
+              "Id": "b1383e0f-6d4c-4506-b4aa-91c4f9622224",
+              "IsFolded": false,
+              "DisplayName": "Expression",
+              "Position": {
+                "X": 3596.2074615872557,
+                "Y": 6108.723103986049
+              }
+            }
+          ],
+          "Response": {
+            "Priority": "Normal",
+            "Hint": null,
+            "Type": null,
+            "Format": null,
+            "Text": "Thank you so much! You table booking for $sys.user.table-date for $sys.user.table-num is now confirmed. \r\nYou'll receive a notification on your mobile number $sys.number soon.",
+            "ResponseMessages": [],
+            "Children": [],
+            "Id": "b4684d58-74b0-4b56-b8ee-0091ff9b7da7",
+            "IsFolded": false,
+            "DisplayName": "Response",
+            "Position": {
+              "X": 3615.0963504761453,
+              "Y": 6389.83421509716
+            }
+          },
+          "Id": "54823e60-095c-400d-ba86-a74296e4a2ac",
+          "IsFolded": false,
+          "DisplayName": "Intent (confirm_intent)",
+          "Position": {
+            "X": 3862.4296838094788,
+            "Y": 6049.742711829188
+          }
+        }
+      ],
+      "Events": [],
+      "Actions": [],
+      "Id": "b7b3b00b-55c6-439b-888d-b6a76f8a38ce",
+      "IsFolded": false,
+      "DisplayName": "Dialog (confirm_dialog)",
+      "Position": {
+        "X": 4125.5729229233048,
+        "Y": 5966.0524054035832
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.IntentNode, Syn.Bot",
+      "IntentName": "confirm_intent",
+      "MinScore": 0.0,
+      "IntentContexts": [
+        {
+          "ContextName": "table-phone-con",
+          "Id": "8828835c-1b90-445b-9892-0110ad516f34",
+          "IsFolded": false,
+          "DisplayName": "Context",
+          "Position": {
+            "X": 3589.9852393650349,
+            "Y": 5964.8015353585988
+          }
+        }
+      ],
+      "Prompts": [],
+      "AutoEntity": null,
+      "Fallback": null,
+      "Trait": null,
+      "Event": null,
+      "Action": null,
+      "Expressions": [
+        {
+          "Value": "@sys.number",
+          "ExpressionName": null,
+          "Id": "b1383e0f-6d4c-4506-b4aa-91c4f9622224",
+          "IsFolded": false,
+          "DisplayName": "Expression",
+          "Position": {
+            "X": 3596.2074615872557,
+            "Y": 6108.723103986049
+          }
+        }
+      ],
+      "Response": {
+        "Priority": "Normal",
+        "Hint": null,
+        "Type": null,
+        "Format": null,
+        "Text": "Thank you so much! You table booking for $sys.user.table-date for $sys.user.table-num is now confirmed. \r\nYou'll receive a notification on your mobile number $sys.number soon.",
+        "ResponseMessages": [],
+        "Children": [],
+        "Id": "b4684d58-74b0-4b56-b8ee-0091ff9b7da7",
+        "IsFolded": false,
+        "DisplayName": "Response",
+        "Position": {
+          "X": 3615.0963504761453,
+          "Y": 6389.83421509716
+        }
+      },
+      "Id": "54823e60-095c-400d-ba86-a74296e4a2ac",
+      "IsFolded": false,
+      "DisplayName": "Intent (confirm_intent)",
+      "Position": {
+        "X": 3862.4296838094788,
+        "Y": 6049.742711829188
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.ContextNode, Syn.Bot",
+      "ContextName": "table-phone-con",
+      "Id": "8828835c-1b90-445b-9892-0110ad516f34",
+      "IsFolded": false,
+      "DisplayName": "Context",
+      "Position": {
+        "X": 3589.9852393650349,
+        "Y": 5964.8015353585988
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.ExpressionNode, Syn.Bot",
+      "Value": "@sys.number",
+      "ExpressionName": null,
+      "Id": "b1383e0f-6d4c-4506-b4aa-91c4f9622224",
+      "IsFolded": false,
+      "DisplayName": "Expression",
+      "Position": {
+        "X": 3596.2074615872557,
+        "Y": 6108.723103986049
+      }
+    },
+    {
+      "$type": "Syn.Bot.Oscova.WorkspaceNodes.ResponseNode, Syn.Bot",
+      "Priority": "Normal",
+      "Hint": null,
+      "Type": null,
+      "Format": null,
+      "Text": "Thank you so much! You table booking for $sys.user.table-date for $sys.user.table-num is now confirmed. \r\nYou'll receive a notification on your mobile number $sys.number soon.",
+      "ResponseMessages": [],
+      "Children": [],
+      "Id": "b4684d58-74b0-4b56-b8ee-0091ff9b7da7",
+      "IsFolded": false,
+      "DisplayName": "Response",
+      "Position": {
+        "X": 3615.0963504761453,
+        "Y": 6389.83421509716
+      }
+    },
+    {
+      "$type": "Syn.Workspace.Nodes.InputOutput.InputTextNode, Syn.Workspace",
+      "OutputValue": "Thank you so much! You table booking for $sys.user.table-date for $sys.user.table-num is now confirmed. \r\nYou'll receive a notification on your mobile number $sys.number soon.",
+      "Id": "f2e2560c-e496-4fce-9f9b-b7e5bdf59983",
+      "IsFolded": false,
+      "DisplayName": "Input Text",
+      "Position": {
+        "X": 2866.2074615872566,
+        "Y": 6448.7231039860508
+      }
+    }
+  ],
+  "Connections": [
+    {
+      "FromNodeId": "c775e85b-46a3-43a0-b432-17db4097abfa",
+      "FromPortName": "Output",
+      "ToNodeId": "dbb77ada-665d-47ef-b7cc-55865b9d9911",
+      "ToPortName": "Intents"
+    },
+    {
+      "FromNodeId": "3ab5c676-e5e5-4ff1-80a8-b7c89d690fc0",
+      "FromPortName": "Output",
+      "ToNodeId": "dbb77ada-665d-47ef-b7cc-55865b9d9911",
+      "ToPortName": "Intents"
+    },
+    {
+      "FromNodeId": "319e2cb5-24b7-4cee-8028-29a6598c6acc",
+      "FromPortName": "Output",
+      "ToNodeId": "c775e85b-46a3-43a0-b432-17db4097abfa",
+      "ToPortName": "Expressions"
+    },
+    {
+      "FromNodeId": "764a2867-f68f-42e7-8434-30f0c13f8d30",
+      "FromPortName": "Output",
+      "ToNodeId": "c775e85b-46a3-43a0-b432-17db4097abfa",
+      "ToPortName": "Expressions"
+    },
+    {
+      "FromNodeId": "43d8e889-c2b4-410a-8860-ebbf2d54e123",
+      "FromPortName": "Output",
+      "ToNodeId": "c775e85b-46a3-43a0-b432-17db4097abfa",
+      "ToPortName": "Expressions"
+    },
+    {
+      "FromNodeId": "60522539-8638-4144-911e-c427ccd9ce99",
+      "FromPortName": "Output",
+      "ToNodeId": "c775e85b-46a3-43a0-b432-17db4097abfa",
+      "ToPortName": "Expressions"
+    },
+    {
+      "FromNodeId": "6865eaec-bad9-40fc-b5c9-380c7a4115dc",
+      "FromPortName": "Output",
+      "ToNodeId": "c775e85b-46a3-43a0-b432-17db4097abfa",
+      "ToPortName": "Response"
+    },
+    {
+      "FromNodeId": "e1b022e2-7955-4680-8d23-7d4cbba6e44b",
+      "FromPortName": "OutputValue",
+      "ToNodeId": "6865eaec-bad9-40fc-b5c9-380c7a4115dc",
+      "ToPortName": "Text"
+    },
+    {
+      "FromNodeId": "6865eaec-bad9-40fc-b5c9-380c7a4115dc",
+      "FromPortName": "TriggerFlow",
+      "ToNodeId": "b00124ec-8f05-43c0-953c-9c85b6f2d3e1",
+      "ToPortName": "OnNodeTriggered"
+    },
+    {
+      "FromNodeId": "0b80c47f-ebf8-43ca-a50b-c2824418d088",
+      "FromPortName": "Output",
+      "ToNodeId": "3ab5c676-e5e5-4ff1-80a8-b7c89d690fc0",
+      "ToPortName": "IntentContexts"
+    },
+    {
+      "FromNodeId": "027d3fce-5e73-4e54-8273-7e6ec54d890c",
+      "FromPortName": "Output",
+      "ToNodeId": "3ab5c676-e5e5-4ff1-80a8-b7c89d690fc0",
+      "ToPortName": "Expressions"
+    },
+    {
+      "FromNodeId": "45021972-4b42-48bb-a203-eb108466c5eb",
+      "FromPortName": "Output",
+      "ToNodeId": "3ab5c676-e5e5-4ff1-80a8-b7c89d690fc0",
+      "ToPortName": "Response"
+    },
+    {
+      "FromNodeId": "858617e2-111e-434f-aeee-ff14448f065b",
+      "FromPortName": "OutputValue",
+      "ToNodeId": "45021972-4b42-48bb-a203-eb108466c5eb",
+      "ToPortName": "Text"
+    },
+    {
+      "FromNodeId": "45021972-4b42-48bb-a203-eb108466c5eb",
+      "FromPortName": "TriggerFlow",
+      "ToNodeId": "03826038-699a-4b37-8f6a-515b05f7750b",
+      "ToPortName": "OnNodeTriggered"
+    },
+    {
+      "FromNodeId": "03826038-699a-4b37-8f6a-515b05f7750b",
+      "FromPortName": "Output",
+      "ToNodeId": "7925466e-258a-42b7-a784-3cdb62418379",
+      "ToPortName": "VariableValue"
+    },
+    {
+      "FromNodeId": "45021972-4b42-48bb-a203-eb108466c5eb",
+      "FromPortName": "TriggerFlow",
+      "ToNodeId": "5d07f149-ddc4-4aa6-aef5-687ad34ed865",
+      "ToPortName": "OnNodeTriggered"
+    },
+    {
+      "FromNodeId": "dbb77ada-665d-47ef-b7cc-55865b9d9911",
+      "FromPortName": "Output",
+      "ToNodeId": "ad0be0b5-a02b-4b30-986b-439e60bdd7a8",
+      "ToPortName": "Dialogs"
+    },
+    {
+      "FromNodeId": "5fc36730-6a60-4e3e-9408-e91da9c443c8",
+      "FromPortName": "Output",
+      "ToNodeId": "ad0be0b5-a02b-4b30-986b-439e60bdd7a8",
+      "ToPortName": "Dialogs"
+    },
+    {
+      "FromNodeId": "b7b3b00b-55c6-439b-888d-b6a76f8a38ce",
+      "FromPortName": "Output",
+      "ToNodeId": "ad0be0b5-a02b-4b30-986b-439e60bdd7a8",
+      "ToPortName": "Dialogs"
+    },
+    {
+      "FromNodeId": "8b707e4a-b01b-48d0-8b32-1aa83a971956",
+      "FromPortName": "Output",
+      "ToNodeId": "ad0be0b5-a02b-4b30-986b-439e60bdd7a8",
+      "ToPortName": "Entities"
+    },
+    {
+      "FromNodeId": "ad0be0b5-a02b-4b30-986b-439e60bdd7a8",
+      "FromPortName": "Output",
+      "ToNodeId": "81c5314f-a755-414c-8182-ab82c2f37719",
+      "ToPortName": "OscovaBotNode"
+    },
+    {
+      "FromNodeId": "0d2209ce-e32c-4498-b12c-e7f41057fa90",
+      "FromPortName": "Output",
+      "ToNodeId": "8b707e4a-b01b-48d0-8b32-1aa83a971956",
+      "ToPortName": "Entries"
+    },
+    {
+      "FromNodeId": "79f51e8f-15ea-492a-a72f-6e7cf4b9fd3e",
+      "FromPortName": "Output",
+      "ToNodeId": "8b707e4a-b01b-48d0-8b32-1aa83a971956",
+      "ToPortName": "Entries"
+    },
+    {
+      "FromNodeId": "ef2bb35a-4c6f-486e-8249-58766c0fe4d3",
+      "FromPortName": "Output",
+      "ToNodeId": "8b707e4a-b01b-48d0-8b32-1aa83a971956",
+      "ToPortName": "Entries"
+    },
+    {
+      "FromNodeId": "556cd632-2360-4856-8df9-dd073df8d7cf",
+      "FromPortName": "Output",
+      "ToNodeId": "5fc36730-6a60-4e3e-9408-e91da9c443c8",
+      "ToPortName": "Intents"
+    },
+    {
+      "FromNodeId": "d819c540-6fef-4411-8905-3f5a684c77ab",
+      "FromPortName": "Output",
+      "ToNodeId": "5fc36730-6a60-4e3e-9408-e91da9c443c8",
+      "ToPortName": "Intents"
+    },
+    {
+      "FromNodeId": "e741d45d-f54a-4031-8122-0ebb984e9712",
+      "FromPortName": "Output",
+      "ToNodeId": "556cd632-2360-4856-8df9-dd073df8d7cf",
+      "ToPortName": "IntentContexts"
+    },
+    {
+      "FromNodeId": "43f834d1-4089-48c5-938d-bcd2efada85f",
+      "FromPortName": "Output",
+      "ToNodeId": "556cd632-2360-4856-8df9-dd073df8d7cf",
+      "ToPortName": "Expressions"
+    },
+    {
+      "FromNodeId": "6a6b78a8-7022-4d84-aa04-dd3c371fe2dd",
+      "FromPortName": "Output",
+      "ToNodeId": "556cd632-2360-4856-8df9-dd073df8d7cf",
+      "ToPortName": "Response"
+    },
+    {
+      "FromNodeId": "6a6b78a8-7022-4d84-aa04-dd3c371fe2dd",
+      "FromPortName": "TriggerFlow",
+      "ToNodeId": "56e1d60e-2f45-490e-94bb-b5f82ccd29c7",
+      "ToPortName": "OnNodeTriggered"
+    },
+    {
+      "FromNodeId": "4f4f8896-9b6b-484d-8ed6-e161ff636560",
+      "FromPortName": "OutputValue",
+      "ToNodeId": "6a6b78a8-7022-4d84-aa04-dd3c371fe2dd",
+      "ToPortName": "Text"
+    },
+    {
+      "FromNodeId": "981de5e6-6288-4960-9667-236483609cc2",
+      "FromPortName": "Output",
+      "ToNodeId": "d819c540-6fef-4411-8905-3f5a684c77ab",
+      "ToPortName": "IntentContexts"
+    },
+    {
+      "FromNodeId": "c786f9e2-ca93-43ea-bd7a-8584cadfe206",
+      "FromPortName": "Output",
+      "ToNodeId": "d819c540-6fef-4411-8905-3f5a684c77ab",
+      "ToPortName": "Expressions"
+    },
+    {
+      "FromNodeId": "29e8406f-384e-4080-b281-106d92793cd0",
+      "FromPortName": "Output",
+      "ToNodeId": "d819c540-6fef-4411-8905-3f5a684c77ab",
+      "ToPortName": "Response"
+    },
+    {
+      "FromNodeId": "571e976c-0640-4e8f-9c71-0c1e173e8a5e",
+      "FromPortName": "OutputValue",
+      "ToNodeId": "29e8406f-384e-4080-b281-106d92793cd0",
+      "ToPortName": "Text"
+    },
+    {
+      "FromNodeId": "29e8406f-384e-4080-b281-106d92793cd0",
+      "FromPortName": "TriggerFlow",
+      "ToNodeId": "0320308c-3239-497a-a345-5cfe14e43127",
+      "ToPortName": "OnNodeTriggered"
+    },
+    {
+      "FromNodeId": "0320308c-3239-497a-a345-5cfe14e43127",
+      "FromPortName": "Output",
+      "ToNodeId": "348eed6b-d4ff-46a3-a536-b1068c9898bd",
+      "ToPortName": "VariableValue"
+    },
+    {
+      "FromNodeId": "29e8406f-384e-4080-b281-106d92793cd0",
+      "FromPortName": "TriggerFlow",
+      "ToNodeId": "de85d2df-1d62-4881-8f9b-caad457e1fb1",
+      "ToPortName": "OnNodeTriggered"
+    },
+    {
+      "FromNodeId": "54823e60-095c-400d-ba86-a74296e4a2ac",
+      "FromPortName": "Output",
+      "ToNodeId": "b7b3b00b-55c6-439b-888d-b6a76f8a38ce",
+      "ToPortName": "Intents"
+    },
+    {
+      "FromNodeId": "8828835c-1b90-445b-9892-0110ad516f34",
+      "FromPortName": "Output",
+      "ToNodeId": "54823e60-095c-400d-ba86-a74296e4a2ac",
+      "ToPortName": "IntentContexts"
+    },
+    {
+      "FromNodeId": "b1383e0f-6d4c-4506-b4aa-91c4f9622224",
+      "FromPortName": "Output",
+      "ToNodeId": "54823e60-095c-400d-ba86-a74296e4a2ac",
+      "ToPortName": "Expressions"
+    },
+    {
+      "FromNodeId": "b4684d58-74b0-4b56-b8ee-0091ff9b7da7",
+      "FromPortName": "Output",
+      "ToNodeId": "54823e60-095c-400d-ba86-a74296e4a2ac",
+      "ToPortName": "Response"
+    },
+    {
+      "FromNodeId": "f2e2560c-e496-4fce-9f9b-b7e5bdf59983",
+      "FromPortName": "OutputValue",
+      "ToNodeId": "b4684d58-74b0-4b56-b8ee-0091ff9b7da7",
+      "ToPortName": "Text"
+    }
+  ]
+}
